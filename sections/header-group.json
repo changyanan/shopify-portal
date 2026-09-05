@@ -18,7 +18,7 @@
           "type": "_announcement",
           "name": "t:names.announcement",
           "settings": {
-            "text": "购买我们的最新到货商品！",
+            "text": "Secure checkout with trusted payment methods",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
