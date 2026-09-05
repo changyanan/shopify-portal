@@ -1,0 +1,536 @@
+{%- doc -%}
+  Portal 定制:信任徽章组(trust badges)。
+
+  设计用于商品详情区(_product-details),放在加购按钮下方,展示免邮/退换/保修/认证等信任点。
+  提供 4 个独立槽位,每槽位可单独开关并配置图标与文案;全部关闭或文案为空时整体不渲染。
+
+  - 图标复用官方 snippets/icon.liquid 的 SVG,颜色走 currentColor 继承文字色;
+  - schema 文案走 locales/*.schema.json 的 t: 翻译键(portal 命名空间);
+  - 徽章文案是商家设置值,在 Translate & Adapt 中按语言翻译,不占用 storefront 翻译键。
+{%- enddoc -%}
+
+{%- liquid
+  assign gap = block.settings.gap | default: 16
+  assign icon_size = block.settings.icon_size | default: 16
+-%}
+
+{%- capture badge_items -%}
+  {%- for i in (1..4) -%}
+    {%- liquid
+      assign enabled_key = 'badge_' | append: i | append: '_enabled'
+      assign icon_key = 'badge_' | append: i | append: '_icon'
+      assign text_key = 'badge_' | append: i | append: '_text'
+      assign badge_enabled = block.settings[enabled_key]
+      assign badge_icon = block.settings[icon_key]
+      assign badge_text = block.settings[text_key]
+    -%}
+    {%- if badge_enabled and badge_text != blank -%}
+      <li class="portal-trust-badges__item">
+        {%- if badge_icon != 'none' -%}
+          <svg
+            class="portal-trust-badges__icon icon-default"
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="{{ icon_size }}"
+            height="{{ icon_size }}"
+            viewBox="0 0 20 20"
+          >
+            {%- render 'icon', icon: badge_icon -%}
+          </svg>
+        {%- endif -%}
+        <span class="portal-trust-badges__text">{{ badge_text }}</span>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if badge_items != blank -%}
+  <ul
+    class="portal-trust-badges portal-trust-badges--{{ block.settings.layout }} portal-trust-badges--{{ block.settings.alignment }}"
+    style="--portal-trust-badges-gap: {{ gap }}px;"
+    role="list"
+    {{ block.shopify_attributes }}
+  >
+    {{ badge_items }}
+  </ul>
+{%- endif -%}
+
+{% stylesheet %}
+  .portal-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--portal-trust-badges-gap, 16px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .portal-trust-badges--column {
+    flex-direction: column;
+  }
+
+  .portal-trust-badges--row.portal-trust-badges--center {
+    justify-content: center;
+  }
+
+  .portal-trust-badges--row.portal-trust-badges--right {
+    justify-content: flex-end;
+  }
+
+  .portal-trust-badges--column.portal-trust-badges--center {
+    align-items: center;
+  }
+
+  .portal-trust-badges--column.portal-trust-badges--right {
+    align-items: flex-end;
+  }
+
+  .portal-trust-badges__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .portal-trust-badges__icon {
+    flex-shrink: 0;
+  }
+
+  .portal-trust-badges__text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:portal.trust_badges_name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:settings.layout",
+      "options": [
+        {
+          "value": "row",
+          "label": "t:portal.tb_layout_row"
+        },
+        {
+          "value": "column",
+          "label": "t:portal.tb_layout_column"
+        }
+      ],
+      "default": "row"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "t:settings.width",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:portal.tb_badge_1"
+    },
+    {
+      "type": "checkbox",
+      "id": "badge_1_enabled",
+      "label": "t:portal.tb_show",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "badge_1_icon",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "truck",
+          "label": "t:options.truck"
+        },
+        {
+          "value": "return",
+          "label": "t:options.return"
+        },
+        {
+          "value": "check_box",
+          "label": "t:options.check_box"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:options.clipboard"
+        },
+        {
+          "value": "lock",
+          "label": "t:options.lock"
+        },
+        {
+          "value": "star",
+          "label": "t:options.star"
+        },
+        {
+          "value": "stopwatch",
+          "label": "t:options.stopwatch"
+        },
+        {
+          "value": "box",
+          "label": "t:options.box"
+        },
+        {
+          "value": "plane",
+          "label": "t:options.plane"
+        },
+        {
+          "value": "lightning_bolt",
+          "label": "t:options.lightning_bolt"
+        },
+        {
+          "value": "recycle",
+          "label": "t:options.recycle"
+        },
+        {
+          "value": "heart",
+          "label": "t:options.heart"
+        },
+        {
+          "value": "price_tag",
+          "label": "t:options.price_tag"
+        },
+        {
+          "value": "question_mark",
+          "label": "t:options.question_mark"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "truck",
+      "visible_if": "{{ block.settings.badge_1_enabled }}"
+    },
+    {
+      "type": "text",
+      "id": "badge_1_text",
+      "label": "t:settings.text",
+      "default": "Free shipping",
+      "visible_if": "{{ block.settings.badge_1_enabled }}"
+    },
+    {
+      "type": "header",
+      "content": "t:portal.tb_badge_2"
+    },
+    {
+      "type": "checkbox",
+      "id": "badge_2_enabled",
+      "label": "t:portal.tb_show",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "badge_2_icon",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "truck",
+          "label": "t:options.truck"
+        },
+        {
+          "value": "return",
+          "label": "t:options.return"
+        },
+        {
+          "value": "check_box",
+          "label": "t:options.check_box"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:options.clipboard"
+        },
+        {
+          "value": "lock",
+          "label": "t:options.lock"
+        },
+        {
+          "value": "star",
+          "label": "t:options.star"
+        },
+        {
+          "value": "stopwatch",
+          "label": "t:options.stopwatch"
+        },
+        {
+          "value": "box",
+          "label": "t:options.box"
+        },
+        {
+          "value": "plane",
+          "label": "t:options.plane"
+        },
+        {
+          "value": "lightning_bolt",
+          "label": "t:options.lightning_bolt"
+        },
+        {
+          "value": "recycle",
+          "label": "t:options.recycle"
+        },
+        {
+          "value": "heart",
+          "label": "t:options.heart"
+        },
+        {
+          "value": "price_tag",
+          "label": "t:options.price_tag"
+        },
+        {
+          "value": "question_mark",
+          "label": "t:options.question_mark"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "return",
+      "visible_if": "{{ block.settings.badge_2_enabled }}"
+    },
+    {
+      "type": "text",
+      "id": "badge_2_text",
+      "label": "t:settings.text",
+      "default": "30-day returns",
+      "visible_if": "{{ block.settings.badge_2_enabled }}"
+    },
+    {
+      "type": "header",
+      "content": "t:portal.tb_badge_3"
+    },
+    {
+      "type": "checkbox",
+      "id": "badge_3_enabled",
+      "label": "t:portal.tb_show",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "badge_3_icon",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "truck",
+          "label": "t:options.truck"
+        },
+        {
+          "value": "return",
+          "label": "t:options.return"
+        },
+        {
+          "value": "check_box",
+          "label": "t:options.check_box"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:options.clipboard"
+        },
+        {
+          "value": "lock",
+          "label": "t:options.lock"
+        },
+        {
+          "value": "star",
+          "label": "t:options.star"
+        },
+        {
+          "value": "stopwatch",
+          "label": "t:options.stopwatch"
+        },
+        {
+          "value": "box",
+          "label": "t:options.box"
+        },
+        {
+          "value": "plane",
+          "label": "t:options.plane"
+        },
+        {
+          "value": "lightning_bolt",
+          "label": "t:options.lightning_bolt"
+        },
+        {
+          "value": "recycle",
+          "label": "t:options.recycle"
+        },
+        {
+          "value": "heart",
+          "label": "t:options.heart"
+        },
+        {
+          "value": "price_tag",
+          "label": "t:options.price_tag"
+        },
+        {
+          "value": "question_mark",
+          "label": "t:options.question_mark"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "check_box",
+      "visible_if": "{{ block.settings.badge_3_enabled }}"
+    },
+    {
+      "type": "text",
+      "id": "badge_3_text",
+      "label": "t:settings.text",
+      "default": "2-year warranty",
+      "visible_if": "{{ block.settings.badge_3_enabled }}"
+    },
+    {
+      "type": "header",
+      "content": "t:portal.tb_badge_4"
+    },
+    {
+      "type": "checkbox",
+      "id": "badge_4_enabled",
+      "label": "t:portal.tb_show",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "badge_4_icon",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "truck",
+          "label": "t:options.truck"
+        },
+        {
+          "value": "return",
+          "label": "t:options.return"
+        },
+        {
+          "value": "check_box",
+          "label": "t:options.check_box"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:options.clipboard"
+        },
+        {
+          "value": "lock",
+          "label": "t:options.lock"
+        },
+        {
+          "value": "star",
+          "label": "t:options.star"
+        },
+        {
+          "value": "stopwatch",
+          "label": "t:options.stopwatch"
+        },
+        {
+          "value": "box",
+          "label": "t:options.box"
+        },
+        {
+          "value": "plane",
+          "label": "t:options.plane"
+        },
+        {
+          "value": "lightning_bolt",
+          "label": "t:options.lightning_bolt"
+        },
+        {
+          "value": "recycle",
+          "label": "t:options.recycle"
+        },
+        {
+          "value": "heart",
+          "label": "t:options.heart"
+        },
+        {
+          "value": "price_tag",
+          "label": "t:options.price_tag"
+        },
+        {
+          "value": "question_mark",
+          "label": "t:options.question_mark"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "clipboard",
+      "visible_if": "{{ block.settings.badge_4_enabled }}"
+    },
+    {
+      "type": "text",
+      "id": "badge_4_text",
+      "label": "t:settings.text",
+      "default": "CE certified",
+      "visible_if": "{{ block.settings.badge_4_enabled }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.trust_badges_name",
+      "category": "t:portal.category",
+      "settings": {
+        "layout": "row",
+        "alignment": "left",
+        "gap": 16,
+        "icon_size": 16,
+        "badge_1_enabled": true,
+        "badge_1_icon": "truck",
+        "badge_1_text": "t:portal.trust_badge_1_text",
+        "badge_2_enabled": true,
+        "badge_2_icon": "return",
+        "badge_2_text": "t:portal.trust_badge_2_text",
+        "badge_3_enabled": true,
+        "badge_3_icon": "check_box",
+        "badge_3_text": "t:portal.trust_badge_3_text",
+        "badge_4_enabled": true,
+        "badge_4_icon": "clipboard",
+        "badge_4_text": "t:portal.trust_badge_4_text"
+      }
+    }
+  ]
+}
+{% endschema %}
