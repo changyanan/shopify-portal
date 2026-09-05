@@ -1,0 +1,32 @@
+{%- doc -%}
+  Styles for the portal CTA banner section. Extracted into a snippet
+  following the theme's *-styles convention so the CSS ships only when
+  the section is used.
+
+  Layout is intentionally minimal: the section composes existing theme
+  blocks (text, button), which bring their own typography and styling.
+{%- enddoc -%}
+
+{% stylesheet %}
+  .portal-cta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--portal-cta-gap, 16px);
+  }
+
+  .portal-cta--left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .portal-cta--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .portal-cta--right {
+    align-items: flex-end;
+    text-align: right;
+  }
+{% endstylesheet %}

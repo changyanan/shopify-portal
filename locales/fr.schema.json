@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Personnalisations Portal",
+    "cta_name": "Bannière CTA Portal"
+  },
+
+
   "names": {
     "404": "404",
     "custom_section": "Section personnalisée",

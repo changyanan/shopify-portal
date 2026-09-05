@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "การปรับแต่ง Portal",
+    "cta_name": "แบนเนอร์ CTA ของ Portal"
+  },
+
+
   "names": {
     "404": "404",
     "colors": "จานสี",

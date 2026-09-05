@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Úpravy Portal",
+    "cta_name": "CTA banner Portal"
+  },
+
+
   "names": {
     "404": "404",
     "colors": "Paleta barev",

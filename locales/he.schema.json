@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "התאמות אישיות של Portal",
+    "cta_name": "באנר CTA של Portal"
+  },
+
+
   "categories": {
     "banners": "באנרים",
     "basic": "בסיסי",

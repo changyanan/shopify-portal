@@ -8,6 +8,11 @@
  * ------------------------------------------------------------
  */
 {
+  "portal": {
+    "category": "Portal customizations",
+    "cta_name": "Portal CTA banner"
+  },
+
   "categories": {
     "banners": "Banners",
     // Category for fundamental content blocks (text, images, buttons)

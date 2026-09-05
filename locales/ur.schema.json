@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal کسٹمائزیشنز",
+    "cta_name": "Portal CTA بینر"
+  },
+
+
   "categories": {
     "banners": "بینر",
     "basic": "بنیادی",

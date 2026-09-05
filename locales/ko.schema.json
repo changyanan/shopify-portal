@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal 사용자 지정",
+    "cta_name": "Portal CTA 배너"
+  },
+
+
   "names": {
     "404": "404",
     "custom_section": "사용자 지정 섹션",

@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Personalizzazioni Portal",
+    "cta_name": "Banner CTA Portal"
+  },
+
+
   "names": {
     "404": "404",
     "colors": "Palette colori",

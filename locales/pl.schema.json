@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Dostosowania Portal",
+    "cta_name": "Baner CTA Portal"
+  },
+
+
   "names": {
     "404": "404",
     "custom_section": "Sekcja niestandardowa",

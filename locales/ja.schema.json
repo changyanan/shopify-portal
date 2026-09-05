@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal カスタマイズ",
+    "cta_name": "Portal CTAバナー"
+  },
+
+
   "names": {
     "404": "404",
     "colors": "カラーパレット",

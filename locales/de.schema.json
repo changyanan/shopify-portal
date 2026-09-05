@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal-Anpassungen",
+    "cta_name": "Portal-CTA-Banner"
+  },
+
+
   "names": {
     "404": "404",
     "custom_section": "Benutzerdefinierter Abschnitt",

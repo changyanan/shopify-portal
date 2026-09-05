@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal özelleştirmeleri",
+    "cta_name": "Portal CTA banneri"
+  },
+
+
   "names": {
     "404": "404",
     "custom_section": "Özel bölüm",

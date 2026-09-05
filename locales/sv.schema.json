@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal-anpassningar",
+    "cta_name": "Portal CTA-banner"
+  },
+
+
   "names": {
     "404": "404",
     "colors": "Färgpalett",

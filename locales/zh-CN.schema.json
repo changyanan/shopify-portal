@@ -1,4 +1,9 @@
 {
+  "portal": {
+    "category": "Portal 定制",
+    "cta_name": "Portal CTA 横幅"
+  },
+
   "names": {
     "404": "404",
     "colors": "调色板",

@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal-mukautukset",
+    "cta_name": "Portalin CTA-banneri"
+  },
+
+
   "names": {
     "404": "404",
     "colors": "Väripaletti",

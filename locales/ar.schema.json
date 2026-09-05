@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "تخصيصات Portal",
+    "cta_name": "لافتة CTA من Portal"
+  },
+
+
   "categories": {
     "banners": "لافتات",
     "basic": "أساسي",

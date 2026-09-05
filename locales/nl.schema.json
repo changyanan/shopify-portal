@@ -1,4 +1,10 @@
 {
+  "portal": {
+    "category": "Portal-aanpassingen",
+    "cta_name": "Portal CTA-banner"
+  },
+
+
   "names": {
     "404": "404",
     "custom_section": "Aangepaste sectie",
