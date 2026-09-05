@@ -14,6 +14,51 @@
     "header_announcements_WbCTVz": {
       "type": "header-announcements",
       "blocks": {
+        "announcement_CLiRbG": {
+          "type": "_announcement",
+          "name": "t:names.announcement",
+          "settings": {
+            "text": "购买我们的最新到货商品！",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "announcement_qX7kFd": {
+          "type": "_announcement",
+          "name": "t:names.announcement",
+          "settings": {
+            "text": "2-year warranty on every product",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "announcement_gTQeX3": {
+          "type": "_announcement",
+          "name": "t:names.announcement",
+          "settings": {
+            "text": "30-day returns, stress-free shopping",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
         "announcement_mxxhta": {
           "type": "_announcement",
           "settings": {
@@ -30,6 +75,9 @@
         }
       },
       "block_order": [
+        "announcement_CLiRbG",
+        "announcement_qX7kFd",
+        "announcement_gTQeX3",
         "announcement_mxxhta"
       ],
       "name": "t:names.announcement_bar",
