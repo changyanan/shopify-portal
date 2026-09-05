@@ -809,7 +809,7 @@
       ],
       "name": "t:portal.cta_name",
       "settings": {
-        "background_color": "",
+        "background_color": "{{ settings.color_palette.background }}",
         "section_width": "page-width",
         "content_alignment": "center",
         "gap": 16,
