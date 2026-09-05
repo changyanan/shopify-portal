@@ -1,0 +1,395 @@
+{% comment %}
+  Portal 定制:品牌核心卖点卡片 block,用于 sections/portal-selling-points.liquid。
+
+  每个卡片 = 图标(或自定义图片)+ 标题 + 描述,可选整卡链接。
+  复用官方 snippets/icon.liquid 的 SVG 与 spacing-style 机制,不重写排版体系。
+{%- endcomment -%}
+
+{%- liquid
+  assign card_link = block.settings.link
+  assign has_media = false
+  if block.settings.image_upload != blank or block.settings.icon != 'none'
+    assign has_media = true
+  endif
+-%}
+
+{%- capture card_content -%}
+  {%- if has_media -%}
+    {%- if block.settings.image_upload != blank -%}
+      {{
+        block.settings.image_upload
+        | image_url: width: 160
+        | image_tag:
+          widths: '48, 96, 160',
+          sizes: '48px',
+          class: 'portal-selling-point__image',
+          alt: block.settings.image_upload.alt
+      }}
+    {%- else -%}
+      <span class="portal-selling-point__icon-wrapper">
+        <svg
+          class="portal-selling-point__icon"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          width="{{ block.settings.icon_size }}"
+          height="{{ block.settings.icon_size }}"
+        >
+          {%- render 'icon', icon: block.settings.icon -%}
+        </svg>
+      </span>
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if block.settings.heading != blank -%}
+    <h3 class="portal-selling-point__heading">{{ block.settings.heading | escape }}</h3>
+  {%- endif -%}
+
+  {%- if block.settings.body != blank -%}
+    <div class="portal-selling-point__body rte">{{ block.settings.body }}</div>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- if card_content != blank -%}
+  {%- if card_link != blank -%}
+    <a
+      href="{{ card_link }}"
+      class="portal-selling-point portal-selling-point--{{ block.settings.alignment }} border-style spacing-style size-style"
+      style="
+        {% render 'size-style', settings: block.settings %}
+        {% render 'spacing-style', settings: block.settings %}
+        {% render 'border-override', settings: block.settings %}
+      "
+      {% if block.settings.open_in_new_tab %}
+        target="_blank"
+        rel="noopener"
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {{ card_content }}
+    </a>
+  {%- else -%}
+    <div
+      class="portal-selling-point portal-selling-point--{{ block.settings.alignment }} border-style spacing-style size-style"
+      style="
+        {% render 'size-style', settings: block.settings %}
+        {% render 'spacing-style', settings: block.settings %}
+        {% render 'border-override', settings: block.settings %}
+      "
+      {{ block.shopify_attributes }}
+    >
+      {{ card_content }}
+    </div>
+  {%- endif -%}
+{%- endif -%}
+
+{% stylesheet %}
+  .portal-selling-point {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .portal-selling-point--left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .portal-selling-point--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .portal-selling-point--right {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .portal-selling-point__icon-wrapper {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: rgb(var(--color-foreground-rgb));
+  }
+
+  .portal-selling-point--center .portal-selling-point__icon-wrapper {
+    color: var(--color-primary);
+  }
+
+  .portal-selling-point__icon {
+    display: block;
+  }
+
+  .portal-selling-point__image {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .portal-selling-point__heading {
+    margin: 0;
+    font-size: var(--font-paragraph--size);
+    font-family: var(--font-accent--family);
+    font-weight: var(--font-accent--weight);
+    line-height: var(--font-paragraph--line-height);
+  }
+
+  .portal-selling-point__body {
+    margin: 0;
+  }
+
+  .portal-selling-point__body > * {
+    margin-block: 0;
+  }
+
+  .portal-selling-point__body > * + * {
+    margin-block-start: var(--gap-xs);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:portal.selling_point_name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "truck",
+          "label": "t:options.truck"
+        },
+        {
+          "value": "stopwatch",
+          "label": "t:options.stopwatch"
+        },
+        {
+          "value": "return",
+          "label": "t:options.return"
+        },
+        {
+          "value": "check_box",
+          "label": "t:options.check_box"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:options.clipboard"
+        },
+        {
+          "value": "lock",
+          "label": "t:options.lock"
+        },
+        {
+          "value": "star",
+          "label": "t:options.star"
+        },
+        {
+          "value": "box",
+          "label": "t:options.box"
+        },
+        {
+          "value": "plane",
+          "label": "t:options.plane"
+        },
+        {
+          "value": "lightning_bolt",
+          "label": "t:options.lightning_bolt"
+        },
+        {
+          "value": "recycle",
+          "label": "t:options.recycle"
+        },
+        {
+          "value": "heart",
+          "label": "t:options.heart"
+        },
+        {
+          "value": "price_tag",
+          "label": "t:options.price_tag"
+        },
+        {
+          "value": "question_mark",
+          "label": "t:options.question_mark"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "truck"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_upload",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "t:settings.width",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "default": 32,
+      "visible_if": "{{ block.settings.image_upload == blank }}"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:portal.sp_default_heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "t:settings.text",
+      "default": "t:portal.sp_default_body"
+    },
+    {
+      "type": "header",
+      "content": "t:content.link"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:settings.link"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_in_new_tab",
+      "label": "t:settings.open_new_tab",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "border",
+      "label": "t:settings.border",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "t:settings.border_width",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1,
+      "visible_if": "{{ block.settings.border == 'solid' }}"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "t:settings.border_color",
+      "placeholder": "t:settings.default",
+      "visible_if": "{{ block.settings.border == 'solid' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:settings.border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4,
+      "visible_if": "{{ block.settings.border != 'none' or block.settings.background_color != blank }}"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.selling_point_name"
+    }
+  ]
+}
+{% endschema %}
