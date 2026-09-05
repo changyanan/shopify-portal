@@ -17,7 +17,7 @@
         "announcement_mxxhta": {
           "type": "_announcement",
           "settings": {
-            "text": "Uplevel your office with new decor",
+            "text": "Free shipping on orders over €50",
             "link": "shopify://collections/all",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
