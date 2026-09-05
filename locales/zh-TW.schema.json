@@ -1,5 +1,10 @@
 {
   "portal": {
+    "settings_group": "Portal 自訂",
+    "free_shipping_enable": "啟用免運進度條",
+    "free_shipping_threshold": "免運門檻(店鋪主幣別)",
+    "free_shipping_threshold_info": "達到該訂單金額即免運,設為 0 關閉進度條。",
+
     "category": "Portal 自訂",
     "cta_name": "Portal CTA 橫幅"
   },

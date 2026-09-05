@@ -1,5 +1,10 @@
 {
   "portal": {
+    "settings_group": "Portal",
+    "free_shipping_enable": "Activer la barre de livraison offerte",
+    "free_shipping_threshold": "Seuil de livraison offerte",
+    "free_shipping_threshold_info": "Montant de commande pour la livraison offerte, dans la devise de la boutique. 0 pour désactiver.",
+
     "category": "Personnalisations Portal",
     "cta_name": "Bannière CTA Portal"
   },

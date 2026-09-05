@@ -8,6 +8,14 @@
  * ------------------------------------------------------------
  */
 {
+  "portal": {
+    "free_shipping": {
+      "remaining_html": "You're {{ amount }} away from free shipping",
+      "unlocked": "You've unlocked free shipping!",
+      "progress_label": "Progress towards free shipping"
+    }
+  },
+
   "accessibility": {
     "account": "Account",
     "active_filters": "Active filters:",

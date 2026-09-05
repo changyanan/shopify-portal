@@ -1,4 +1,12 @@
 {
+  "portal": {
+    "free_shipping": {
+      "remaining_html": "再购 {{ amount }} 即可免邮",
+      "unlocked": "已解锁免邮!",
+      "progress_label": "免邮进度"
+    }
+  },
+
   "blocks": {
     "load_video": "加载视频：{{ description }}",
     "sold_out": "售罄",

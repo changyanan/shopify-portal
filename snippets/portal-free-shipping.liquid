@@ -1,0 +1,80 @@
+{%- doc -%}
+  Portal 定制:购物车免邮进度条。
+
+  当购物车金额未达免邮门槛时显示 "还差 XX 免邮" + 进度条;达标后显示解锁文案。
+  门槛在主题设置 → Portal 中配置(settings.portal_free_shipping_threshold,单位为店铺主币种)。
+  购物车抽屉 / 购物车页通过 Section Rendering API 重渲染,本片段为纯 Liquid,
+  金额变化时进度自动更新,无需 JS。
+
+  注意:cart.total_price 以当前展示币种计;多币种店铺若门槛需按币种换算,后续可扩展。
+{%- enddoc -%}
+
+{%- liquid
+  assign threshold = settings.portal_free_shipping_threshold | times: 100
+  if threshold > 0
+    assign remaining = threshold | minus: cart.total_price
+    assign progress = cart.total_price | times: 100 | divided_by: threshold | at_least: 0 | at_most: 100
+    assign remaining_money = remaining | money
+  endif
+-%}
+
+{%- if settings.portal_free_shipping_enabled and threshold > 0 and cart.item_count > 0 -%}
+  <div class="portal-free-shipping" data-testid="portal-free-shipping">
+    {%- if remaining > 0 -%}
+      <p class="portal-free-shipping__label">
+        {{ 'portal.free_shipping.remaining_html' | t: amount: remaining_money }}
+      </p>
+    {%- else -%}
+      <p class="portal-free-shipping__label portal-free-shipping__label--unlocked">
+        {{ 'portal.free_shipping.unlocked' | t }}
+      </p>
+    {%- endif -%}
+
+    <div
+      class="portal-free-shipping__bar"
+      role="progressbar"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="{{ progress }}"
+      aria-label="{{ 'portal.free_shipping.progress_label' | t }}"
+    >
+      <div
+        class="portal-free-shipping__fill"
+        style="--portal-free-shipping-progress: {{ progress }}%;"
+      >
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .portal-free-shipping {
+    padding: 12px 16px 4px;
+  }
+
+  .portal-free-shipping__label {
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .portal-free-shipping__label--unlocked {
+    color: var(--color-primary-button-background);
+    font-weight: 600;
+  }
+
+  .portal-free-shipping__bar {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--color-border);
+    overflow: hidden;
+  }
+
+  .portal-free-shipping__fill {
+    height: 100%;
+    width: var(--portal-free-shipping-progress, 0%);
+    border-radius: inherit;
+    background: var(--color-primary-button-background);
+    transition: width 0.4s ease;
+  }
+{% endstylesheet %}

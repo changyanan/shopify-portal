@@ -1,5 +1,10 @@
 {
   "portal": {
+    "settings_group": "Portal 定制",
+    "free_shipping_enable": "启用免邮进度条",
+    "free_shipping_threshold": "免邮门槛(店铺主币种)",
+    "free_shipping_threshold_info": "达到该订单金额即免邮,设为 0 关闭进度条。",
+
     "category": "Portal 定制",
     "cta_name": "Portal CTA 横幅"
   },

@@ -1,4 +1,12 @@
 {
+  "portal": {
+    "free_shipping": {
+      "remaining_html": "You're {{ amount }} away from free shipping",
+      "unlocked": "You've unlocked free shipping!",
+      "progress_label": "Progress towards free shipping"
+    }
+  },
+
   "blocks": {
     "load_video": "Lataa video: {{ description }}",
     "sold_out": "Loppuunmyyty",

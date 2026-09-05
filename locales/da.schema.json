@@ -1,5 +1,10 @@
 {
   "portal": {
+    "settings_group": "Portal",
+    "free_shipping_enable": "Enable free shipping bar",
+    "free_shipping_threshold": "Free shipping threshold",
+    "free_shipping_threshold_info": "Order amount for free shipping, in your store currency. Set to 0 to disable.",
+
     "category": "Portal-tilpasninger",
     "cta_name": "Portal CTA-banner"
   },

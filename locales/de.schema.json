@@ -1,5 +1,10 @@
 {
   "portal": {
+    "settings_group": "Portal",
+    "free_shipping_enable": "Kostenlosen-Versand-Balken aktivieren",
+    "free_shipping_threshold": "Kostenloser Versand ab",
+    "free_shipping_threshold_info": "Bestellbetrag für kostenlosen Versand in deiner Shop-Währung. 0 = deaktiviert.",
+
     "category": "Portal-Anpassungen",
     "cta_name": "Portal-CTA-Banner"
   },

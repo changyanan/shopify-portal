@@ -1,4 +1,12 @@
 {
+  "portal": {
+    "free_shipping": {
+      "remaining_html": "Nur noch {{ amount }} bis zum kostenlosen Versand",
+      "unlocked": "Kostenloser Versand freigeschaltet!",
+      "progress_label": "Fortschritt zum kostenlosen Versand"
+    }
+  },
+
   "blocks": {
     "load_video": "Video laden: {{ description }}",
     "sold_out": "Ausverkauft",

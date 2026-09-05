@@ -2116,5 +2116,26 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "t:portal.settings_group",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "portal_free_shipping_enabled",
+        "label": "t:portal.free_shipping_enable",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "portal_free_shipping_threshold",
+        "label": "t:portal.free_shipping_threshold",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "default": 50,
+        "info": "t:portal.free_shipping_threshold_info"
+      }
+    ]
   }
 ]
