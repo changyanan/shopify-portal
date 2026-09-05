@@ -755,12 +755,76 @@
         "padding-block-start": 48,
         "padding-block-end": 64
       }
+    },
+    "portal_cta_PkYLiU": {
+      "type": "portal-cta",
+      "blocks": {
+        "text_tyLDXh": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_eJTfxU": {
+          "type": "button",
+          "settings": {
+            "label": "立即购买",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "custom_button_background": "{{ settings.color_palette.foreground }}",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_tyLDXh",
+        "button_eJTfxU"
+      ],
+      "name": "t:portal.cta_name",
+      "settings": {
+        "background_color": "",
+        "section_width": "page-width",
+        "content_alignment": "center",
+        "gap": 16,
+        "padding-block-start": 48,
+        "padding-block-end": 48,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     }
   },
   "order": [
     "hero_iLBwPd",
     "product_list_EDUBdR",
     "media_with_content_LfPdEJ",
-    "collection_list_xpBxCm"
+    "collection_list_xpBxCm",
+    "portal_cta_PkYLiU"
   ]
 }
