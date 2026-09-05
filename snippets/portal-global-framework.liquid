@@ -1,0 +1,58 @@
+{% comment %}
+  Portal global framework enhancements.
+
+  Tinker/Horizon's official header, drawer, search and localization components
+  stay responsible for their behavior. This snippet adds only shared focus,
+  touch-target, safe-area and reduced-motion rules plus the small ARIA sync
+  module used by progressive search and the mobile menu.
+{% endcomment %}
+
+<script
+  src="{{ 'portal-global-framework.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{% stylesheet %}
+  /* Keep global navigation controls usable at touch and keyboard sizes. */
+  :where(
+      #header-component .header__icon,
+      #header-component .header-actions__action,
+      #header-component .search-action button,
+      #header-component .dropdown-localization__button
+    ) {
+    min-height: var(--minimum-touch-target, 44px);
+  }
+
+  :where(
+      #header-component .header__icon,
+      #header-component .header-actions__action,
+      #header-component .search-action button,
+      #header-component .dropdown-localization__button,
+      header-drawer .menu-drawer button,
+      header-drawer .menu-drawer a
+    ):focus-visible {
+    outline: var(--focus-outline-width, 2px) solid currentColor;
+    outline-offset: var(--focus-outline-offset, 2px);
+  }
+
+  /* Leave room for gesture-navigation areas on small screens. */
+  header-drawer .menu-drawer {
+    padding-block-end: max(var(--padding-lg, 24px), env(safe-area-inset-bottom));
+  }
+
+  /* Long translated footer labels must be allowed to shrink and wrap. */
+  .footer-content > *,
+  .footer-utilities .utilities > * {
+    min-width: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .announcement-bar__slide,
+    header-drawer .menu-drawer__animated-element {
+      animation-duration: 0.01ms;
+      animation-iteration-count: 1;
+      transition-duration: 0.01ms;
+    }
+  }
+{% endstylesheet %}

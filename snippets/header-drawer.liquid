@@ -63,6 +63,8 @@
     <summary
       class="header__icon header__icon--menu header__icon--summary"
       aria-label="{{ 'accessibility.menu' | t }}"
+      aria-controls="Details-menu-drawer-container-panel"
+      aria-expanded="false"
       on:click="/toggle"
     >
       <span class="svg-wrapper header-drawer-icon header-drawer-icon--open">
@@ -80,6 +82,7 @@
           color-custom-{{ block.id }}
         {% endif %}
       "
+      id="Details-menu-drawer-container-panel"
     >
       <button
         class="button close-button menu-drawer__close-button focus-inset"

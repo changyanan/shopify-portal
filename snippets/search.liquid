@@ -18,6 +18,8 @@
       class="button-unstyled header-actions__action{% if display_style == 'text' %} header-actions__text-style{% endif %}"
       aria-label="{{ 'content.search_input_label' | t }}"
       aria-haspopup="dialog"
+      aria-controls="search-modal"
+      aria-expanded="false"
     >
       <span class="{% if display_style == 'icon' %}hidden{% else %}mobile:hidden{% endif %}">
         {{ 'content.search' | t }}
