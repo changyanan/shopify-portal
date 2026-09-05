@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal תגי אמון",
+    "tb_layout_row": "שורה",
+    "tb_layout_column": "טור",
+    "tb_badge_1": "תג 1",
+    "tb_badge_2": "תג 2",
+    "tb_badge_3": "תג 3",
+    "tb_badge_4": "תג 4",
+    "tb_show": "הצג תג",
+    "trust_badge_1_text": "משלוח חינם",
+    "trust_badge_2_text": "החזרה חינם תוך 30 יום",
+    "trust_badge_3_text": "אחריות לשנתיים",
+    "trust_badge_4_text": "מאושר CE",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal 신뢰 배지",
+    "tb_layout_row": "가로",
+    "tb_layout_column": "세로",
+    "tb_badge_1": "배지 1",
+    "tb_badge_2": "배지 2",
+    "tb_badge_3": "배지 3",
+    "tb_badge_4": "배지 4",
+    "tb_show": "배지 표시",
+    "trust_badge_1_text": "무료 배송",
+    "trust_badge_2_text": "30일 무료 반품",
+    "trust_badge_3_text": "2년 보증",
+    "trust_badge_4_text": "CE 인증",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

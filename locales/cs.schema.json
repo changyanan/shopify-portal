@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal odznaky důvěry",
+    "tb_layout_row": "Řádek",
+    "tb_layout_column": "Sloupec",
+    "tb_badge_1": "Odznaka 1",
+    "tb_badge_2": "Odznaka 2",
+    "tb_badge_3": "Odznaka 3",
+    "tb_badge_4": "Odznaka 4",
+    "tb_show": "Zobrazit odznaku",
+    "trust_badge_1_text": "Doprava zdarma",
+    "trust_badge_2_text": "Vrácení do 30 dnů",
+    "trust_badge_3_text": "Záruka 2 roky",
+    "trust_badge_4_text": "Certifikace CE",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

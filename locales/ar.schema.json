@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal شارات الثقة",
+    "tb_layout_row": "أفقي",
+    "tb_layout_column": "عمودي",
+    "tb_badge_1": "الشارة 1",
+    "tb_badge_2": "الشارة 2",
+    "tb_badge_3": "الشارة 3",
+    "tb_badge_4": "الشارة 4",
+    "tb_show": "إظهار الشارة",
+    "trust_badge_1_text": "شحن مجاني",
+    "trust_badge_2_text": "إرجاع مجاني خلال 30 يومًا",
+    "trust_badge_3_text": "ضمان لمدة سنتين",
+    "trust_badge_4_text": "معتمد CE",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

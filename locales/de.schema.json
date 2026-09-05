@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal Vertrauenssiegel",
+    "tb_layout_row": "Zeile",
+    "tb_layout_column": "Spalte",
+    "tb_badge_1": "Badge 1",
+    "tb_badge_2": "Badge 2",
+    "tb_badge_3": "Badge 3",
+    "tb_badge_4": "Badge 4",
+    "tb_show": "Badge anzeigen",
+    "trust_badge_1_text": "Kostenloser Versand",
+    "trust_badge_2_text": "30 Tage Rückgabe",
+    "trust_badge_3_text": "2 Jahre Garantie",
+    "trust_badge_4_text": "CE-zertifiziert",
     "settings_group": "Portal",
     "free_shipping_enable": "Kostenlosen-Versand-Balken aktivieren",
     "free_shipping_threshold": "Kostenloser Versand ab",

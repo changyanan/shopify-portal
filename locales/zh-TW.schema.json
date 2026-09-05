@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal 信任徽章",
+    "tb_layout_row": "橫向",
+    "tb_layout_column": "縱向",
+    "tb_badge_1": "徽章 1",
+    "tb_badge_2": "徽章 2",
+    "tb_badge_3": "徽章 3",
+    "tb_badge_4": "徽章 4",
+    "tb_show": "顯示徽章",
+    "trust_badge_1_text": "免運費",
+    "trust_badge_2_text": "30 天免費退換",
+    "trust_badge_3_text": "2 年保固",
+    "trust_badge_4_text": "CE 認證",
     "settings_group": "Portal 自訂",
     "free_shipping_enable": "啟用免運進度條",
     "free_shipping_threshold": "免運門檻(店鋪主幣別)",

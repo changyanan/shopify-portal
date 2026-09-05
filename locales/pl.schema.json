@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal odznaki zaufania",
+    "tb_layout_row": "Wiersz",
+    "tb_layout_column": "Kolumna",
+    "tb_badge_1": "Odznaka 1",
+    "tb_badge_2": "Odznaka 2",
+    "tb_badge_3": "Odznaka 3",
+    "tb_badge_4": "Odznaka 4",
+    "tb_show": "Pokaż odznakę",
+    "trust_badge_1_text": "Darmowa dostawa",
+    "trust_badge_2_text": "Zwroty w ciągu 30 dni",
+    "trust_badge_3_text": "2 lata gwarancji",
+    "trust_badge_4_text": "Certyfikat CE",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

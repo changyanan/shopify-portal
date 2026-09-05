@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal tillidsmærker",
+    "tb_layout_row": "Række",
+    "tb_layout_column": "Kolonne",
+    "tb_badge_1": "Mærke 1",
+    "tb_badge_2": "Mærke 2",
+    "tb_badge_3": "Mærke 3",
+    "tb_badge_4": "Mærke 4",
+    "tb_show": "Vis mærke",
+    "trust_badge_1_text": "Gratis fragt",
+    "trust_badge_2_text": "30 dages retur",
+    "trust_badge_3_text": "2 års garanti",
+    "trust_badge_4_text": "CE-godkendt",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

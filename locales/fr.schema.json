@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal badges de confiance",
+    "tb_layout_row": "Ligne",
+    "tb_layout_column": "Colonne",
+    "tb_badge_1": "Badge 1",
+    "tb_badge_2": "Badge 2",
+    "tb_badge_3": "Badge 3",
+    "tb_badge_4": "Badge 4",
+    "tb_show": "Afficher le badge",
+    "trust_badge_1_text": "Livraison offerte",
+    "trust_badge_2_text": "Retours sous 30 jours",
+    "trust_badge_3_text": "Garantie 2 ans",
+    "trust_badge_4_text": "Certifié CE",
     "settings_group": "Portal",
     "free_shipping_enable": "Activer la barre de livraison offerte",
     "free_shipping_threshold": "Seuil de livraison offerte",

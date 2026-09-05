@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal förtroendemärken",
+    "tb_layout_row": "Rad",
+    "tb_layout_column": "Kolumn",
+    "tb_badge_1": "Märke 1",
+    "tb_badge_2": "Märke 2",
+    "tb_badge_3": "Märke 3",
+    "tb_badge_4": "Märke 4",
+    "tb_show": "Visa märke",
+    "trust_badge_1_text": "Fri frakt",
+    "trust_badge_2_text": "30 dagars retur",
+    "trust_badge_3_text": "2 års garanti",
+    "trust_badge_4_text": "CE-certifierad",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

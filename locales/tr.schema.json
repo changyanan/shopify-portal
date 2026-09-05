@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal güven rozetleri",
+    "tb_layout_row": "Satır",
+    "tb_layout_column": "Sütun",
+    "tb_badge_1": "Rozet 1",
+    "tb_badge_2": "Rozet 2",
+    "tb_badge_3": "Rozet 3",
+    "tb_badge_4": "Rozet 4",
+    "tb_show": "Rozet göster",
+    "trust_badge_1_text": "Ücretsiz kargo",
+    "trust_badge_2_text": "30 gün içinde iade",
+    "trust_badge_3_text": "2 yıl garanti",
+    "trust_badge_4_text": "CE sertifikalı",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

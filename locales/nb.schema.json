@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal tillitsmerker",
+    "tb_layout_row": "Rad",
+    "tb_layout_column": "Kolonne",
+    "tb_badge_1": "Merke 1",
+    "tb_badge_2": "Merke 2",
+    "tb_badge_3": "Merke 3",
+    "tb_badge_4": "Merke 4",
+    "tb_show": "Vis merke",
+    "trust_badge_1_text": "Gratis frakt",
+    "trust_badge_2_text": "30 dagers retur",
+    "trust_badge_3_text": "2 års garanti",
+    "trust_badge_4_text": "CE-sertifisert",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

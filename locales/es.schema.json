@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal sellos de confianza",
+    "tb_layout_row": "Fila",
+    "tb_layout_column": "Columna",
+    "tb_badge_1": "Sello 1",
+    "tb_badge_2": "Sello 2",
+    "tb_badge_3": "Sello 3",
+    "tb_badge_4": "Sello 4",
+    "tb_show": "Mostrar sello",
+    "trust_badge_1_text": "Envío gratis",
+    "trust_badge_2_text": "Devoluciones en 30 días",
+    "trust_badge_3_text": "Garantía de 2 años",
+    "trust_badge_4_text": "Certificado CE",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal vertrouwensbadges",
+    "tb_layout_row": "Rij",
+    "tb_layout_column": "Kolom",
+    "tb_badge_1": "Badge 1",
+    "tb_badge_2": "Badge 2",
+    "tb_badge_3": "Badge 3",
+    "tb_badge_4": "Badge 4",
+    "tb_show": "Badge tonen",
+    "trust_badge_1_text": "Gratis verzending",
+    "trust_badge_2_text": "30 dagen retour",
+    "trust_badge_3_text": "2 jaar garantie",
+    "trust_badge_4_text": "CE-gecertificeerd",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

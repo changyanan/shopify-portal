@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal 信頼バッジ",
+    "tb_layout_row": "横並び",
+    "tb_layout_column": "縦並び",
+    "tb_badge_1": "バッジ 1",
+    "tb_badge_2": "バッジ 2",
+    "tb_badge_3": "バッジ 3",
+    "tb_badge_4": "バッジ 4",
+    "tb_show": "バッジを表示",
+    "trust_badge_1_text": "送料無料",
+    "trust_badge_2_text": "30日間返品無料",
+    "trust_badge_3_text": "2年保証",
+    "trust_badge_4_text": "CE認証",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",

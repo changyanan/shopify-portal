@@ -1,5 +1,17 @@
 {
   "portal": {
+    "trust_badges_name": "Portal ป้ายความน่าเชื่อถือ",
+    "tb_layout_row": "แนวนอน",
+    "tb_layout_column": "แนวตั้ง",
+    "tb_badge_1": "ป้าย 1",
+    "tb_badge_2": "ป้าย 2",
+    "tb_badge_3": "ป้าย 3",
+    "tb_badge_4": "ป้าย 4",
+    "tb_show": "แสดงป้าย",
+    "trust_badge_1_text": "จัดส่งฟรี",
+    "trust_badge_2_text": "คืนสินค้าฟรีภายใน 30 วัน",
+    "trust_badge_3_text": "รับประกัน 2 ปี",
+    "trust_badge_4_text": "รับรอง CE",
     "settings_group": "Portal",
     "free_shipping_enable": "Enable free shipping bar",
     "free_shipping_threshold": "Free shipping threshold",
