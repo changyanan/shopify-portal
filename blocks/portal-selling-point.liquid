@@ -55,9 +55,8 @@
   {%- if card_link != blank -%}
     <a
       href="{{ card_link }}"
-      class="portal-selling-point portal-selling-point--{{ block.settings.alignment }} border-style spacing-style size-style"
+      class="portal-selling-point portal-selling-point--{{ block.settings.alignment }} border-style spacing-style"
       style="
-        {% render 'size-style', settings: block.settings %}
         {% render 'spacing-style', settings: block.settings %}
         {% render 'border-override', settings: block.settings %}
       "
@@ -71,9 +70,8 @@
     </a>
   {%- else -%}
     <div
-      class="portal-selling-point portal-selling-point--{{ block.settings.alignment }} border-style spacing-style size-style"
+      class="portal-selling-point portal-selling-point--{{ block.settings.alignment }} border-style spacing-style"
       style="
-        {% render 'size-style', settings: block.settings %}
         {% render 'spacing-style', settings: block.settings %}
         {% render 'border-override', settings: block.settings %}
       "

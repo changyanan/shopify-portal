@@ -1,0 +1,315 @@
+{% comment %}
+  Portal 定制:用户评价卡片 block,用于 sections/portal-reviews.liquid。
+
+  每张卡片 = 星级(1-5)+ 评价引文 + 评价人与身份,可选头像图。
+  语义结构用 figure / blockquote / figcaption;星星对屏幕阅读器输出文字评分。
+  内容完全来自商家在 Theme Editor 的配置,不写死任何评价文案。
+{%- endcomment -%}
+
+{%- liquid
+  assign rating = block.settings.rating | default: 5
+  assign rounded_rating = rating | round
+-%}
+
+{%- if block.settings.quote != blank -%}
+  <figure
+    class="portal-review portal-review--{{ block.settings.alignment }} border-style spacing-style"
+    style="
+      {% render 'spacing-style', settings: block.settings %}
+      {% render 'border-override', settings: block.settings %}
+    "
+    {{ block.shopify_attributes }}
+  >
+    <div
+      class="portal-review__stars"
+      role="img"
+      aria-label="{{ rating | round: 1 }} / 5"
+    >
+      {%- for star in (1..5) -%}
+        <svg
+          class="portal-review__star{% if star <= rounded_rating %} portal-review__star--filled{% endif %}"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+        >
+          <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
+        </svg>
+      {%- endfor -%}
+    </div>
+
+    <blockquote class="portal-review__quote">
+      <p>{{ block.settings.quote }}</p>
+    </blockquote>
+
+    {%- if block.settings.author != blank or block.settings.role != blank or block.settings.avatar != blank -%}
+      <figcaption class="portal-review__meta">
+        {%- if block.settings.avatar != blank -%}
+          {{
+            block.settings.avatar
+            | image_url: width: 96
+            | image_tag:
+              widths: '48, 96',
+              sizes: '48px',
+              width: 48,
+              height: 48,
+              alt: block.settings.avatar.alt,
+              loading: 'lazy',
+              class: 'portal-review__avatar'
+          }}
+        {%- endif -%}
+        <span class="portal-review__meta-text">
+          {%- if block.settings.author != blank -%}
+            <span class="portal-review__author">{{ block.settings.author | escape }}</span>
+          {%- endif -%}
+          {%- if block.settings.role != blank -%}
+            <span class="portal-review__role">{{ block.settings.role | escape }}</span>
+          {%- endif -%}
+        </span>
+      </figcaption>
+    {%- endif -%}
+  </figure>
+{%- endif -%}
+
+{% stylesheet %}
+  .portal-review {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    height: 100%;
+    margin: 0;
+  }
+
+  .portal-review--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .portal-review--right {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .portal-review__stars {
+    display: flex;
+    gap: var(--gap-3xs);
+    color: rgb(var(--color-foreground-rgb));
+  }
+
+  .portal-review__star {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: rgb(var(--color-foreground-rgb) / var(--opacity-20));
+  }
+
+  .portal-review__star--filled {
+    fill: currentcolor;
+  }
+
+  .portal-review__quote {
+    margin: 0;
+  }
+
+  .portal-review__quote p {
+    margin-block: 0;
+  }
+
+  .portal-review__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+    margin: 0;
+  }
+
+  .portal-review--center .portal-review__meta {
+    flex-direction: column;
+  }
+
+  .portal-review__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .portal-review__meta-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portal-review__author {
+    font-weight: 600;
+    font-size: var(--font-paragraph--size);
+  }
+
+  .portal-review__role {
+    font-size: calc(var(--font-paragraph--size) * 0.85);
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:portal.review_name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "rating",
+      "label": "t:portal.review_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "t:portal.review_quote",
+      "default": "t:portal.review_default_quote"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "t:portal.review_author",
+      "default": "t:portal.review_default_author"
+    },
+    {
+      "type": "text",
+      "id": "role",
+      "label": "t:portal.review_role",
+      "default": "t:portal.review_default_role"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar",
+      "label": "t:portal.review_avatar"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "border",
+      "label": "t:settings.border",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "t:settings.border_width",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1,
+      "visible_if": "{{ block.settings.border == 'solid' }}"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "t:settings.border_color",
+      "placeholder": "t:settings.default",
+      "visible_if": "{{ block.settings.border == 'solid' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:settings.border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.review_name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,71 @@
+{%- doc -%}
+  Styles for the portal FAQ section. Extracted into a snippet following
+  the theme's *-styles convention so the CSS ships only when the section
+  is used.
+{%- enddoc -%}
+
+{% stylesheet %}
+  /*
+   * The section keeps the theme's .section grid; the .portal-faq wrapper
+   * below is a plain flex column holding header and accordion content.
+   */
+  .portal-faq-section {
+    row-gap: var(--gap-xl);
+  }
+
+  .portal-faq {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xl);
+    width: 100%;
+  }
+
+  .portal-faq--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .portal-faq--right {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .portal-faq__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    max-width: 48rem;
+  }
+
+  .portal-faq__heading {
+    margin: 0;
+  }
+
+  .portal-faq__description {
+    margin: 0;
+  }
+
+  .portal-faq__description > * {
+    margin-block: 0;
+  }
+
+  .portal-faq__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    width: 100%;
+  }
+
+  .portal-faq__content--narrow {
+    max-width: 52rem;
+  }
+
+  .portal-faq--center .portal-faq__content--narrow,
+  .portal-faq--right .portal-faq__content--narrow {
+    margin-inline: auto;
+  }
+
+  .portal-faq--right .portal-faq__content--narrow {
+    margin-inline-end: 0;
+  }
+{% endstylesheet %}

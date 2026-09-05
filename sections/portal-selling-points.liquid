@@ -1,0 +1,240 @@
+{% comment %}
+  Portal 定制:品牌核心卖点 section(免邮 / 闪发 / 退换 / 保修等信任点)。
+
+  - 每个卖点是一个可拖拽的 portal-selling-point block(icon 或图片 + 标题 + 描述 + 可选链接);
+  - 网格列数桌面 / 移动端独立配置,支持背景色、内容宽度、对齐、内边距与间距;
+  - 标题与副标题为 section 设置,留空即不渲染,标题层级 h1 → h2(本区)→ h3(卡片);
+  - 样式在 snippets/portal-selling-points-styles.liquid,遵循 portal-* 命名与作用域。
+{%- endcomment -%}
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+{% render 'portal-selling-points-styles' %}
+
+<div
+  class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+
+<div
+  class="section section--{{ section.settings.section_width }} spacing-style portal-selling-points-section{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  {%- if section.settings.heading != blank or section.settings.description != blank -%}
+    <div class="portal-selling-points__header portal-selling-points__header--{{ section.settings.content_alignment }}">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="portal-selling-points__heading h2">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <div class="portal-selling-points__description rte">{{ section.settings.description }}</div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div
+    class="portal-selling-points"
+    style="
+      --portal-sp-columns: {{ section.settings.columns }};
+      --portal-sp-columns-mobile: {{ section.settings.mobile_columns }};
+      --portal-sp-gap: {{ section.settings.gap }}px;
+    "
+  >
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:portal.selling_points_name",
+  "tag": "section",
+  "class": "section-wrapper",
+  "blocks": [
+    {
+      "type": "portal-selling-point"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:portal.description"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "t:settings.mobile_columns",
+      "min": 1,
+      "max": 2,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.selling_points_name",
+      "category": "t:portal.category",
+      "blocks": [
+        {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "truck",
+            "heading": "t:portal.sp_default_heading_1",
+            "body": "t:portal.sp_default_body_1"
+          }
+        },
+        {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "lightning_bolt",
+            "heading": "t:portal.sp_default_heading_2",
+            "body": "t:portal.sp_default_body_2"
+          }
+        },
+        {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "return",
+            "heading": "t:portal.sp_default_heading_3",
+            "body": "t:portal.sp_default_body_3"
+          }
+        },
+        {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "check_box",
+            "heading": "t:portal.sp_default_heading_4",
+            "body": "t:portal.sp_default_body_4"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

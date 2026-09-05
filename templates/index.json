@@ -12,7 +12,7 @@
     "hero": {
       "type": "hero",
       "blocks": {
-        "group_mATTUY": {
+        "group_main": {
           "type": "group",
           "settings": {
             "content_direction": "row",
@@ -26,7 +26,7 @@
             "height": "fit"
           },
           "blocks": {
-            "group_U86Qji": {
+            "group_copy": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
@@ -76,10 +76,20 @@
               }
             }
           },
-          "block_order": ["group_U86Qji", "text_sub"]
+          "block_order": ["group_copy", "text_sub"]
+        },
+        "button_cta": {
+          "type": "button",
+          "settings": {
+            "label": "Shop bestsellers",
+            "link": "shopify://collections/all",
+            "style_class": "button",
+            "width": "fit-content",
+            "width_mobile": "fill"
+          }
         }
       },
-      "block_order": ["group_mATTUY"],
+      "block_order": ["group_main", "button_cta"],
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
@@ -93,151 +103,63 @@
         "background_color": "{{ settings.color_palette.foreground }}",
         "toggle_overlay": true,
         "overlay_color": "#00000026",
-        "overlay_style": "solid",
+        "overlay_style": "gradient",
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 31
       }
     },
-    "trust-bar": {
-      "type": "section",
+    "selling_points": {
+      "type": "portal-selling-points",
       "blocks": {
-        "item_shipping": {
-          "type": "group",
+        "point_shipping": {
+          "type": "portal-selling-point",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "gap": 8,
-            "width": "fill",
-            "height": "fit"
-          },
-          "blocks": {
-            "icon_shipping": {
-              "type": "icon",
-              "settings": {
-                "icon": "truck",
-                "width": 32,
-                "icon_color": "{{ settings.color_palette.color1 }}"
-              }
-            },
-            "text_shipping": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>Free EU shipping</strong> over €50</p>",
-                "alignment": "center",
-                "type_preset": "rte"
-              }
-            }
-          },
-          "block_order": ["icon_shipping", "text_shipping"]
+            "icon": "truck",
+            "heading": "Free EU shipping over €50",
+            "body": "<p>Every order of €50 or more ships free within the EU.</p>",
+            "alignment": "center"
+          }
         },
-        "item_dispatch": {
-          "type": "group",
+        "point_dispatch": {
+          "type": "portal-selling-point",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "gap": 8,
-            "width": "fill",
-            "height": "fit"
-          },
-          "blocks": {
-            "icon_dispatch": {
-              "type": "icon",
-              "settings": {
-                "icon": "stopwatch",
-                "width": 32,
-                "icon_color": "{{ settings.color_palette.color1 }}"
-              }
-            },
-            "text_dispatch": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>Ships in 24h</strong> from our EU hub</p>",
-                "alignment": "center",
-                "type_preset": "rte"
-              }
-            }
-          },
-          "block_order": ["icon_dispatch", "text_dispatch"]
+            "icon": "lightning_bolt",
+            "heading": "Ships in 24 hours",
+            "body": "<p>Orders leave our EU hub within one business day.</p>",
+            "alignment": "center"
+          }
         },
-        "item_returns": {
-          "type": "group",
+        "point_returns": {
+          "type": "portal-selling-point",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "gap": 8,
-            "width": "fill",
-            "height": "fit"
-          },
-          "blocks": {
-            "icon_returns": {
-              "type": "icon",
-              "settings": {
-                "icon": "return",
-                "width": 32,
-                "icon_color": "{{ settings.color_palette.color1 }}"
-              }
-            },
-            "text_returns": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>30-day returns</strong>, no questions asked</p>",
-                "alignment": "center",
-                "type_preset": "rte"
-              }
-            }
-          },
-          "block_order": ["icon_returns", "text_returns"]
+            "icon": "return",
+            "heading": "30-day returns",
+            "body": "<p>Changed your mind? Send it back within 30 days.</p>",
+            "alignment": "center"
+          }
         },
-        "item_secure": {
-          "type": "group",
+        "point_warranty": {
+          "type": "portal-selling-point",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "gap": 8,
-            "width": "fill",
-            "height": "fit"
-          },
-          "blocks": {
-            "icon_secure": {
-              "type": "icon",
-              "settings": {
-                "icon": "lock",
-                "width": 32,
-                "icon_color": "{{ settings.color_palette.color1 }}"
-              }
-            },
-            "text_secure": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>Secure checkout</strong> & buyer protection</p>",
-                "alignment": "center",
-                "type_preset": "rte"
-              }
-            }
-          },
-          "block_order": ["icon_secure", "text_secure"]
+            "icon": "check_box",
+            "heading": "2-year warranty",
+            "body": "<p>Every product carries a full two-year warranty.</p>",
+            "alignment": "center"
+          }
         }
       },
-      "block_order": ["item_shipping", "item_dispatch", "item_returns", "item_secure"],
+      "block_order": ["point_shipping", "point_dispatch", "point_returns", "point_warranty"],
       "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "center",
-        "vertical_alignment": "center",
+        "heading": "Why shop with instocks",
+        "content_alignment": "center",
+        "columns": 4,
+        "mobile_columns": 2,
         "gap": 24,
         "section_width": "page-width",
-        "background_color": "{{ settings.color_palette.color2 }}",
-        "padding-block-start": 32,
-        "padding-block-end": 32
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     },
     "product_list": {
@@ -343,71 +265,6 @@
         "padding-block-end": 64
       }
     },
-    "media_with_content": {
-      "type": "media-with-content",
-      "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
-          "settings": {
-            "media_type": "image",
-            "image_position": "cover",
-            "video_position": "cover"
-          }
-        },
-        "content": {
-          "type": "_content-without-appearance",
-          "static": true,
-          "settings": {
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 24
-          },
-          "blocks": {
-            "mwc_heading": {
-              "type": "text",
-              "settings": {
-                "text": "<h2>Built for focus</h2>",
-                "width": "fit-content",
-                "alignment": "left",
-                "type_preset": "h3"
-              }
-            },
-            "mwc_text": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Monitors, mounts, cable management and comfort — gear that clears the clutter and keeps you in flow, from first coffee to last call.</p>",
-                "width": "fit-content",
-                "max_width": "narrow",
-                "alignment": "left",
-                "type_preset": "rte"
-              }
-            },
-            "mwc_button": {
-              "type": "button",
-              "settings": {
-                "label": "Shop bestsellers",
-                "link": "shopify://collections/all",
-                "style_class": "button-secondary",
-                "width": "fit-content",
-                "width_mobile": "fit-content"
-              }
-            }
-          },
-          "block_order": ["mwc_heading", "mwc_text", "mwc_button"]
-        }
-      },
-      "settings": {
-        "media_position": "left",
-        "media_width": "medium",
-        "media_height": "50svh",
-        "section_width": "page-width",
-        "extend_media": true,
-        "background_color": "{{ settings.color_palette.color2 }}",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "collection_list": {
       "type": "collection-list",
       "blocks": {
@@ -432,9 +289,19 @@
                 "alignment": "left",
                 "type_preset": "h2"
               }
+            },
+            "cl_sub": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Pick your device — find the gear that fits it.</p>",
+                "width": "fit-content",
+                "alignment": "left",
+                "type_preset": "rte",
+                "text_color": "{{ settings.color_palette.color1 }}"
+              }
             }
           },
-          "block_order": ["cl_heading"]
+          "block_order": ["cl_heading", "cl_sub"]
         },
         "static-collection-card": {
           "type": "_collection-card",
@@ -489,229 +356,266 @@
         "padding-block-end": 64
       }
     },
-    "marquee": {
-      "type": "marquee",
+    "brand_story": {
+      "type": "portal-brand-story",
       "blocks": {
-        "m1": {
+        "story_heading": {
           "type": "text",
           "settings": {
-            "text": "<p>Free EU shipping over €50</p>",
-            "type_preset": "rte",
-            "text_color": "{{ settings.color_palette.background }}"
-          }
-        },
-        "m2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>2-year warranty on everything</p>",
-            "type_preset": "rte",
-            "text_color": "{{ settings.color_palette.background }}"
-          }
-        },
-        "m3": {
-          "type": "text",
-          "settings": {
-            "text": "<p>30-day returns</p>",
-            "type_preset": "rte",
-            "text_color": "{{ settings.color_palette.background }}"
-          }
-        },
-        "m4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>CE-certified products</p>",
-            "type_preset": "rte",
-            "text_color": "{{ settings.color_palette.background }}"
-          }
-        }
-      },
-      "block_order": ["m1", "m2", "m3", "m4"],
-      "settings": {
-        "movement_direction": "normal",
-        "gap_between_elements": 48,
-        "background_color": "{{ settings.color_palette.foreground }}",
-        "padding-block-start": 16,
-        "padding-block-end": 16
-      }
-    },
-    "reviews": {
-      "type": "section",
-      "blocks": {
-        "rev_heading": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Loved by desk people</h2>",
+            "text": "<h2>Built for better desk days</h2>",
             "width": "fit-content",
             "alignment": "left",
             "type_preset": "h2"
           }
         },
-        "rev_row": {
-          "type": "group",
+        "story_body": {
+          "type": "text",
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-start",
-            "gap": 24,
-            "width": "fill",
-            "height": "fit"
-          },
-          "blocks": {
-            "quote_1": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "gap": 8,
-                "width": "fill",
-                "height": "fit"
-              },
-              "blocks": {
-                "stars_1": {
-                  "type": "review",
-                  "settings": {
-                    "stars_style": "shaded",
-                    "show_number": false,
-                    "type_preset": "paragraph",
-                    "alignment": "left"
-                  }
-                },
-                "text_1": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>“Finally a stand that fits my setup perfectly. Arrived in two days, well packed.”</p>",
-                    "width": "fit-content",
-                    "alignment": "left",
-                    "type_preset": "rte"
-                  }
-                },
-                "author_1": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Jonas K. — Berlin</p>",
-                    "width": "fit-content",
-                    "alignment": "left",
-                    "type_preset": "paragraph",
-                    "text_color": "{{ settings.color_palette.color1 }}"
-                  }
-                }
-              },
-              "block_order": ["stars_1", "text_1", "author_1"]
-            },
-            "quote_2": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "gap": 8,
-                "width": "fill",
-                "height": "fit"
-              },
-              "blocks": {
-                "stars_2": {
-                  "type": "review",
-                  "settings": {
-                    "stars_style": "shaded",
-                    "show_number": false,
-                    "type_preset": "paragraph",
-                    "alignment": "left"
-                  }
-                },
-                "text_2": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>“The cable organiser cleaned up my desk in minutes. Worth every cent.”</p>",
-                    "width": "fit-content",
-                    "alignment": "left",
-                    "type_preset": "rte"
-                  }
-                },
-                "author_2": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Marta L. — Amsterdam</p>",
-                    "width": "fit-content",
-                    "alignment": "left",
-                    "type_preset": "paragraph",
-                    "text_color": "{{ settings.color_palette.color1 }}"
-                  }
-                }
-              },
-              "block_order": ["stars_2", "text_2", "author_2"]
-            },
-            "quote_3": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "gap": 8,
-                "width": "fill",
-                "height": "fit"
-              },
-              "blocks": {
-                "stars_3": {
-                  "type": "review",
-                  "settings": {
-                    "stars_style": "shaded",
-                    "show_number": false,
-                    "type_preset": "paragraph",
-                    "alignment": "left"
-                  }
-                },
-                "text_3": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>“Quality feels premium, and support answered within hours.”</p>",
-                    "width": "fit-content",
-                    "alignment": "left",
-                    "type_preset": "rte"
-                  }
-                },
-                "author_3": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Tomáš H. — Prague</p>",
-                    "width": "fit-content",
-                    "alignment": "left",
-                    "type_preset": "paragraph",
-                    "text_color": "{{ settings.color_palette.color1 }}"
-                  }
-                }
-              },
-              "block_order": ["stars_3", "text_3", "author_3"]
-            }
-          },
-          "block_order": ["quote_1", "quote_2", "quote_3"]
+            "text": "<p>instocks curates dependable chargers, stands, organisers and comfort gear — tested in real setups, shipped fast across Europe. No noise, no gimmicks: just the essentials your desk actually needs.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte"
+          }
+        },
+        "story_button": {
+          "type": "button",
+          "settings": {
+            "label": "Our story",
+            "link": "shopify://pages/about",
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "width_mobile": "fit-content"
+          }
         }
       },
-      "block_order": ["rev_heading", "rev_row"],
+      "block_order": ["story_heading", "story_body", "story_button"],
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
+        "media_type": "image",
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "60svh",
+        "section_width": "page-width",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.color2 }}",
+        "content_alignment": "left",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "reviews": {
+      "type": "portal-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "portal-review",
+          "settings": {
+            "rating": 5,
+            "quote": "Finally a stand that fits my setup perfectly. Arrived in two days, well packed.",
+            "author": "Jonas K.",
+            "role": "Verified buyer — Berlin",
+            "alignment": "left",
+            "border": "solid",
+            "border_width": 1,
+            "border_radius": 4,
+            "padding-block-start": 20,
+            "padding-block-end": 20,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          }
+        },
+        "review_2": {
+          "type": "portal-review",
+          "settings": {
+            "rating": 5,
+            "quote": "The cable organiser cleaned up my desk in minutes. Worth every cent.",
+            "author": "Marta L.",
+            "role": "Verified buyer — Amsterdam",
+            "alignment": "left",
+            "border": "solid",
+            "border_width": 1,
+            "border_radius": 4,
+            "padding-block-start": 20,
+            "padding-block-end": 20,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          }
+        },
+        "review_3": {
+          "type": "portal-review",
+          "settings": {
+            "rating": 4,
+            "quote": "Quality feels premium, and support answered within hours.",
+            "author": "Tomáš H.",
+            "role": "Verified buyer — Prague",
+            "alignment": "left",
+            "border": "solid",
+            "border_width": 1,
+            "border_radius": 4,
+            "padding-block-start": 20,
+            "padding-block-end": 20,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3"],
+      "settings": {
+        "heading": "Loved by desk people",
+        "description": "Real reviews from customers across Europe.",
+        "content_alignment": "left",
+        "columns": 3,
         "gap": 24,
         "section_width": "page-width",
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 48,
         "padding-block-end": 64
       }
+    },
+    "faq": {
+      "type": "portal-faq",
+      "blocks": {
+        "faq_accordion": {
+          "type": "accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "row_shipping": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How fast is delivery?"
+              },
+              "blocks": {
+                "answer_shipping": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We dispatch from our EU hub within 24 hours. Most orders arrive in 2–4 business days.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer_shipping"]
+            },
+            "row_returns": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What is your return policy?"
+              },
+              "blocks": {
+                "answer_returns": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>You can return any item within 30 days of delivery for a full refund — no questions asked.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer_returns"]
+            },
+            "row_compatibility": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will this work with my device?"
+              },
+              "blocks": {
+                "answer_compatibility": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Every product page lists compatible models. If you are unsure, contact us and we will confirm before you order.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer_compatibility"]
+            },
+            "row_warranty": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do products come with a warranty?"
+              },
+              "blocks": {
+                "answer_warranty": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes — everything we sell includes a 2-year warranty covering manufacturing defects.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer_warranty"]
+            }
+          },
+          "block_order": ["row_shipping", "row_returns", "row_compatibility", "row_warranty"]
+        }
+      },
+      "block_order": ["faq_accordion"],
+      "settings": {
+        "heading": "Frequently asked questions",
+        "content_alignment": "left",
+        "wide_content": false,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.color2 }}",
+        "padding-block-start": 48,
+        "padding-block-end": 64
+      }
+    },
+    "newsletter": {
+      "type": "portal-newsletter",
+      "blocks": {
+        "newsletter_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Get 10% off your first order</h2>",
+            "width": "100%",
+            "alignment": "center",
+            "type_preset": "h2",
+            "text_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "newsletter_body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join the instocks newsletter for early drops, desk tips and subscriber-only offers.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "text_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "newsletter_form": {
+          "type": "email-signup",
+          "settings": {
+            "width": "custom",
+            "custom_width": 60,
+            "display_type": "text",
+            "style_class": "button"
+          }
+        }
+      },
+      "block_order": ["newsletter_heading", "newsletter_body", "newsletter_form"],
+      "settings": {
+        "media_type": "none",
+        "content_alignment": "center",
+        "vertical_alignment": "center",
+        "section_height": "medium",
+        "section_width": "full-width",
+        "background_color": "{{ settings.color_palette.foreground }}",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
     }
   },
   "order": [
     "hero",
-    "trust-bar",
+    "selling_points",
     "product_list",
-    "media_with_content",
     "collection_list",
-    "marquee",
-    "reviews"
+    "brand_story",
+    "reviews",
+    "faq",
+    "newsletter"
   ]
 }

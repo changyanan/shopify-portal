@@ -1,0 +1,56 @@
+{%- doc -%}
+  Styles for the portal reviews (testimonials) section. Extracted into a
+  snippet following the theme's *-styles convention so the CSS ships only
+  when the section is used.
+{%- enddoc -%}
+
+{% stylesheet %}
+  /*
+   * The section keeps the theme's .section grid (content stays in the page
+   * column); we only add row spacing between header and grid.
+   */
+  .portal-reviews-section {
+    row-gap: var(--gap-xl);
+  }
+
+  .portal-reviews__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    max-width: 60rem;
+  }
+
+  .portal-reviews__header--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .portal-reviews__header--right {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .portal-reviews__heading {
+    margin: 0;
+  }
+
+  .portal-reviews__description {
+    margin: 0;
+  }
+
+  .portal-reviews__description > * {
+    margin-block: 0;
+  }
+
+  .portal-reviews {
+    display: grid;
+    grid-template-columns: repeat(var(--portal-reviews-columns, 3), 1fr);
+    gap: var(--portal-reviews-gap, 24px);
+  }
+
+  @media screen and (max-width: 749px) {
+    .portal-reviews {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstylesheet %}

@@ -1,0 +1,231 @@
+{% comment %}
+  Portal 定制:用户评价(Testimonials)section。
+
+  - 每条评价是一个可拖拽的 portal-review block(星级 / 引文 / 评价人 / 头像),
+    也可以直接使用 @app blocks 对接评价应用的数据;
+  - 网格列数桌面 / 移动端独立配置,支持背景色、内容宽度、间距与内边距;
+  - 标题与副标题为 section 设置,留空不渲染,保持 h1 → h2 → 卡片内容的标题层级;
+  - 样式在 snippets/portal-reviews-styles.liquid。
+{%- endcomment -%}
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+{% render 'portal-reviews-styles' %}
+
+<div
+  class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+
+<div
+  class="section section--{{ section.settings.section_width }} spacing-style portal-reviews-section{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  {%- if section.settings.heading != blank or section.settings.description != blank -%}
+    <div class="portal-reviews__header portal-reviews__header--{{ section.settings.content_alignment }}">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="portal-reviews__heading h2">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <div class="portal-reviews__description rte">{{ section.settings.description }}</div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div
+    class="portal-reviews"
+    style="
+      --portal-reviews-columns: {{ section.settings.columns }};
+      --portal-reviews-gap: {{ section.settings.gap }}px;
+    "
+  >
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:portal.reviews_name",
+  "tag": "section",
+  "class": "section-wrapper",
+  "blocks": [
+    {
+      "type": "portal-review"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:portal.description"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.reviews_name",
+      "category": "t:portal.category",
+      "settings": {
+        "heading": "t:portal.reviews_default_heading",
+        "columns": 3,
+        "gap": 24
+      },
+      "blocks": [
+        {
+          "type": "portal-review",
+          "settings": {
+            "rating": 5,
+            "quote": "t:portal.reviews_default_quote_1",
+            "author": "t:portal.reviews_default_author_1",
+            "role": "t:portal.reviews_default_role_1"
+          }
+        },
+        {
+          "type": "portal-review",
+          "settings": {
+            "rating": 5,
+            "quote": "t:portal.reviews_default_quote_2",
+            "author": "t:portal.reviews_default_author_2",
+            "role": "t:portal.reviews_default_role_2"
+          }
+        },
+        {
+          "type": "portal-review",
+          "settings": {
+            "rating": 4,
+            "quote": "t:portal.reviews_default_quote_3",
+            "author": "t:portal.reviews_default_author_3",
+            "role": "t:portal.reviews_default_role_3"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,262 @@
+{% comment %}
+  Portal 定制:FAQ section。
+
+  - 复用官方 accordion block(_accordion-row 行 + text block 答案),问答内容完全由
+    商家在 Theme Editor 配置,不写死任何问题与答案;
+  - 支持 @app blocks(如 FAQ 结构化数据类应用)与官方 button block(联系入口);
+  - 标题与副标题为 section 设置,留空不渲染;内容区默认限制宽度保证长答案的可读性;
+  - 无障碍:官方 accordion 基于 details/summary,天然支持键盘操作与焦点管理;
+  - 样式在 snippets/portal-faq-styles.liquid。
+{%- endcomment -%}
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+{% render 'portal-faq-styles' %}
+
+<div
+  class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+
+<div
+  class="section section--{{ section.settings.section_width }} spacing-style portal-faq-section{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  <div class="portal-faq portal-faq--{{ section.settings.content_alignment }}">
+    {%- if section.settings.heading != blank or section.settings.description != blank -%}
+      <div class="portal-faq__header">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="portal-faq__heading h2">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="portal-faq__description rte">{{ section.settings.description }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div
+      class="portal-faq__content{% unless section.settings.wide_content %} portal-faq__content--narrow{% endunless %}"
+    >
+      {% content_for 'blocks' %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:portal.faq_name",
+  "tag": "section",
+  "class": "section-wrapper",
+  "blocks": [
+    {
+      "type": "text"
+    },
+    {
+      "type": "accordion"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:portal.description"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "wide_content",
+      "label": "t:portal.faq_wide_content",
+      "default": false,
+      "info": "t:portal.faq_wide_content_info"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.faq_name",
+      "category": "t:portal.category",
+      "settings": {
+        "heading": "t:portal.faq_default_heading"
+      },
+      "block_order": ["faq_accordion"],
+      "blocks": {
+        "faq_accordion": {
+          "type": "accordion",
+          "blocks": {
+            "row-1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "t:portal.faq_default_q_1"
+              },
+              "blocks": {
+                "answer-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "t:portal.faq_default_a_1",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer-1"]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "t:portal.faq_default_q_2"
+              },
+              "blocks": {
+                "answer-2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "t:portal.faq_default_a_2",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer-2"]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "t:portal.faq_default_q_3"
+              },
+              "blocks": {
+                "answer-3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "t:portal.faq_default_a_3",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer-3"]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "t:portal.faq_default_q_4"
+              },
+              "blocks": {
+                "answer-4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "t:portal.faq_default_a_4",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["answer-4"]
+            }
+          },
+          "block_order": ["row-1", "row-2", "row-3", "row-4"]
+        }
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -50,21 +50,26 @@
 
 ## 4. 首页结构(Section 顺序)
 
-| # | 模块 | 落地 |
-|---|---|---|
-| 1 | 公告栏(免邮/促销轮播) | 原生 header-announcements |
-| 2 | 吸顶导航 | 原生 header |
-| 3 | Hero 大图 + 旗舰产品 CTA | 原生 hero |
-| 4 | 信任条(免邮/2年保修/30天退换/CE认证) | 原生 icon blocks |
-| 5 | 旗舰产品 spotlight 大图区 | 原生 featured-product / media-with-content |
-| 6 | 畅销网格 + 快速加购 | 原生 product-list |
-| 7 | 分类瓷片(按设备:手机/平板/笔记本) | 原生 collection-list |
-| 8 | 参数对比 / before-after | 原生 comparison-slider |
-| 9 | 品牌故事 | 原生 media-with-content |
-| 10 | 评价 + 媒体 Logo 滚动 | 原生 review block + marquee |
-| 11 | 博客预览 | 原生 featured-blog-posts |
-| 12 | 邮件订阅(首单 9 折) | 原生 email-signup |
-| 13 | Footer(政策/社媒/支付图标) | 原生 footer 组 |
+> 2026-09 更新:首页已落地为 8 模块品牌电商结构(`templates/index.json`),全部模块独立、可拖拽、可配置。
+
+| # | 模块 | 落地 | 说明 |
+|---|---|---|---|
+| 1 | 主视觉 Banner | 官方 `hero` | 图/视频 + 移动端独立媒体(`custom_mobile_media`)+ overlay + 区块链接 |
+| 2 | 品牌核心卖点 | 定制 `portal-selling-points` + block `portal-selling-point` | 图标/图片 + 标题 + 描述 + 可选整卡链接;列数、移动端列数、背景、对齐、间距可配 |
+| 3 | 精选商品 | 官方 `product-list` | collection 设置驱动,不写死商品 |
+| 4 | 商品分类 | 官方 `collection-list` | collection_list 设置驱动,不写死集合 |
+| 5 | 品牌介绍 | 定制 `portal-brand-story` | 图/视频 + 移动端独立图片(picture 艺术方向);内容区组合官方 text/button blocks |
+| 6 | 用户评价 | 定制 `portal-reviews` + block `portal-review` | 星级/引文/评价人/头像均为 block 设置;figure/blockquote 语义;@app 可接评价应用 |
+| 7 | FAQ | 定制 `portal-faq`(复用官方 `accordion` block) | 问答内容完全由 accordion rows 配置,details/summary 键盘可达 |
+| 8 | 邮件订阅 | 定制 `portal-newsletter`(复用官方 `email-signup` block) | 背景图/视频 + 移动端独立图 + 遮罩;表单错误/成功反馈由官方 block 提供 |
+
+公共能力:所有自定义 section 支持背景色(`contrast-override` 自动反色)、内容宽度(page/full)、对齐、四向内边距;schema 文案走 `t:portal.*` 翻译键并覆盖全部 23 个 `locales/*.schema.json`;样式走 `snippets/portal-*-styles.liquid`。原 trust-bar(icon blocks 拼装)与 marquee 已被卖点区与 8 模块结构取代,如需可随时在编辑器加回。
+
+| 其他首页组件 | 落地 |
+|---|---|
+| 公告栏(免邮/促销轮播) | 原生 header-announcements |
+| 吸顶导航 | 原生 header |
+| Footer(政策/社媒/支付图标) | 原生 footer 组 |
 
 ## 5. PDP 规划(3C 标准)
 
