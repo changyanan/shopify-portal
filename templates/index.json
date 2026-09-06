@@ -823,13 +823,354 @@
         "padding-inline-start": 0,
         "padding-inline-end": 0
       }
+    },
+    "selling_points": {
+      "type": "portal-selling-points",
+      "blocks": {
+        "point_shipping": {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "truck",
+            "heading": "Free EU shipping over €50",
+            "body": "<p>Every order of €50 or more ships free within the EU.</p>",
+            "alignment": "center"
+          }
+        },
+        "point_dispatch": {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "lightning_bolt",
+            "heading": "Ships in 24 hours",
+            "body": "<p>Orders leave our EU hub within one business day.</p>",
+            "alignment": "center"
+          }
+        },
+        "point_returns": {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "return",
+            "heading": "30-day returns",
+            "body": "<p>Changed your mind? Send it back within 30 days.</p>",
+            "alignment": "center"
+          }
+        },
+        "point_warranty": {
+          "type": "portal-selling-point",
+          "settings": {
+            "icon": "check_box",
+            "heading": "2-year warranty",
+            "body": "<p>Every product carries a full two-year warranty.</p>",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "point_shipping",
+        "point_dispatch",
+        "point_returns",
+        "point_warranty"
+      ],
+      "settings": {
+        "heading": "Why shop with instocks",
+        "content_alignment": "center",
+        "columns": 4,
+        "mobile_columns": 2,
+        "gap": 24,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "brand_story": {
+      "type": "portal-brand-story",
+      "blocks": {
+        "story_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Built for better desk days</h2>",
+            "width": "fit-content",
+            "alignment": "left",
+            "type_preset": "h2"
+          }
+        },
+        "story_body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>instocks curates dependable chargers, stands, organisers and comfort gear — tested in real setups, shipped fast across Europe. No noise, no gimmicks: just the essentials your desk actually needs.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte"
+          }
+        },
+        "story_button": {
+          "type": "button",
+          "settings": {
+            "label": "Our story",
+            "link": "shopify://pages/about",
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "width_mobile": "fit-content"
+          }
+        }
+      },
+      "block_order": [
+        "story_heading",
+        "story_body",
+        "story_button"
+      ],
+      "settings": {
+        "media_type": "image",
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "60svh",
+        "section_width": "page-width",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.color2 }}",
+        "content_alignment": "left",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "reviews": {
+      "type": "portal-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "portal-review",
+          "settings": {
+            "rating": 5,
+            "quote": "Finally a stand that fits my setup perfectly. Arrived in two days, well packed.",
+            "author": "Jonas K.",
+            "role": "Verified buyer — Berlin",
+            "alignment": "left",
+            "border": "solid",
+            "border_width": 1,
+            "border_radius": 4,
+            "padding-block-start": 20,
+            "padding-block-end": 20,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          }
+        },
+        "review_2": {
+          "type": "portal-review",
+          "settings": {
+            "rating": 5,
+            "quote": "The cable organiser cleaned up my desk in minutes. Worth every cent.",
+            "author": "Marta L.",
+            "role": "Verified buyer — Amsterdam",
+            "alignment": "left",
+            "border": "solid",
+            "border_width": 1,
+            "border_radius": 4,
+            "padding-block-start": 20,
+            "padding-block-end": 20,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          }
+        },
+        "review_3": {
+          "type": "portal-review",
+          "settings": {
+            "rating": 4,
+            "quote": "Quality feels premium, and support answered within hours.",
+            "author": "Tomáš H.",
+            "role": "Verified buyer — Prague",
+            "alignment": "left",
+            "border": "solid",
+            "border_width": 1,
+            "border_radius": 4,
+            "padding-block-start": 20,
+            "padding-block-end": 20,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "heading": "Loved by desk people",
+        "description": "Real reviews from customers across Europe.",
+        "content_alignment": "left",
+        "columns": 3,
+        "gap": 24,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 64
+      }
+    },
+    "faq": {
+      "type": "portal-faq",
+      "blocks": {
+        "faq_accordion": {
+          "type": "accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "row_shipping": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How fast is delivery?"
+              },
+              "blocks": {
+                "answer_shipping": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We dispatch from our EU hub within 24 hours. Most orders arrive in 2–4 business days.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": [
+                "answer_shipping"
+              ]
+            },
+            "row_returns": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What is your return policy?"
+              },
+              "blocks": {
+                "answer_returns": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>You can return any item within 30 days of delivery for a full refund — no questions asked.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": [
+                "answer_returns"
+              ]
+            },
+            "row_compatibility": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will this work with my device?"
+              },
+              "blocks": {
+                "answer_compatibility": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Every product page lists compatible models. If you are unsure, contact us and we will confirm before you order.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": [
+                "answer_compatibility"
+              ]
+            },
+            "row_warranty": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do products come with a warranty?"
+              },
+              "blocks": {
+                "answer_warranty": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes — everything we sell includes a 2-year warranty covering manufacturing defects.</p>",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": [
+                "answer_warranty"
+              ]
+            }
+          },
+          "block_order": [
+            "row_shipping",
+            "row_returns",
+            "row_compatibility",
+            "row_warranty"
+          ]
+        }
+      },
+      "block_order": [
+        "faq_accordion"
+      ],
+      "settings": {
+        "heading": "Frequently asked questions",
+        "content_alignment": "left",
+        "wide_content": false,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.color2 }}",
+        "padding-block-start": 48,
+        "padding-block-end": 64
+      }
+    },
+    "newsletter": {
+      "type": "portal-newsletter",
+      "blocks": {
+        "newsletter_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Get 10% off your first order</h2>",
+            "width": "100%",
+            "alignment": "center",
+            "type_preset": "h2",
+            "text_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "newsletter_body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join the instocks newsletter for early drops, desk tips and subscriber-only offers.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "text_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "newsletter_form": {
+          "type": "email-signup",
+          "settings": {
+            "width": "custom",
+            "custom_width": 60,
+            "display_type": "text",
+            "style_class": "button"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_heading",
+        "newsletter_body",
+        "newsletter_form"
+      ],
+      "settings": {
+        "media_type": "none",
+        "content_alignment": "center",
+        "vertical_alignment": "center",
+        "section_height": "medium",
+        "section_width": "full-width",
+        "background_color": "{{ settings.color_palette.foreground }}",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
     }
   },
   "order": [
     "hero_iLBwPd",
+    "selling_points",
     "product_list_EDUBdR",
     "media_with_content_LfPdEJ",
     "collection_list_xpBxCm",
+    "brand_story",
+    "reviews",
+    "faq",
+    "newsletter",
     "portal_cta_PkYLiU"
   ]
 }
