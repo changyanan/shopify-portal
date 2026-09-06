@@ -677,7 +677,7 @@
           "settings": {
             "placement": "on_image",
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-start",
+            "vertical_alignment": "center",
             "collection_card_gap": 8,
             "background_color": "",
             "border": "none",
