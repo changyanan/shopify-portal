@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Aktivér FAQ-strukturerede data",
+    "faq_structured_data_info": "Tilføjer FAQPage JSON-LD, så søgemaskiner bedre forstår dine spørgsmål og svar.",
+    "blog_show_tags": "Vis emnetags",
+    "blog_posts_per_page": "Indlæg pr. side",
+    "blog_pagination_style": "Pagineringsstil",
+    "blog_pagination_numbered": "Sidetal",
+    "blog_pagination_infinite": "Uendelig rulning",
+    "not_found_search_name": "404-søgning",
+    "search_heading": "Søg i butikken",
+    "search_placeholder": "Søg",
+    "search_placeholder_label": "Pladsholder til søgefelt",
+    "cart_delivery_header": "Levering til kurven",
+    "shipping_notice_enable": "Vis forsendelsesmeddelelse",
+    "shipping_notice_text": "Tekst til forsendelsesmeddelelse",
+    "shipping_notice_text_info": "Lad stå tomt for at bruge standardoversættelsen. Vises over oversigten på kurvsiden og i kurvskuffen.",
+    "estimated_delivery_enable": "Vis forventet leveringsdato",
+    "estimated_delivery_min_days": "Tidligste levering (dage fra i dag)",
+    "estimated_delivery_max_days": "Seneste levering (dage fra i dag)",
+    "estimated_delivery_days_info": "Kalenderdage fra i dag. Intervallet beregnes igen, hver gang kurven opdateres.",
+    "cart_recommendations_enable": "Vis anbefalinger i kurvskuffen",
+    "cart_recommendations_name": "Kurvanbefalinger",
+    "recently_viewed_name": "Senest sete",
+    "rv_default_heading": "Senest sete",
+    "rv_editor_info": "Viser produkter, kunden senest har set. Uden browserhistorik forbliver sektionen skjult; temaredigeringen viser pladsholderkort.",
     "trust_badges_name": "Portal tillidsmærker",
     "tb_layout_row": "Række",
     "tb_layout_column": "Kolonne",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Deling i søgemaskiner",
     "404": "404",
     "colors": "Farvepalet",
     "custom_section": "Brugerdefineret sektion",
@@ -250,6 +275,12 @@
     "disclosures": "Oplysninger"
   },
   "settings": {
+    "accent_color": "Accentfarve",
+    "accent_color_secondary": "Sekundær accentfarve",
+    "page_spacing": "Sideafstand",
+    "page_spacing_info": "Skalerer udfyldning og mellemrum i sektioner, der bruger temaets afstandssystem.",
+    "social_share_image": "Billede til social delning",
+    "social_share_image_info": "Bruges som standardbillede til social delning, når en side ikke har sit eget billede.",
     "alignment": "Justering",
     "autoplay": "Automatisk afspilning",
     "background": "Baggrund",
@@ -665,6 +696,7 @@
     "title_preset": "Forudindstilling for titel"
   },
   "options": {
+    "roomy": "Rummelig",
     "apple": "Apple",
     "arrow": "Pil",
     "auto": "Auto",
@@ -941,6 +973,7 @@
     "input_field": "Indtastningsfelt"
   },
   "content": {
+    "social_links_fallback_info": "Disse links bruges som reserve af sociale medie-blokke, når deres eget link er tomt.",
     "advanced": "Avanceret",
     "background_image": "Baggrundsbillede",
     "background_video": "Baggrundsvideo",

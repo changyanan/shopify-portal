@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "الصفحة غير موجودة",
+      "description": "الصفحة التي تبحث عنها غير موجودة أو ربما تم نقلها.",
+      "back_home": "العودة إلى الصفحة الرئيسية"
+    },
+    "blog": {
+      "tags_label": "تصفية مقالات المدونة حسب الموضوع",
+      "all_tags": "جميع المقالات"
+    },
+    "about": {
+      "story_heading": "قصتنا",
+      "story_body": "لكل علامة تجارية قصة. شارك كيف بدأت علامتك وما تمثله ومن يقف خلفها.",
+      "cta_label": "تواصل معنا",
+      "values_heading": "لماذا تتسوق معنا",
+      "value_1_heading": "شحن سريع",
+      "value_1_body": "يتم تجهيز الطلبات وشحنها خلال 1–2 يوم عمل.",
+      "value_2_heading": "إرجاع سهل",
+      "value_2_body": "إرجاع بدون متاعب خلال 30 يومًا من التسليم.",
+      "value_3_heading": "دعم مخصص",
+      "value_3_body": "فريقنا جاهز لمساعدتك قبل الشراء وبعده.",
+      "newsletter_heading": "اشترك في نشرتنا البريدية",
+      "newsletter_body": "احصل على أخبار المنتجات والقصص والعروض الحصرية في بريدك الوارد."
+    },
+    "shipping_notice": {
+      "default_text": "تُؤكَّد تكاليف الشحن وخياراته عند إتمام الشراء."
+    },
+    "estimated_delivery": {
+      "range_text": "التوصيل المتوقع: {{ start_date }} – {{ end_date }}",
+      "single_text": "التوصيل المتوقع: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "قد يعجبك أيضًا",
+      "add_to_cart": "إضافة {{ title }} إلى السلة",
+      "add_error": "تعذّرت إضافة هذا العنصر. حاول مرة أخرى."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -17,6 +52,7 @@
   },
 
   "accessibility": {
+    "quick_add": "إضافة سريعة",
     "account": "الحساب",
     "active_filters": "عوامل التصفية النشطة:",
     "cart": "سلة التسوق",

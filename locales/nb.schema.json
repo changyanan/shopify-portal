@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Aktiver strukturerte FAQ-data",
+    "faq_structured_data_info": "Legger til FAQPage JSON-LD slik at søkemotorer bedre forstår spørsmålene og svarene dine.",
+    "blog_show_tags": "Vis emnetagger",
+    "blog_posts_per_page": "Innlegg per side",
+    "blog_pagination_style": "Pagineringsstil",
+    "blog_pagination_numbered": "Sidetall",
+    "blog_pagination_infinite": "Uendelig rulling",
+    "not_found_search_name": "404-søk",
+    "search_heading": "Søk i butikken",
+    "search_placeholder": "Søk",
+    "search_placeholder_label": "Plassholder for søkefelt",
+    "cart_delivery_header": "Levering for handlekurven",
+    "shipping_notice_enable": "Vis fraktmelding",
+    "shipping_notice_text": "Tekst for fraktmelding",
+    "shipping_notice_text_info": "La stå tomt for å bruke standardoversettelsen. Vises over oppsummeringen på handlekurvsiden og i handlekurvskuffen.",
+    "estimated_delivery_enable": "Vis forventet leveringsdato",
+    "estimated_delivery_min_days": "Tidligste levering (dager fra i dag)",
+    "estimated_delivery_max_days": "Seneste levering (dager fra i dag)",
+    "estimated_delivery_days_info": "Kalenderdager fra i dag. Intervallet beregnes på nytt hver gang handlekurven oppdateres.",
+    "cart_recommendations_enable": "Vis anbefalinger i handlekurvskuffen",
+    "cart_recommendations_name": "Handlekurvanbefalinger",
+    "recently_viewed_name": "Nylig vist",
+    "rv_default_heading": "Nylig vist",
+    "rv_editor_info": "Viser produkter kunden nylig har sett. Uten nettleserhistorikk forblir seksjonen skjult; temaredigeringsverktøyet viser plassholderkort.",
     "trust_badges_name": "Portal tillitsmerker",
     "tb_layout_row": "Rad",
     "tb_layout_column": "Kolonne",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Deling i søkemotorer",
     "404": "404",
     "colors": "Fargepalett",
     "custom_section": "Egendefinert seksjon",
@@ -250,6 +275,12 @@
     "disclosures": "Opplysninger"
   },
   "settings": {
+    "accent_color": "Aksentfarge",
+    "accent_color_secondary": "Sekundær aksentfarge",
+    "page_spacing": "Sideavstand",
+    "page_spacing_info": "Skalerer utfylling og mellomrom i seksjoner som bruker temaets avstandssystem.",
+    "social_share_image": "Bilde for sosial deling",
+    "social_share_image_info": "Brukes som standardbilde for sosial deling når en side ikke har eget bilde.",
     "alignment": "Justering",
     "autoplay": "Autospill",
     "background": "Bakgrunn",
@@ -665,6 +696,7 @@
     "title_preset": "Forhåndsinnstilling for tittel"
   },
   "options": {
+    "roomy": "Romslig",
     "apple": "Eple",
     "arrow": "Pil",
     "auto": "Auto",
@@ -941,6 +973,7 @@
     "input_field": "Inndatafelt"
   },
   "content": {
+    "social_links_fallback_info": "Disse koblingene brukes som reserve av sosiale medier-blokker når deres egen kobling er tom.",
     "advanced": "Avansert",
     "background_image": "Bakgrunnsbilde",
     "background_video": "Bakgrunnsvideo",

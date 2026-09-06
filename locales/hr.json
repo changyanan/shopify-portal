@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Stranica nije pronađena",
+      "description": "Stranica koju tražite ne postoji ili je možda premještena.",
+      "back_home": "Povratak na početnu"
+    },
+    "blog": {
+      "tags_label": "Filtriraj blog objave po temi",
+      "all_tags": "Sve objave"
+    },
+    "about": {
+      "story_heading": "Naša priča",
+      "story_body": "Svaki brend ima svoju priču. Podijelite kako je vaša počela, u što vjerujete i tko stoji iza nje.",
+      "cta_label": "Kontaktirajte nas",
+      "values_heading": "Zašto kupovati kod nas",
+      "value_1_heading": "Brza dostava",
+      "value_1_body": "Narudžbe pripremamo i šaljemo u roku 1–2 radna dana.",
+      "value_2_heading": "Jednostavna vraćanja",
+      "value_2_body": "Besprobletno vraćanje u roku 30 dana od dostave.",
+      "value_3_heading": "Posvećena podrška",
+      "value_3_body": "Naš tim pomaže prije i nakon kupnje.",
+      "newsletter_heading": "Prijavite se na naš newsletter",
+      "newsletter_body": "Novosti o proizvodima, priče i ekskluzivne ponude izravno u vaš sandučić."
+    },
+    "shipping_notice": {
+      "default_text": "Troškovi dostave i opcije dostave potvrđuju se pri plaćanju."
+    },
+    "estimated_delivery": {
+      "range_text": "Očekivana dostava: {{ start_date }} – {{ end_date }}",
+      "single_text": "Očekivana dostava: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Možda će vam se svidjeti i ovo",
+      "add_to_cart": "Dodaj {{ title }} u košaricu",
+      "add_error": "Stavku nije bilo moguće dodati. Pokušajte ponovno."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Kliznik"
   },
   "accessibility": {
+    "quick_add": "Brzo dodavanje",
     "play_model": "Reproduciraj 3D model",
     "play_video": "Reproduciraj videozapis",
     "unit_price": "Jedinična cijena",

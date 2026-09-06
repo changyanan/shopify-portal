@@ -1,0 +1,40 @@
+{%- doc -%}
+  Renders the product count for the collection toolbar.
+
+  The filters block renders a desktop-only count inside the facets form, so this
+  variant is meant for the mobile facets toolbar (facets-toggle) and hides itself
+  from 750px up.
+
+  @param {number} products_count - Number of products in the current results
+{%- enddoc -%}
+
+<div
+  class="portal-products-count"
+  data-testid="products-count"
+>
+  <span role="status">
+    {% if products_count > 25000 %}
+      {{- 'content.item_count_cutoff' | t: count: 25000 -}}
+    {% else %}
+      {{- 'content.item_count' | t: count: products_count -}}
+    {% endif %}
+  </span>
+</div>
+
+{% stylesheet %}
+  .portal-products-count {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    height: var(--minimum-touch-target);
+    margin-left: auto;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 750px) {
+    .portal-products-count {
+      display: none;
+    }
+  }
+{% endstylesheet %}

@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Sivua ei löytynyt",
+      "description": "Hakemaasi sivua ei ole olemassa tai se on saatettu siirtää.",
+      "back_home": "Takaisin etusivulle"
+    },
+    "blog": {
+      "tags_label": "Suodata blogikirjoituksia aiheen mukaan",
+      "all_tags": "Kaikki kirjoitukset"
+    },
+    "about": {
+      "story_heading": "Tarinamme",
+      "story_body": "Jokaisella brändillä on tarina. Kerro, miten omasi alkoi, mitä arvostat ja ketkä sen takana ovat.",
+      "cta_label": "Ota yhteyttä",
+      "values_heading": "Miksi ostaa meiltä",
+      "value_1_heading": "Nopea toimitus",
+      "value_1_body": "Tilaukset valmistellaan ja lähetetään 1–2 arkipäivässä.",
+      "value_2_heading": "Helppopalautus",
+      "value_2_body": "Vaivaton palautus 30 päivän kuluessa toimituksesta.",
+      "value_3_heading": "Henkilökohtainen tuki",
+      "value_3_body": "Tiimimme auttaa ennen ostoa ja sen jälkeen.",
+      "newsletter_heading": "Tilaa uutiskirjeemme",
+      "newsletter_body": "Vastaanota tuoteuutisia, tarinoita ja kutsu tarjouksia suoraan sähköpostiisi."
+    },
+    "shipping_notice": {
+      "default_text": "Toimituskulut ja toimitustavat vahvistetaan kassalla."
+    },
+    "estimated_delivery": {
+      "range_text": "Arvioitu toimitus: {{ start_date }} – {{ end_date }}",
+      "single_text": "Arvioitu toimitus: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Saatat pitää myös näistä",
+      "add_to_cart": "Lisää {{ title }} ostoskoriin",
+      "add_error": "Tuotteen lisääminen ei onnistunut. Yritä uudelleen."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Liukusäädin"
   },
   "accessibility": {
+    "quick_add": "Pikalisäys",
     "play_model": "Toista 3D-malli",
     "play_video": "Toista video",
     "unit_price": "Yksikköhinta",

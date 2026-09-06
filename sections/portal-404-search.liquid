@@ -1,0 +1,225 @@
+{% comment %}
+  Portal 定制:404 页面搜索入口。
+
+  - 原生 GET 表单提交到 {{ routes.search_url }},复用官方搜索结果页,不做任何本地模拟;
+  - 标题与输入框占位符均可在 Theme Editor 配置,留空自动隐藏;
+  - 无障碍:label 关联输入框,提交按钮带 aria-label,焦点态清晰;
+  - 样式使用 portal- 前缀类名,不污染官方样式。
+{%- endcomment -%}
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+<div class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"></div>
+
+<div
+  class="section section--{{ section.settings.section_width }} spacing-style portal-404-search-section{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  <div class="portal-404-search">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="portal-404-search__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+    <form
+      class="portal-404-search__form"
+      action="{{ routes.search_url }}"
+      method="get"
+      role="search"
+    >
+      <label class="visually-hidden" for="Portal404SearchInput-{{ section.id }}">
+        {{ 'content.search_input_label' | t }}
+      </label>
+      <input
+        type="search"
+        id="Portal404SearchInput-{{ section.id }}"
+        class="portal-404-search__input"
+        name="q"
+        value="{{ search.terms | escape }}"
+        placeholder="{{ section.settings.placeholder | escape }}"
+        autocomplete="off"
+      >
+      <button
+        type="submit"
+        class="portal-404-search__submit"
+        aria-label="{{ 'content.search' | t }}"
+      >
+        <span class="svg-wrapper">
+          {{ 'icon-search.svg' | inline_asset_content }}
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+
+{% stylesheet %}
+  .portal-404-search {
+    width: 100%;
+    max-width: 480px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .portal-404-search__heading {
+    margin: 0;
+    font-size: var(--font-size--lg);
+    text-align: center;
+  }
+
+  .portal-404-search__form {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .portal-404-search__input {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 48px;
+    padding: 0 16px;
+    font-size: var(--font-size--sm);
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    border: var(--style-border-width-inputs) solid var(--color-border);
+    border-radius: var(--style-border-radius-inputs);
+  }
+
+  .portal-404-search__input:focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 2px;
+  }
+
+  .portal-404-search__submit {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    border: var(--style-border-width-inputs) solid var(--color-border);
+    border-radius: var(--style-border-radius-inputs);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+
+  .portal-404-search__submit:hover {
+    border-color: rgb(var(--color-foreground-rgb) / var(--opacity-40));
+  }
+
+  .portal-404-search__submit:focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 2px;
+  }
+
+  @media screen and (max-width: 749px) {
+    /* 移动端保证足够大的点击区域 */
+    .portal-404-search__input,
+    .portal-404-search__submit {
+      height: 52px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:portal.not_found_search_name",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:portal.search_heading"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "t:portal.search_placeholder_label",
+      "default": "t:portal.search_placeholder"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.not_found_search_name",
+      "category": "t:portal.category"
+    }
+  ]
+}
+{% endschema %}

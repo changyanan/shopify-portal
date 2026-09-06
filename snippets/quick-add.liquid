@@ -13,6 +13,10 @@
   # Logic to determine which variant to use (matching swatch selection logic from product-card)
   assign variant = product.selected_or_first_available_variant
 
+  if variant.available == false
+    assign add_to_cart_text = 'products.product.sold_out' | t
+  endif
+
   assign uses_selling_plans = false
   if product.requires_selling_plan or product.selling_plan_groups.size > 0
     assign uses_selling_plans = true

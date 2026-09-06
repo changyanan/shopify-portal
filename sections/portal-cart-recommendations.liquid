@@ -1,0 +1,93 @@
+{%- comment -%}
+  Portal 定制:购物车抽屉推荐商品(Section Rendering API 渲染目标)。
+
+  本 section 不挂载在任何模板中,仅由 assets/portal-cart-recommendations.js
+  通过原生推荐接口请求:
+  /recommendations/products?section_id=portal-cart-recommendations&intent=related&product_id=...
+  使用原生 recommendations 对象渲染真实商品;无推荐结果时输出为空,
+  由注入脚本隐藏整个模块。卡片样式由 snippets/portal-cart-recommendations.liquid
+  提供(注入目标位于购物车抽屉内)。
+{%- endcomment -%}
+
+{% # theme-check-disable ValidScopedCSSClass %}
+{% # 卡片样式类集中定义在 snippets/portal-cart-recommendations.liquid 的 stylesheet 中,本文件仅输出结构 %}
+
+
+{%- if recommendations.performed and recommendations.products_count > 0 -%}
+  <div
+    class="portal-cart-recommendations__content"
+    data-portal-cart-recs-content
+  >
+    <h3 class="portal-cart-recommendations__heading">
+      {{ 'portal.cart_recommendations.title' | t }}
+    </h3>
+    <ul
+      class="portal-cart-recommendations__list"
+      role="list"
+    >
+      {%- for recommended_product in recommendations.products limit: 4 -%}
+        <li class="portal-cart-recommendations__item">
+          <a
+            class="portal-cart-recommendations__media"
+            href="{{ recommended_product.url }}"
+            tabindex="-1"
+            aria-hidden="true"
+          >
+            {%- if recommended_product.featured_image -%}
+              {{
+                recommended_product.featured_image
+                | image_url: width: 160
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '80, 120, 160',
+                  sizes: '64px',
+                  alt: recommended_product.featured_image.alt
+              }}
+            {%- endif -%}
+          </a>
+          <div class="portal-cart-recommendations__info">
+            <a
+              class="portal-cart-recommendations__title"
+              href="{{ recommended_product.url }}"
+            >
+              {{- recommended_product.title | escape -}}
+            </a>
+            {%- if recommended_product.available == false -%}
+              <span class="portal-cart-recommendations__price portal-cart-recommendations__price--sold-out">
+                {{ 'products.product.sold_out' | t }}
+              </span>
+            {%- else -%}
+              <span class="portal-cart-recommendations__price">
+                {{- recommended_product.price | money -}}
+              </span>
+            {%- endif -%}
+          </div>
+          {%- comment -%}
+          仅单默认变体且可售的商品提供原生快捷加购(POST /cart/add.js),
+          多变体商品跳转商品页选择规格,避免误加购错误变体。
+          {%- endcomment -%}
+          {%- if recommended_product.has_only_default_variant and recommended_product.available -%}
+            <button
+              class="portal-cart-recommendations__add button-unstyled"
+              type="button"
+              data-portal-rec-add
+              data-variant-id="{{ recommended_product.selected_or_first_available_variant.id }}"
+              aria-label="{{ 'portal.cart_recommendations.add_to_cart' | t: title: recommended_product.title | escape }}"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-plus.svg' | inline_asset_content -}}
+              </span>
+            </button>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:portal.cart_recommendations_name",
+  "settings": []
+}
+{% endschema %}

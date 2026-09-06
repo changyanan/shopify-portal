@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "FAQ 構造化データを有効にする",
+    "faq_structured_data_info": "FAQPage JSON-LD マークアップを追加し、検索エンジンが質問と回答を正しく理解できるようにします。",
+    "blog_show_tags": "トピックタグを表示",
+    "blog_posts_per_page": "1ページの記事数",
+    "blog_pagination_style": "ページネーション方式",
+    "blog_pagination_numbered": "ページ番号",
+    "blog_pagination_infinite": "無限スクロール",
+    "not_found_search_name": "404 検索",
+    "search_heading": "ストアを検索",
+    "search_placeholder": "検索",
+    "search_placeholder_label": "検索欄のプレースホルダー",
+    "cart_delivery_header": "カートの配送情報",
+    "shipping_notice_enable": "配送に関する注意を表示",
+    "shipping_notice_text": "配送に関する注意テキスト",
+    "shipping_notice_text_info": "空欄の場合、ストアフロントのデフォルト翻訳が使用されます。カートページとカートドロワーの概要の上に表示されます。",
+    "estimated_delivery_enable": "配送予定日を表示",
+    "estimated_delivery_min_days": "最短配送日数（本日から起算）",
+    "estimated_delivery_max_days": "最長配送日数（本日から起算）",
+    "estimated_delivery_days_info": "本日からの暦日で計算され、カートが更新されるたびに再計算されます。",
+    "cart_recommendations_enable": "カートドロワーにおすすめ商品を表示",
+    "cart_recommendations_name": "カートのおすすめ",
+    "recently_viewed_name": "最近閲覧した商品",
+    "rv_default_heading": "最近閲覧した商品",
+    "rv_editor_info": "顧客が最近閲覧した商品を表示します。閲覧履歴がない場合は非表示になり、テーマエディターではプレースホルダーカードが表示されます。",
     "trust_badges_name": "Portal 信頼バッジ",
     "tb_layout_row": "横並び",
     "tb_layout_column": "縦並び",
@@ -87,6 +111,7 @@
 
 
   "names": {
+    "search_engine_sharing": "検索エンジンでの共有",
     "404": "404",
     "colors": "カラーパレット",
     "custom_section": "カスタムセクション",
@@ -249,6 +274,12 @@
     "disclosures": "開示情報"
   },
   "settings": {
+    "accent_color": "アクセントカラー",
+    "accent_color_secondary": "セカンダリアクセントカラー",
+    "page_spacing": "ページの余白",
+    "page_spacing_info": "テーマの余白システムを使用するセクションのパディングと間隔を拡大縮小します。",
+    "social_share_image": "ソーシャルシェア画像",
+    "social_share_image_info": "ページに独自の画像がない場合のデフォルトのシェア画像として使用されます。",
     "alignment": "配置",
     "autoplay": "自動再生",
     "background": "背景",
@@ -664,6 +695,7 @@
     "title_preset": "タイトルプリセット"
   },
   "options": {
+    "roomy": "ゆったり",
     "apple": "Apple",
     "arrow": "矢印",
     "auto": "自動",
@@ -940,6 +972,7 @@
     "input_field": "入力フィールド"
   },
   "content": {
+    "social_links_fallback_info": "ソーシャルメディアブロックのリンクが空の場合、これらのリンクがフォールバックとして使用されます。",
     "advanced": "高度な設定",
     "background_image": "背景画像",
     "background_video": "背景動画",

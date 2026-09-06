@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Puslapis nerastas",
+      "description": "Jūsų ieškomas puslapis neegzistuoja arba galėjo būti perkeltas.",
+      "back_home": "Grįžti į pradžią"
+    },
+    "blog": {
+      "tags_label": "Filtruoti tinklaraščio įrašus pagal temą",
+      "all_tags": "Visi įrašai"
+    },
+    "about": {
+      "story_heading": "Mūsų istorija",
+      "story_body": "Kiekvienas prekės ženklas turi savo istoriją. Papasokokite, kaip prasidėjo jūsų, kuo tikite ir kas stovi už jo.",
+      "cta_label": "Susisiekite su mumis",
+      "values_heading": "Kodėl verta pirkti pas mus",
+      "value_1_heading": "Greitas pristatymas",
+      "value_1_body": "Užsakymai paruošiami ir išsiunčiami per 1–2 darbo dienas.",
+      "value_2_heading": "Lengvas grąžinimas",
+      "value_2_body": "Be rūpesčių grąžinimas per 30 dienų nuo pristatymo.",
+      "value_3_heading": "Rūpestinga pagalba",
+      "value_3_body": "Mūsų komanda padeda ir prieš pirkimą, ir po jo.",
+      "newsletter_heading": "Užsisakykite naujienlaiškį",
+      "newsletter_body": "Gaukite naujienų apie produktus, istorijas ir išskirtinius pasiūlymus tiesiai į savo pašto dėžutę."
+    },
+    "shipping_notice": {
+      "default_text": "Siuntimo išlaidos ir parinktys patvirtinamos prie kasos."
+    },
+    "estimated_delivery": {
+      "range_text": "Numatomas pristatymas: {{ start_date }} – {{ end_date }}",
+      "single_text": "Numatomas pristatymas: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Jums taip pat gali patikti",
+      "add_to_cart": "Įtraukti {{ title }} į krepšelį",
+      "add_error": "Nepavyko pridėti šios prekės. Pabandykite dar kartą."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Slankiklis"
   },
   "accessibility": {
+    "quick_add": "Greitas pridėjimas",
     "play_model": "Paleisti 3D modelį",
     "play_video": "Paleisti vaizdo įrašą",
     "unit_price": "Vieneto kaina",

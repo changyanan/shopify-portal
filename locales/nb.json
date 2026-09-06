@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Siden ble ikke funnet",
+      "description": "Siden du leter etter finnes ikke, eller kan ha blitt flyttet.",
+      "back_home": "Tilbake til forsiden"
+    },
+    "blog": {
+      "tags_label": "Filtrer blogginnlegg etter emne",
+      "all_tags": "Alle innlegg"
+    },
+    "about": {
+      "story_heading": "Vår historie",
+      "story_body": "Alle merker har en historie. Fortell hvordan din startet, hva du står for og hvem som står bak.",
+      "cta_label": "Kontakt oss",
+      "values_heading": "Hvorfor handle hos oss",
+      "value_1_heading": "Rask levering",
+      "value_1_body": "Bestillinger pakkes og sendes innen 1–2 virkedager.",
+      "value_2_heading": "Enkel retur",
+      "value_2_body": "Bekymringsfri retur innen 30 dager etter levering.",
+      "value_3_heading": "Dedikert support",
+      "value_3_body": "Teamet vårt hjelper deg før og etter kjøpet.",
+      "newsletter_heading": "Meld deg på nyhetsbrevet vårt",
+      "newsletter_body": "Få produktnyheter, historier og eksklusive tilbud rett i innboksen."
+    },
+    "shipping_notice": {
+      "default_text": "Fraktkostnader og leveringsalternativer bekreftes i kassen."
+    },
+    "estimated_delivery": {
+      "range_text": "Forventet levering: {{ start_date }} – {{ end_date }}",
+      "single_text": "Forventet levering: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Kanskje du også liker",
+      "add_to_cart": "Legg {{ title }} i handlekurven",
+      "add_error": "Kunne ikke legge til dette produktet. Prøv igjen."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Glidefelt"
   },
   "accessibility": {
+    "quick_add": "Hurtiglegging",
     "play_model": "Spill av 3D-modell",
     "play_video": "Spill av video",
     "unit_price": "Enhetspris",

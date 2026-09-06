@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Seite nicht gefunden",
+      "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+      "back_home": "Zur Startseite"
+    },
+    "blog": {
+      "tags_label": "Blogbeiträge nach Thema filtern",
+      "all_tags": "Alle Beiträge"
+    },
+    "about": {
+      "story_heading": "Unsere Geschichte",
+      "story_body": "Jede Marke hat eine Geschichte. Erzählen Sie, wie es begann, wofür Sie stehen und wer dahintersteckt.",
+      "cta_label": "Kontakt",
+      "values_heading": "Warum Sie bei uns kaufen sollten",
+      "value_1_heading": "Schneller Versand",
+      "value_1_body": "Bestellungen werden innerhalb von 1–2 Werktagen versandt.",
+      "value_2_heading": "Einfache Rückgabe",
+      "value_2_body": "Problemlose Rückgabe innerhalb von 30 Tagen nach Erhalt.",
+      "value_3_heading": "Persönlicher Support",
+      "value_3_body": "Unser Team hilft Ihnen vor und nach dem Kauf.",
+      "newsletter_heading": "Newsletter abonnieren",
+      "newsletter_body": "Produktneuheiten, Geschichten und exklusive Angebote direkt in Ihr Postfach."
+    },
+    "shipping_notice": {
+      "default_text": "Versandkosten und Versandoptionen werden beim Checkout bestätigt."
+    },
+    "estimated_delivery": {
+      "range_text": "Voraussichtliche Lieferung: {{ start_date }} – {{ end_date }}",
+      "single_text": "Voraussichtliche Lieferung: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Das könnte Ihnen auch gefallen",
+      "add_to_cart": "{{ title }} zum Warenkorb hinzufügen",
+      "add_error": "Dieser Artikel konnte nicht hinzugefügt werden. Bitte versuchen Sie es erneut."
+    },
     "free_shipping": {
       "remaining_html": "Nur noch {{ amount }} bis zum kostenlosen Versand",
       "unlocked": "Kostenloser Versand freigeschaltet!",
@@ -37,6 +72,7 @@
     "slider_label": "Slider"
   },
   "accessibility": {
+    "quick_add": "Schnell hinzufügen",
     "play_model": "3D-Modell abspielen",
     "play_video": "Video abspielen",
     "unit_price": "Stückpreis",

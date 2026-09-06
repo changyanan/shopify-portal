@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Activar datos estructurados de FAQ",
+    "faq_structured_data_info": "Añade marcado FAQPage JSON-LD para que los buscadores entiendan mejor tus preguntas y respuestas.",
+    "blog_show_tags": "Mostrar etiquetas de tema",
+    "blog_posts_per_page": "Artículos por página",
+    "blog_pagination_style": "Estilo de paginación",
+    "blog_pagination_numbered": "Números de página",
+    "blog_pagination_infinite": "Desplazamiento infinito",
+    "not_found_search_name": "Búsqueda 404",
+    "search_heading": "Buscar en la tienda",
+    "search_placeholder": "Buscar",
+    "search_placeholder_label": "Texto del campo de búsqueda",
+    "cart_delivery_header": "Envío del carrito",
+    "shipping_notice_enable": "Mostrar aviso de envío",
+    "shipping_notice_text": "Texto del aviso de envío",
+    "shipping_notice_text_info": "Déjelo vacío para usar la traducción predeterminada de la tienda. Se muestra encima del resumen del carrito, en la página del carrito y en el panel del carrito.",
+    "estimated_delivery_enable": "Mostrar fecha de entrega estimada",
+    "estimated_delivery_min_days": "Entrega más temprana (días desde hoy)",
+    "estimated_delivery_max_days": "Entrega más tardía (días desde hoy)",
+    "estimated_delivery_days_info": "Días naturales a partir de hoy. El rango se recalcula cada vez que se actualiza el carrito.",
+    "cart_recommendations_enable": "Mostrar recomendaciones en el panel del carrito",
+    "cart_recommendations_name": "Recomendaciones",
+    "recently_viewed_name": "Vistos recientemente",
+    "rv_default_heading": "Vistos recientemente",
+    "rv_editor_info": "Muestra los productos que el cliente vio recientemente. Sin historial de navegación, la sección permanece oculta; el editor de temas muestra tarjetas de muestra.",
     "trust_badges_name": "Portal sellos de confianza",
     "tb_layout_row": "Fila",
     "tb_layout_column": "Columna",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Compartir en buscadores",
     "404": "404",
     "colors": "Paleta de colores",
     "custom_section": "Sección personalizada",
@@ -250,6 +275,12 @@
     "disclosures": "Divulgaciones"
   },
   "settings": {
+    "accent_color": "Color de acento",
+    "accent_color_secondary": "Color de acento secundario",
+    "page_spacing": "Espaciado de página",
+    "page_spacing_info": "Escala el relleno y los espacios de las secciones que usan el sistema de espaciado del tema.",
+    "social_share_image": "Imagen para compartir en redes sociales",
+    "social_share_image_info": "Se usa como imagen para compartir predeterminada cuando una página no tiene imagen propia.",
     "alignment": "Alineación",
     "autoplay": "Reproducción automática",
     "background": "Fondo",
@@ -665,6 +696,7 @@
     "title_preset": "Preajuste del título"
   },
   "options": {
+    "roomy": "Espacioso",
     "apple": "Apple",
     "arrow": "Flecha",
     "auto": "Auto",
@@ -941,6 +973,7 @@
     "input_field": "Campo de entrada"
   },
   "content": {
+    "social_links_fallback_info": "Estos enlaces se usan como respaldo en los bloques de redes sociales cuando su enlace está vacío.",
     "advanced": "Avanzado",
     "background_image": "Imagen de fondo",
     "background_video": "Video de fondo",

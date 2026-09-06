@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Pagina niet gevonden",
+      "description": "De pagina die je zoekt bestaat niet of is mogelijk verplaatst.",
+      "back_home": "Terug naar home"
+    },
+    "blog": {
+      "tags_label": "Blogberichten filteren op onderwerp",
+      "all_tags": "Alle berichten"
+    },
+    "about": {
+      "story_heading": "Ons verhaal",
+      "story_body": "Elk merk heeft een verhaal. Deel hoe jouw merk begon, waar je voor staat en wie erachter zit.",
+      "cta_label": "Neem contact op",
+      "values_heading": "Waarom bij ons winkelen",
+      "value_1_heading": "Snelle verzending",
+      "value_1_body": "Bestellingen worden binnen 1–2 werkdagen klaargemaakt en verzonden.",
+      "value_2_heading": "Eenvoudig retourneren",
+      "value_2_body": "Zorgeloos retourneren binnen 30 dagen na ontvangst.",
+      "value_3_heading": "Persoonlijke support",
+      "value_3_body": "Ons team helpt je voor en na je aankoop.",
+      "newsletter_heading": "Schrijf je in voor onze nieuwsbrief",
+      "newsletter_body": "Ontvang productnieuws, verhalen en exclusieve aanbiedingen in je inbox."
+    },
+    "shipping_notice": {
+      "default_text": "Verzendkosten en verzendopties worden bij het afrekenen bevestigd."
+    },
+    "estimated_delivery": {
+      "range_text": "Geschatte levering: {{ start_date }} – {{ end_date }}",
+      "single_text": "Geschatte levering: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Misschien vind je dit ook leuk",
+      "add_to_cart": "{{ title }} toevoegen aan winkelwagen",
+      "add_error": "Dit artikel kon niet worden toegevoegd. Probeer het opnieuw."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Schuifregelaar"
   },
   "accessibility": {
+    "quick_add": "Snel toevoegen",
     "play_model": "3D-model afspelen",
     "play_video": "Video afspelen",
     "unit_price": "Eenheidsprijs",

@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Sayfa bulunamadı",
+      "description": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+      "back_home": "Ana sayfaya dön"
+    },
+    "blog": {
+      "tags_label": "Blog gönderilerini konuya göre filtrele",
+      "all_tags": "Tüm gönderiler"
+    },
+    "about": {
+      "story_heading": "Hikâyemiz",
+      "story_body": "Her markanın bir hikâyesi vardır. Sizin nasıl başladığınızı, neyi savunduğunuzu ve arkasındaki insanları paylaşın.",
+      "cta_label": "Bize ulaşın",
+      "values_heading": "Neden bizden alışveriş yapmalısınız",
+      "value_1_heading": "Hızlı kargo",
+      "value_1_body": "Siparişler 1–2 iş günü içinde hazırlanır ve gönderilir.",
+      "value_2_heading": "Kolay iade",
+      "value_2_body": "Teslimattan sonra 30 gün içinde sorunsuz iade.",
+      "value_3_heading": "Özverili destek",
+      "value_3_body": "Ekibimiz satın alma öncesi ve sonrasında yanınızda.",
+      "newsletter_heading": "Bültene abone olun",
+      "newsletter_body": "Ürün yenilikleri, hikâyeler ve özel fırsatlar doğrudan e-postanıza gelsin."
+    },
+    "shipping_notice": {
+      "default_text": "Kargo ücretleri ve teslimat seçenekleri ödeme sırasında onaylanır."
+    },
+    "estimated_delivery": {
+      "range_text": "Tahmini teslimat: {{ start_date }} – {{ end_date }}",
+      "single_text": "Tahmini teslimat: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Bunları da beğenebilirsiniz",
+      "add_to_cart": "{{ title }} ürününü sepete ekle",
+      "add_error": "Bu ürün sepete eklenemedi. Lütfen tekrar deneyin."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Kaydırıcı"
   },
   "accessibility": {
+    "quick_add": "Hızlı ekleme",
     "play_model": "3B modeli oynat",
     "play_video": "Videoyu oynat",
     "unit_price": "Birim fiyatı",

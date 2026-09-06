@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Page introuvable",
+      "description": "La page que vous cherchez n'existe pas ou a été déplacée.",
+      "back_home": "Retour à l'accueil"
+    },
+    "blog": {
+      "tags_label": "Filtrer les articles par sujet",
+      "all_tags": "Tous les articles"
+    },
+    "about": {
+      "story_heading": "Notre histoire",
+      "story_body": "Chaque marque a une histoire. Partagez comment la vôtre a commencé, ce qui vous anime et les personnes qui la font vivre.",
+      "cta_label": "Nous contacter",
+      "values_heading": "Pourquoi nous choisir",
+      "value_1_heading": "Livraison rapide",
+      "value_1_body": "Les commandes sont préparées et expédiées sous 1 à 2 jours ouvrés.",
+      "value_2_heading": "Retours faciles",
+      "value_2_body": "Retours sans tracas sous 30 jours après la livraison.",
+      "value_3_heading": "Assistance dédiée",
+      "value_3_body": "Notre équipe vous accompagne avant et après votre achat.",
+      "newsletter_heading": "Rejoignez notre newsletter",
+      "newsletter_body": "Recevez nouveautés, histoires et offres exclusives dans votre boîte mail."
+    },
+    "shipping_notice": {
+      "default_text": "Les frais et les options de livraison sont confirmés au moment du paiement."
+    },
+    "estimated_delivery": {
+      "range_text": "Livraison estimée : {{ start_date }} – {{ end_date }}",
+      "single_text": "Livraison estimée : {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Vous aimerez peut-être aussi",
+      "add_to_cart": "Ajouter {{ title }} au panier",
+      "add_error": "Impossible d'ajouter cet article. Veuillez réessayer."
+    },
     "free_shipping": {
       "remaining_html": "Plus que {{ amount }} pour la livraison offerte",
       "unlocked": "Livraison offerte débloquée !",
@@ -37,6 +72,7 @@
     "slider_label": "Carrousel"
   },
   "accessibility": {
+    "quick_add": "Ajout rapide",
     "play_model": "Jouer le modèle 3D",
     "play_video": "Lire la vidéo",
     "unit_price": "Prix unitaire",

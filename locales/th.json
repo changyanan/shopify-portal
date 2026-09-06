@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "ไม่พบหน้านี้",
+      "description": "หน้าที่คุณกำลังมองหาไม่มีอยู่ หรืออาจถูกย้ายไปแล้ว",
+      "back_home": "กลับไปหน้าแรก"
+    },
+    "blog": {
+      "tags_label": "กรองบทความตามหัวข้อ",
+      "all_tags": "บทความทั้งหมด"
+    },
+    "about": {
+      "story_heading": "เรื่องราวของเรา",
+      "story_body": "ทุกแบรนด์ล้วนมีเรื่องราว เล่าให้ฟังว่าแบรนด์ของคุณเริ่มต้นอย่างไร ยืนหยัดในสิ่งใด และใครอยู่เบื้องหลัง",
+      "cta_label": "ติดต่อเรา",
+      "values_heading": "ทำไมต้องซื้อกับเรา",
+      "value_1_heading": "จัดส่งรวดเร็ว",
+      "value_1_body": "เตรียมและจัดส่งคำสั่งซื้อภายใน 1–2 วันทำการ",
+      "value_2_heading": "คืนสินค้าง่าย",
+      "value_2_body": "คืนสินค้าได้ไม่ยุ่งยากภายใน 30 วันหลังได้รับสินค้า",
+      "value_3_heading": "ทีมสนับสนุนที่ใส่ใจ",
+      "value_3_body": "ทีมงานของเราพร้อมช่วยเหลือก่อนและหลังการซื้อ",
+      "newsletter_heading": "สมัครรับข่าวสาร",
+      "newsletter_body": "รับข่าวสารสินค้า เรื่องราว และข้อเสนอพิเศษตรงถึงกล่องจดหมายของคุณ"
+    },
+    "shipping_notice": {
+      "default_text": "ค่าจัดส่งและตัวเลือกการจัดส่งจะยืนยันในขั้นตอนชำระเงิน"
+    },
+    "estimated_delivery": {
+      "range_text": "จัดส่งโดยประมาณ: {{ start_date }} – {{ end_date }}",
+      "single_text": "จัดส่งโดยประมาณ: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "คุณอาจสนใจสิ่งเหล่านี้ด้วย",
+      "add_to_cart": "เพิ่ม {{ title }} ลงในตะกร้า",
+      "add_error": "ไม่สามารถเพิ่มสินค้านี้ได้ กรุณาลองอีกครั้ง"
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "แถบเลื่อน"
   },
   "accessibility": {
+    "quick_add": "เพิ่มด่วน",
     "play_model": "เล่นโมเดล 3 มิติ",
     "play_video": "เล่นวิดีโอ",
     "unit_price": "ราคาต่อหน่วย",

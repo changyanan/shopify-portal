@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Siden blev ikke fundet",
+      "description": "Siden, du leder efter, findes ikke eller er måske blevet flyttet.",
+      "back_home": "Tilbage til forsiden"
+    },
+    "blog": {
+      "tags_label": "Filtrér blogindlæg efter emne",
+      "all_tags": "Alle indlæg"
+    },
+    "about": {
+      "story_heading": "Vores historie",
+      "story_body": "Alle mærker har en historie. Fortæl, hvordan din begyndte, hvad du står for, og hvem der står bag.",
+      "cta_label": "Kontakt os",
+      "values_heading": "Hvorfor handle hos os",
+      "value_1_heading": "Hurtig levering",
+      "value_1_body": "Ordrer pakkes og afsendes inden for 1–2 hverdage.",
+      "value_2_heading": "Nem retur",
+      "value_2_body": "Bekymringsfri retur inden for 30 dage efter levering.",
+      "value_3_heading": "Dedikeret support",
+      "value_3_body": "Vores team hjælper dig før og efter dit køb.",
+      "newsletter_heading": "Tilmeld dig vores nyhedsbrev",
+      "newsletter_body": "Få produktopdateringer, historier og eksklusive tilbud direkte i indbakken."
+    },
+    "shipping_notice": {
+      "default_text": "Forsendelsesomkostninger og leveringsmuligheder bekræftes ved betaling."
+    },
+    "estimated_delivery": {
+      "range_text": "Forventet levering: {{ start_date }} – {{ end_date }}",
+      "single_text": "Forventet levering: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Du vil måske også kunne lide",
+      "add_to_cart": "Føj {{ title }} til kurven",
+      "add_error": "Produktet kunne ikke tilføjes. Prøv igen."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Billedkarrusel"
   },
   "accessibility": {
+    "quick_add": "Hurtig tilføjelse",
     "play_model": "Afspil 3D-model",
     "play_video": "Afspil video",
     "unit_price": "Stykpris",

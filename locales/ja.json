@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "ページが見つかりません",
+      "description": "お探しのページは存在しないか、移動した可能性があります。",
+      "back_home": "ホームに戻る"
+    },
+    "blog": {
+      "tags_label": "トピックでブログ記事を絞り込む",
+      "all_tags": "すべての記事"
+    },
+    "about": {
+      "story_heading": "私たちの物語",
+      "story_body": "どのブランドにも物語があります。ここでは、私たちの原点、大切にしていること、そしてブランドを支える仲間をご紹介します。",
+      "cta_label": "お問い合わせ",
+      "values_heading": "選ばれる理由",
+      "value_1_heading": "迅速な配送",
+      "value_1_body": "ご注文は1〜2営業日以内に発送いたします。",
+      "value_2_heading": "安心の返品",
+      "value_2_body": "お受け取り後30日以内なら簡単に返品できます。",
+      "value_3_heading": "充実のサポート",
+      "value_3_body": "ご購入前後を通じて、スタッフが丁寧にサポートします。",
+      "newsletter_heading": "ニュースレター登録",
+      "newsletter_body": "新商品情報、ブランドストーリー、限定オファーをお届けします。"
+    },
+    "shipping_notice": {
+      "default_text": "送料と配送方法は購入時に確定します。"
+    },
+    "estimated_delivery": {
+      "range_text": "配送予定：{{ start_date }} ～ {{ end_date }}",
+      "single_text": "配送予定：{{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "おすすめ商品",
+      "add_to_cart": "{{ title }}をカートに追加",
+      "add_error": "この商品をカートに追加できませんでした。もう一度お試しください。"
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "スライダー"
   },
   "accessibility": {
+    "quick_add": "クイック追加",
     "play_model": "3Dモデルを再生",
     "play_video": "ビデオを再生",
     "unit_price": "単価",

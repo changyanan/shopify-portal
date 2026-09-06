@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Sidan hittades inte",
+      "description": "Sidan du letar efter finns inte eller kan ha flyttats.",
+      "back_home": "Tillbaka till startsidan"
+    },
+    "blog": {
+      "tags_label": "Filtrera blogginlägg efter ämne",
+      "all_tags": "Alla inlägg"
+    },
+    "about": {
+      "story_heading": "Vår historia",
+      "story_body": "Alla varumärken har en historia. Berätta hur din startade, vad du står för och vilka som finns bakom.",
+      "cta_label": "Kontakta oss",
+      "values_heading": "Därför ska du handla hos oss",
+      "value_1_heading": "Snabb leverans",
+      "value_1_body": "Beställningar packas och skickas inom 1–2 vardagar.",
+      "value_2_heading": "Enkla returer",
+      "value_2_body": "Bekymragsfria returer inom 30 dagar efter leverans.",
+      "value_3_heading": "Personlig support",
+      "value_3_body": "Vårt team hjälper dig före och efter köpet.",
+      "newsletter_heading": "Prenumerera på vårt nyhetsbrev",
+      "newsletter_body": "Få produktnyheter, berättelser och exklusiva erbjudanden direkt i inkorgen."
+    },
+    "shipping_notice": {
+      "default_text": "Fraktkostnader och leveransalternativ bekräftas i kassan."
+    },
+    "estimated_delivery": {
+      "range_text": "Beräknad leverans: {{ start_date }} – {{ end_date }}",
+      "single_text": "Beräknad leverans: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Kanske gillar du också",
+      "add_to_cart": "Lägg {{ title }} i varukorgen",
+      "add_error": "Det gick inte att lägga till artikeln. Försök igen."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Bild"
   },
   "accessibility": {
+    "quick_add": "Snabbtillägg",
     "play_model": "Spela 3D-modell",
     "play_video": "Spela video",
     "unit_price": "Enhetspris",

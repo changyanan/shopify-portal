@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Attiva dati strutturati FAQ",
+    "faq_structured_data_info": "Aggiunge markup FAQPage JSON-LD per aiutare i motori di ricerca a comprendere domande e risposte.",
+    "blog_show_tags": "Mostra tag per argomento",
+    "blog_posts_per_page": "Articoli per pagina",
+    "blog_pagination_style": "Stile di paginazione",
+    "blog_pagination_numbered": "Numeri di pagina",
+    "blog_pagination_infinite": "Scorrimento infinito",
+    "not_found_search_name": "Ricerca 404",
+    "search_heading": "Cerca nel negozio",
+    "search_placeholder": "Cerca",
+    "search_placeholder_label": "Testo segnaposto del campo di ricerca",
+    "cart_delivery_header": "Spedizione del carrello",
+    "shipping_notice_enable": "Mostra avviso di spedizione",
+    "shipping_notice_text": "Testo dell'avviso di spedizione",
+    "shipping_notice_text_info": "Lascia vuoto per usare la traduzione predefinita della vetrina. Mostrato sopra il riepilogo del carrello, nella pagina carrello e nel pannello del carrello.",
+    "estimated_delivery_enable": "Mostra data di consegna stimata",
+    "estimated_delivery_min_days": "Consegna più vicina (giorni da oggi)",
+    "estimated_delivery_max_days": "Consegna più lontana (giorni da oggi)",
+    "estimated_delivery_days_info": "Giorni di calendario da oggi. L'intervallo viene ricalcolato a ogni aggiornamento del carrello.",
+    "cart_recommendations_enable": "Mostra consigli nel pannello del carrello",
+    "cart_recommendations_name": "Consigli carrello",
+    "recently_viewed_name": "Visti di recente",
+    "rv_default_heading": "Visti di recente",
+    "rv_editor_info": "Mostra i prodotti visti di recente dal cliente. Senza cronologia di navigazione la sezione resta nascosta; l'editor del tema mostra schede segnaposto.",
     "trust_badges_name": "Portal badge di fiducia",
     "tb_layout_row": "Riga",
     "tb_layout_column": "Colonna",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Condivisione sui motori di ricerca",
     "404": "404",
     "colors": "Palette colori",
     "custom_section": "Sezione personalizzata",
@@ -250,6 +275,12 @@
     "disclosures": "Informative"
   },
   "settings": {
+    "accent_color": "Colore accento",
+    "accent_color_secondary": "Colore accento secondario",
+    "page_spacing": "Spaziatura della pagina",
+    "page_spacing_info": "Ridimensiona la spaziatura interna ed esterna delle sezioni che utilizzano il sistema di spaziatura del tema.",
+    "social_share_image": "Immagine di condivisione social",
+    "social_share_image_info": "Usata come immagine di condivisione predefinita quando una pagina non ha un'immagine propria.",
     "alignment": "Allineamento",
     "autoplay": "Riproduzione automatica",
     "background": "Sfondo",
@@ -665,6 +696,7 @@
     "title_preset": "Preimpostazione titolo"
   },
   "options": {
+    "roomy": "Spazioso",
     "apple": "Mela",
     "arrow": "Freccia",
     "auto": "Automatico",
@@ -941,6 +973,7 @@
     "input_field": "Campo di inserimento"
   },
   "content": {
+    "social_links_fallback_info": "Questi collegamenti vengono usati come riserva dai blocchi dei social media quando il loro collegamento è vuoto.",
     "advanced": "Avanzate",
     "background_image": "Immagine di sfondo",
     "background_video": "Video di sfondo",

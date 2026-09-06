@@ -1,0 +1,98 @@
+{%- doc -%}
+  Portal 定制:购物车配送提示 + 预计送达信息。
+
+  - 配送提示:商家可在主题设置 → Portal 中自定义文案;留空时回退到
+    locales 中的 portal.shipping_notice.default_text 翻译。
+  - 预计送达:按主题设置的最早/最晚天数(自然日)在渲染时用 Liquid date
+    过滤器计算真实日期区间,日期格式跟随店铺语言(abbreviated_date)。
+    不伪造任何价格、折扣或库存,仅为商家配置的时效预估。
+
+  购物车页与购物车抽屉均通过 Section Rendering API 重渲染,本片段为纯
+  Liquid,购物车变化时文案与日期自动更新,无需 JS。
+
+  @param {string} [context] - 传 'drawer' 时使用购物车抽屉的内边距布局。
+{%- enddoc -%}
+
+{%- liquid
+  assign show_notice = false
+  assign show_estimate = false
+
+  if cart.item_count > 0
+    if settings.portal_cart_shipping_notice_enabled
+      assign notice_text = settings.portal_cart_shipping_notice_text | strip
+      if notice_text == blank
+        assign notice_text = 'portal.shipping_notice.default_text' | t
+      endif
+      if notice_text != blank
+        assign show_notice = true
+      endif
+    endif
+
+    if settings.portal_estimated_delivery_enabled
+      assign min_days = settings.portal_estimated_delivery_min_days | plus: 0
+      assign max_days = settings.portal_estimated_delivery_max_days | plus: 0
+      if min_days > max_days
+        assign max_days = min_days
+      endif
+      if min_days > 0 and max_days > 0
+        assign now_ts = 'now' | date: '%s' | plus: 0
+        assign start_ts = min_days | times: 86400 | plus: now_ts
+        assign end_ts = max_days | times: 86400 | plus: now_ts
+        assign start_date = start_ts | date: format: 'abbreviated_date'
+        assign end_date = end_ts | date: format: 'abbreviated_date'
+        if min_days == max_days
+          assign estimate_text = 'portal.estimated_delivery.single_text' | t: date: start_date
+        else
+          assign estimate_text = 'portal.estimated_delivery.range_text' | t: start_date: start_date, end_date: end_date
+        endif
+        if estimate_text != blank
+          assign show_estimate = true
+        endif
+      endif
+    endif
+  endif
+-%}
+
+{%- if show_notice or show_estimate -%}
+  <div
+    class="portal-cart-delivery{% if context == 'drawer' %} portal-cart-delivery--drawer{% endif %}"
+    data-testid="portal-cart-delivery"
+  >
+    {%- if show_notice -%}
+      <p class="portal-cart-delivery__notice">{{ notice_text | escape }}</p>
+    {%- endif -%}
+    {%- if show_estimate -%}
+      <p
+        class="portal-cart-delivery__estimate"
+        role="note"
+      >
+        {{ estimate_text | escape }}
+      </p>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .portal-cart-delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px 16px 0;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .portal-cart-delivery--drawer {
+    padding: 8px var(--cart-drawer-padding, 16px) 0;
+  }
+
+  .portal-cart-delivery__notice {
+    margin: 0;
+    color: var(--color-foreground-subdued);
+  }
+
+  .portal-cart-delivery__estimate {
+    margin: 0;
+    font-weight: 500;
+  }
+{% endstylesheet %}

@@ -65,3 +65,13 @@
     z-index: var(--layer-raised);
   }
 {% endstylesheet %}
+
+{% if settings.card_drop_shadow %}
+  {% style %}
+    .product-card,
+    .collection-card,
+    .predictive-search-results__card {
+      box-shadow: 0 4px 20px rgb(var(--color-card-shadow-rgb) / 0.15);
+    }
+  {% endstyle %}
+{% endif %}

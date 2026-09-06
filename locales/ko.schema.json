@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "FAQ 구조화된 데이터 사용",
+    "faq_structured_data_info": "FAQPage JSON-LD 마크업을 추가하여 검색 엔진이 질문과 답변을 더 잘 이해하도록 합니다.",
+    "blog_show_tags": "주제 태그 표시",
+    "blog_posts_per_page": "페이지당 글 수",
+    "blog_pagination_style": "페이지네이션 방식",
+    "blog_pagination_numbered": "페이지 번호",
+    "blog_pagination_infinite": "무한 스크롤",
+    "not_found_search_name": "404 검색",
+    "search_heading": "스토어 검색",
+    "search_placeholder": "검색",
+    "search_placeholder_label": "검색 입력란 자리 표시자",
+    "cart_delivery_header": "장바구니 배송 정보",
+    "shipping_notice_enable": "배송 안내 표시",
+    "shipping_notice_text": "배송 안내 문구",
+    "shipping_notice_text_info": "비워 두면 스토어프론트 기본 번역이 사용됩니다. 장바구니 페이지와 장바구니 서랍의 요약 위에 표시됩니다.",
+    "estimated_delivery_enable": "예상 배송일 표시",
+    "estimated_delivery_min_days": "가장 빠른 배송 (오늘부터 일수)",
+    "estimated_delivery_max_days": "가장 늦은 배송 (오늘부터 일수)",
+    "estimated_delivery_days_info": "오늘부터의 달력 일수로 계산되며, 장바구니가 업데이트될 때마다 다시 계산됩니다.",
+    "cart_recommendations_enable": "장바구니 서랍에 추천 상품 표시",
+    "cart_recommendations_name": "장바구니 추천 상품",
+    "recently_viewed_name": "최근 본 상품",
+    "rv_default_heading": "최근 본 상품",
+    "rv_editor_info": "고객이 최근에 본 상품을 표시합니다. 탐색 기록이 없으면 숨겨지며, 테마 편집기에서는 자리표시자 카드가 표시됩니다.",
     "trust_badges_name": "Portal 신뢰 배지",
     "tb_layout_row": "가로",
     "tb_layout_column": "세로",
@@ -87,6 +111,7 @@
 
 
   "names": {
+    "search_engine_sharing": "검색 엔진 공유",
     "404": "404",
     "custom_section": "사용자 지정 섹션",
     "icon": "아이콘",
@@ -249,6 +274,12 @@
     "disclosures": "고지 사항"
   },
   "settings": {
+    "accent_color": "강조 색상",
+    "accent_color_secondary": "보조 강조 색상",
+    "page_spacing": "페이지 간격",
+    "page_spacing_info": "테마 간격 시스템을 사용하는 섹션의 패딩과 간격을 조절합니다.",
+    "social_share_image": "소셜 공유 이미지",
+    "social_share_image_info": "페이지에 자체 이미지가 없을 때 기본 소셜 공유 이미지로 사용됩니다.",
     "autoplay": "자동 재생",
     "background": "배경",
     "border_radius": "모서리 반경",
@@ -664,6 +695,7 @@
     "title_preset": "제목 사전 설정"
   },
   "options": {
+    "roomy": "넉넉히",
     "apple": "Apple",
     "arrow": "화살표",
     "banana": "바나나",
@@ -940,6 +972,7 @@
     "input_field": "입력 필드"
   },
   "content": {
+    "social_links_fallback_info": "소셜 미디어 블록의 링크가 비어 있을 때 이 링크가 대체로 사용됩니다.",
     "background_video": "배경 비디오",
     "describe_the_video_for": "스크린리더를 사용하는 고객에게 슬라이드 쇼를 설명합니다. [자세히 알아보기](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "너비는 모바일에 맞게 자동으로 최적화됩니다.",

@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Az oldal nem található",
+      "description": "A keresett oldal nem létezik, vagy esetleg áthelyezték.",
+      "back_home": "Vissza a kezdőlapra"
+    },
+    "blog": {
+      "tags_label": "Blogbejegyzések szűrése téma szerint",
+      "all_tags": "Összes bejegyzés"
+    },
+    "about": {
+      "story_heading": "A történetünk",
+      "story_body": "Minden márkának van egy története. Meséld el, hogyan indult a tiéd, mit képviselsz, és ki áll mögötte.",
+      "cta_label": "Lépj kapcsolatba velünk",
+      "values_heading": "Miért vásárolj nálunk",
+      "value_1_heading": "Gyors szállítás",
+      "value_1_body": "A megrendeléseket 1–2 munkanapon belül elkészítjük és kiszállítjuk.",
+      "value_2_heading": "Egyszerű visszaküldés",
+      "value_2_body": "Gondtalan visszaküldés a kézbesítéstől számított 30 napon belül.",
+      "value_3_heading": "Kiemelt támogatás",
+      "value_3_body": "Csapatunk vásárlás előtt és után is segít.",
+      "newsletter_heading": "Iratkozz fel hírlevelünkre",
+      "newsletter_body": "Termékújdonságok, történetek és exkluzív ajánlatok közvetlenül a postaládádba."
+    },
+    "shipping_notice": {
+      "default_text": "A szállítási költségek és lehetőségek a pénztárnál erősítődnek meg."
+    },
+    "estimated_delivery": {
+      "range_text": "Várható szállítás: {{ start_date }} – {{ end_date }}",
+      "single_text": "Várható szállítás: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Ezt is kedvelheted",
+      "add_to_cart": "{{ title }} hozzáadása a kosárhoz",
+      "add_error": "A tételt nem sikerült hozzáadni. Kérjük, próbálja újra."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Csúszka"
   },
   "accessibility": {
+    "quick_add": "Gyors hozzáadás",
     "play_model": "3D-modell lejátszása",
     "play_video": "Videó lejátszása",
     "unit_price": "Egységár",

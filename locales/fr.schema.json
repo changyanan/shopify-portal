@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Activer les données structurées FAQ",
+    "faq_structured_data_info": "Ajoute un balisage FAQPage JSON-LD pour aider les moteurs de recherche à mieux comprendre vos questions et réponses.",
+    "blog_show_tags": "Afficher les tags de sujet",
+    "blog_posts_per_page": "Articles par page",
+    "blog_pagination_style": "Style de pagination",
+    "blog_pagination_numbered": "Numéros de page",
+    "blog_pagination_infinite": "Défilement infini",
+    "not_found_search_name": "Recherche 404",
+    "search_heading": "Rechercher dans la boutique",
+    "search_placeholder": "Rechercher",
+    "search_placeholder_label": "Texte indicatif du champ de recherche",
+    "cart_delivery_header": "Livraison du panier",
+    "shipping_notice_enable": "Afficher l'avis d'expédition",
+    "shipping_notice_text": "Texte de l'avis d'expédition",
+    "shipping_notice_text_info": "Laissez vide pour utiliser la traduction par défaut de la boutique. Affiché au-dessus du récapitulatif du panier, sur la page panier et dans le tiroir du panier.",
+    "estimated_delivery_enable": "Afficher la date de livraison estimée",
+    "estimated_delivery_min_days": "Livraison au plus tôt (jours à partir d'aujourd'hui)",
+    "estimated_delivery_max_days": "Livraison au plus tard (jours à partir d'aujourd'hui)",
+    "estimated_delivery_days_info": "Jours calendaires à partir d'aujourd'hui. La plage est recalculée à chaque mise à jour du panier.",
+    "cart_recommendations_enable": "Afficher des recommandations dans le tiroir du panier",
+    "cart_recommendations_name": "Recommandations panier",
+    "recently_viewed_name": "Vus récemment",
+    "rv_default_heading": "Vus récemment",
+    "rv_editor_info": "Affiche les produits récemment consultés par le client. Sans historique de navigation, la section reste masquée ; l'éditeur de thème affiche des cartes fictives.",
     "trust_badges_name": "Portal badges de confiance",
     "tb_layout_row": "Ligne",
     "tb_layout_column": "Colonne",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Partage sur les moteurs de recherche",
     "404": "404",
     "custom_section": "Section personnalisée",
     "icon": "Icône",
@@ -250,6 +275,12 @@
     "disclosures": "Divulgations"
   },
   "settings": {
+    "accent_color": "Couleur d'accent",
+    "accent_color_secondary": "Couleur d'accent secondaire",
+    "page_spacing": "Espacement des pages",
+    "page_spacing_info": "Échelle les marges internes et externes des sections utilisant le système d'espacement du thème.",
+    "social_share_image": "Image de partage social",
+    "social_share_image_info": "Utilisée comme image de partage social par défaut lorsqu'une page n'a pas sa propre image.",
     "autoplay": "Lecture automatique",
     "background": "Arrière-plan",
     "border_radius": "Rayon de la bordure",
@@ -665,6 +696,7 @@
     "title_preset": "Préréglage du titre"
   },
   "options": {
+    "roomy": "Spacieux",
     "apple": "Pomme",
     "arrow": "Flèche",
     "banana": "Banane",
@@ -941,6 +973,7 @@
     "input_field": "Champ de saisie"
   },
   "content": {
+    "social_links_fallback_info": "Ces liens servent de secours aux blocs de réseaux sociaux lorsque leur propre lien est vide.",
     "background_video": "Vidéo de fond",
     "describe_the_video_for": "Décrivez la vidéo pour les clients utilisant des lecteurs d’écran. [En savoir plus](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "La largeur est automatiquement optimisée pour les appareils mobiles.",

@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "页面未找到",
+      "description": "您访问的页面不存在，或已被移动。",
+      "back_home": "返回首页"
+    },
+    "blog": {
+      "tags_label": "按话题筛选博客文章",
+      "all_tags": "全部文章"
+    },
+    "about": {
+      "story_heading": "品牌故事",
+      "story_body": "每个品牌都有自己的故事。在这里分享我们的起点、坚持的理念，以及品牌背后的人。",
+      "cta_label": "联系我们",
+      "values_heading": "为什么选择我们",
+      "value_1_heading": "快速配送",
+      "value_1_body": "订单将在 1–2 个工作日内拣货并发出。",
+      "value_2_heading": "轻松退货",
+      "value_2_body": "签收后 30 天内支持无忧退货。",
+      "value_3_heading": "专属服务",
+      "value_3_body": "购前购后，我们的团队随时为您提供帮助。",
+      "newsletter_heading": "订阅我们的资讯",
+      "newsletter_body": "在收件箱获取商品动态、品牌故事与专属优惠。"
+    },
+    "shipping_notice": {
+      "default_text": "运费与配送方式将在结账时确认。"
+    },
+    "estimated_delivery": {
+      "range_text": "预计送达：{{ start_date }} 至 {{ end_date }}",
+      "single_text": "预计送达：{{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "为你推荐",
+      "add_to_cart": "将 {{ title }} 加入购物车",
+      "add_error": "暂时无法加入该商品，请重试。"
+    },
     "free_shipping": {
       "remaining_html": "再购 {{ amount }} 即可免邮",
       "unlocked": "已解锁免邮!",
@@ -37,6 +72,7 @@
     "slider_label": "滑块"
   },
   "accessibility": {
+    "quick_add": "快速加购",
     "play_model": "演示 3D 模型",
     "play_video": "播放视频",
     "unit_price": "单价",

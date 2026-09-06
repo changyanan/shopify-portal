@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist or may have been moved.",
+      "back_home": "Back to home"
+    },
+    "blog": {
+      "tags_label": "Filter blog posts by topic",
+      "all_tags": "All posts"
+    },
+    "about": {
+      "story_heading": "Our story",
+      "story_body": "Every brand has a story. Share how yours started, what you stand for, and the people behind it.",
+      "cta_label": "Contact us",
+      "values_heading": "Why shop with us",
+      "value_1_heading": "Fast shipping",
+      "value_1_body": "Orders are prepared and shipped within 1–2 business days.",
+      "value_2_heading": "Easy returns",
+      "value_2_body": "Hassle-free returns within 30 days of delivery.",
+      "value_3_heading": "Dedicated support",
+      "value_3_body": "Our team is here to help before and after your purchase.",
+      "newsletter_heading": "Join our newsletter",
+      "newsletter_body": "Get product updates, stories, and exclusive offers in your inbox."
+    },
+    "shipping_notice": {
+      "default_text": "Shipping costs and delivery options are confirmed at checkout."
+    },
+    "estimated_delivery": {
+      "range_text": "Estimated delivery: {{ start_date }} – {{ end_date }}",
+      "single_text": "Estimated delivery: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "You may also like",
+      "add_to_cart": "Add {{ title }} to cart",
+      "add_error": "Couldn't add this item. Please try again."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -17,6 +52,7 @@
   },
 
   "accessibility": {
+    "quick_add": "Quick add",
     "account": "Account",
     "active_filters": "Active filters:",
     "cart": "Cart",

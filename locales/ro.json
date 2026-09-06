@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Pagina nu a fost găsită",
+      "description": "Pagina pe care o cauți nu există sau poate fi fost mutată.",
+      "back_home": "Înapoi la pagina principală"
+    },
+    "blog": {
+      "tags_label": "Filtrează articolele după subiect",
+      "all_tags": "Toate articolele"
+    },
+    "about": {
+      "story_heading": "Povestea noastră",
+      "story_body": "Fiecare brand are o poveste. Spune cum a început a ta, ce reprezinți și cine stă în spatele ei.",
+      "cta_label": "Contactează-ne",
+      "values_heading": "De ce să cumperi de la noi",
+      "value_1_heading": "Livrare rapidă",
+      "value_1_body": "Comenzile sunt pregătite și expediate în 1–2 zile lucrătoare.",
+      "value_2_heading": "Retururi ușoare",
+      "value_2_body": "Retururi fără bătăi de cap în termen de 30 de zile de la livrare.",
+      "value_3_heading": "Suport dedicat",
+      "value_3_body": "Echipa noastră te ajută înainte și după achiziție.",
+      "newsletter_heading": "Abonează-te la newsletter",
+      "newsletter_body": "Primește noutăți, povești și oferte exclusive direct în căsuța ta de email."
+    },
+    "shipping_notice": {
+      "default_text": "Costurile și opțiunile de livrare sunt confirmate la finalizarea comenzii."
+    },
+    "estimated_delivery": {
+      "range_text": "Livrare estimată: {{ start_date }} – {{ end_date }}",
+      "single_text": "Livrare estimată: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "S-ar putea să-ți placă și",
+      "add_to_cart": "Adaugă {{ title }} în coș",
+      "add_error": "Nu am putut adăuga acest produs. Încearcă din nou."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Cursor"
   },
   "accessibility": {
+    "quick_add": "Adăugare rapidă",
     "play_model": "Redă modelul 3D",
     "play_video": "Redă videoclipul",
     "unit_price": "Preț unitar",

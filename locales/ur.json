@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "صفحہ نہیں ملا",
+      "description": "آپ جس صفحے کی تلاش ہے وہ موجود نہیں یا شاید منتقل کر دیا گیا ہے۔",
+      "back_home": "ہوم پیج پر واپس جائیں"
+    },
+    "blog": {
+      "tags_label": "موضوع کے مطابق بلاگ پوسٹس فلٹر کریں",
+      "all_tags": "تمام پوسٹس"
+    },
+    "about": {
+      "story_heading": "ہماری کہانی",
+      "story_body": "ہر برانڈ کی اپنی کہانی ہوتی ہے۔ شیئر کریں کہ آپ کی کہانی کیسے شروع ہوئی، آپ کس چیز پر یقین رکھتے ہیں، اور اس کے پیچھے کون ہے۔",
+      "cta_label": "ہم سے رابطہ کریں",
+      "values_heading": "ہم سے خریداری کیوں کریں",
+      "value_1_heading": "تیز ترسیل",
+      "value_1_body": "آرڈرز 1–2 کاروباری دنوں میں تیار اور بھیج دیے جاتے ہیں۔",
+      "value_2_heading": "آسان واپسی",
+      "value_2_body": "ترسیل کے 30 دن کے اندر بغیر کسی پریشانی کے واپسی۔",
+      "value_3_heading": "معاون سپورٹ",
+      "value_3_body": "خریداری سے پہلے اور بعد میں ہماری ٹیم آپ کی مدد کے لیے حاضر ہے۔",
+      "newsletter_heading": "ہماری نیوز لیٹر میں شامل ہوں",
+      "newsletter_body": "پروڈکٹ کی تازہ ترین خبریں، کہانیاں اور خصوصی آفرز براہ راست اپنے ان باکس میں حاصل کریں۔"
+    },
+    "shipping_notice": {
+      "default_text": "شپنگ کے اخراجات اور آپشنز چیک آؤٹ کے وقت حتمی ہوں گے۔"
+    },
+    "estimated_delivery": {
+      "range_text": "متوقع ترسیل: {{ start_date }} – {{ end_date }}",
+      "single_text": "متوقع ترسیل: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "آپ کو یہ بھی پسند آ سکتے ہیں",
+      "add_to_cart": "{{ title }} کارٹ میں شامل کریں",
+      "add_error": "یہ آئٹم شامل نہیں ہو سکا۔ دوبارہ کوشش کریں۔"
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -17,6 +52,7 @@
   },
 
   "accessibility": {
+    "quick_add": "فوری شامل کریں",
     "account": "اکاؤنٹ",
     "active_filters": "فعال فلٹر:",
     "cart": "کارٹ",

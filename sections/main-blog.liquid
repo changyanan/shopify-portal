@@ -1,3 +1,10 @@
+{% comment %}
+  Portal 定制(最小改动):在官方 main-blog 基础上新增博客列表的分页与话题标签能力:
+  - 用 {% paginate %} 按设置的数量分页,复用官方 pagination-controls 或原生无限滚动;
+  - 新增 blog.all_tags 标签导航(分类),激活标签高亮;
+  - 文章卡片的每条 style 移入卡片元素内,便于分页追加时样式随卡片携带。
+  其余布局逻辑与官方保持一致。
+{% endcomment %}
 
 
 <script
@@ -29,9 +36,55 @@
   >
     {% content_for 'blocks' %}
 
+    {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
+      <nav
+        class="blog-tags"
+        aria-label="{{ 'portal.blog.tags_label' | t }}"
+      >
+        <ul
+          class="blog-tags__list"
+          role="list"
+        >
+          <li>
+            <a
+              href="{{ blog.url }}"
+              class="blog-tags__pill{% if current_tags == blank %} blog-tags__pill--active{% endif %}"
+              {% if current_tags == blank %}
+                aria-current="page"
+              {% endif %}
+            >
+              {{ 'portal.blog.all_tags' | t }}
+            </a>
+          </li>
+          {%- for tag in blog.all_tags -%}
+            <li>
+              {%- if current_tags contains tag -%}
+                <a
+                  href="{{ blog.url }}"
+                  class="blog-tags__pill blog-tags__pill--active"
+                  aria-current="page"
+                >
+                  {{ tag }}
+                </a>
+              {%- else -%}
+                <a
+                  href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+                  class="blog-tags__pill"
+                >
+                  {{ tag }}
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
+
+    {%- paginate blog.articles by section.settings.posts_per_page -%}
     <div
       ref="grid"
       class="blog-posts-container"
+      data-last-page="{{ paginate.pages }}"
     >
       {% liquid
         assign items_on_page = blog.articles.size
@@ -131,25 +184,27 @@
             endif
           endif
         %}
-        {% # Keep the mobile breakpoint in the style block below in sync with the responsive image sizes above. %}
-        {% style %}
-          [data-blog-index="{{ section.id }}-{{ forloop.index }}"] {
-            --col-span: {{ col_span }};
-            --blog-post-card-scale: {{ scale }};
-          }
-
-          @media screen and (max-width: 749px) {
-            [data-blog-index="{{ section.id }}-{{ forloop.index }}"] {
-              --col-span: 6;
-              --blog-post-card-scale: 0.5;
-            }
-          }
-        {% endstyle %}
+        {% # The style block lives inside the item so section-renderer pagination can carry it along when appending pages. %}
         <div
           class="blog-post-item"
           data-testid="blog-post-item"
           data-blog-index="{{ section.id }}-{{ forloop.index }}"
+          data-page="{{ paginate.current_page }}"
+          ref="cards[]"
         >
+          {% style %}
+            [data-blog-index="{{ section.id }}-{{ forloop.index }}"] {
+              --col-span: {{ col_span }};
+              --blog-post-card-scale: {{ scale }};
+            }
+
+            @media screen and (max-width: 749px) {
+              [data-blog-index="{{ section.id }}-{{ forloop.index }}"] {
+                --col-span: 6;
+                --blog-post-card-scale: 0.5;
+              }
+            }
+          {% endstyle %}
           {% content_for 'block',
             id: 'static-blog-post-card',
             type: '_blog-post-card',
@@ -162,6 +217,18 @@
         </div>
       {% endfor %}
     </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- if section.settings.pagination_style == 'infinite_scroll' -%}
+        <span ref="viewMorePrevious"></span>
+        <span ref="viewMoreNext"></span>
+      {%- else -%}
+        <div class="blog-posts-pagination">
+          {%- render 'pagination-controls', paginate: paginate -%}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+    {%- endpaginate -%}
   </div>
 </blog-posts-list>
 
@@ -209,6 +276,60 @@
     border: none;
     padding: 0;
   }
+
+  /**
+   * Portal: blog topic tags (categories).
+   */
+  .blog-tags {
+    width: 100%;
+    margin-block-end: 8px;
+  }
+
+  .blog-tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .blog-tags__pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid rgb(var(--color-foreground-rgb) / var(--opacity-20));
+    border-radius: 999px;
+    font-size: var(--font-size--sm);
+    line-height: 1.4;
+    color: var(--color-foreground);
+    text-decoration: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .blog-tags__pill:hover {
+    border-color: rgb(var(--color-foreground-rgb) / var(--opacity-40));
+  }
+
+  .blog-tags__pill:focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 2px;
+  }
+
+  .blog-tags__pill--active {
+    background-color: var(--color-foreground);
+    border-color: var(--color-foreground);
+    color: var(--color-background);
+  }
+
+  /**
+   * Portal: numbered pagination below the article grid.
+   */
+  .blog-posts-pagination {
+    width: 100%;
+    margin-block-start: 16px;
+    display: flex;
+    justify-content: center;
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -250,6 +371,37 @@
     "groups": ["header"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "t:portal.blog_show_tags",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "posts_per_page",
+      "label": "t:portal.blog_posts_per_page",
+      "min": 6,
+      "max": 24,
+      "step": 3,
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "pagination_style",
+      "label": "t:portal.blog_pagination_style",
+      "options": [
+        {
+          "value": "pagination",
+          "label": "t:portal.blog_pagination_numbered"
+        },
+        {
+          "value": "infinite_scroll",
+          "label": "t:portal.blog_pagination_infinite"
+        }
+      ],
+      "default": "pagination"
+    },
     {
       "type": "color",
       "id": "background_color",

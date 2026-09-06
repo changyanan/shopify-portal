@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Nie znaleziono strony",
+      "description": "Strona, której szukasz, nie istnieje lub mogła zostać przeniesiona.",
+      "back_home": "Wróć na stronę główną"
+    },
+    "blog": {
+      "tags_label": "Filtruj wpisy na blogu według tematu",
+      "all_tags": "Wszystkie wpisy"
+    },
+    "about": {
+      "story_heading": "Nasza historia",
+      "story_body": "Każda marka ma swoją historię. Opowiedz, jak się zaczęła, co jest dla Ciebie ważne i kto stoi za marką.",
+      "cta_label": "Skontaktuj się z nami",
+      "values_heading": "Dlaczego warto kupować u nas",
+      "value_1_heading": "Szybka wysyłka",
+      "value_1_body": "Zamówienia przygotowujemy i wysyłamy w ciągu 1–2 dni roboczych.",
+      "value_2_heading": "Łatwe zwroty",
+      "value_2_body": "Bezproblemowe zwroty w ciągu 30 dni od doręczenia.",
+      "value_3_heading": "Dedykowane wsparcie",
+      "value_3_body": "Nasz zespół pomoże Ci przed i po zakupie.",
+      "newsletter_heading": "Zapisz się do newslettera",
+      "newsletter_body": "Otrzymuj nowości, historie i ekskluzywne oferty prosto na swoją skrzynkę."
+    },
+    "shipping_notice": {
+      "default_text": "Koszty i opcje dostawy zostaną potwierdzone przy płatności."
+    },
+    "estimated_delivery": {
+      "range_text": "Szacowana dostawa: {{ start_date }} – {{ end_date }}",
+      "single_text": "Szacowana dostawa: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Może Ci się też spodobać",
+      "add_to_cart": "Dodaj {{ title }} do koszyka",
+      "add_error": "Nie udało się dodać tego produktu. Spróbuj ponownie."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Suwak"
   },
   "accessibility": {
+    "quick_add": "Szybkie dodanie",
     "play_model": "Odtwórz model 3D",
     "play_video": "Odtwórz film",
     "unit_price": "Cena jednostkowa",

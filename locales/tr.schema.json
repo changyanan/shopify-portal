@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "SSS yapılandırılmış verilerini etkinleştir",
+    "faq_structured_data_info": "Arama motorlarının soru ve yanıtlarınızı daha iyi anlaması için FAQPage JSON-LD işaretlemesi ekler.",
+    "blog_show_tags": "Konu etiketlerini göster",
+    "blog_posts_per_page": "Sayfa başına gönderi",
+    "blog_pagination_style": "Sayfalama stili",
+    "blog_pagination_numbered": "Sayfa numaraları",
+    "blog_pagination_infinite": "Sonsuz kaydırma",
+    "not_found_search_name": "404 arama",
+    "search_heading": "Mağazamızda arayın",
+    "search_placeholder": "Ara",
+    "search_placeholder_label": "Arama kutusu yer tutucu metni",
+    "cart_delivery_header": "Sepet teslimatı",
+    "shipping_notice_enable": "Kargo bildirimini göster",
+    "shipping_notice_text": "Kargo bildirimi metni",
+    "shipping_notice_text_info": "Varsayılan mağaza çevirisini kullanmak için boş bırakın. Sepet sayfasında ve sepet çekmecesinde özetin üzerinde gösterilir.",
+    "estimated_delivery_enable": "Tahmini teslim tarihini göster",
+    "estimated_delivery_min_days": "En erken teslimat (bugünden itibaren gün)",
+    "estimated_delivery_max_days": "En geç teslimat (bugünden itibaren gün)",
+    "estimated_delivery_days_info": "Bugünden itibaren takvim günü. Aralık, sepet her güncellendiğinde yeniden hesaplanır.",
+    "cart_recommendations_enable": "Sepet çekmecesinde önerileri göster",
+    "cart_recommendations_name": "Sepet önerileri",
+    "recently_viewed_name": "Son görüntülenenler",
+    "rv_default_heading": "Son görüntülenenler",
+    "rv_editor_info": "Müşterinin yakın zamanda görüntülediği ürünleri gösterir. Gezinti geçmişi yoksa bölüm gizli kalır; tema düzenleyicide yer tutucu kartlar gösterilir.",
     "trust_badges_name": "Portal güven rozetleri",
     "tb_layout_row": "Satır",
     "tb_layout_column": "Sütun",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Arama motorlarında paylaşım",
     "404": "404",
     "custom_section": "Özel bölüm",
     "icon": "Simge",
@@ -250,6 +275,12 @@
     "disclosures": "Bildirimler"
   },
   "settings": {
+    "accent_color": "Vurgu rengi",
+    "accent_color_secondary": "İkincil vurgu rengi",
+    "page_spacing": "Sayfa aralığı",
+    "page_spacing_info": "Tema aralık sistemini kullanan bölümlerin dolgu ve boşluklarını ölçeklendirir.",
+    "social_share_image": "Sosyal paylaşım görseli",
+    "social_share_image_info": "Bir sayfanın kendi görseli olmadığında varsayılan sosyal paylaşım görseli olarak kullanılır.",
     "autoplay": "Otomatik oynatma",
     "background": "Arka plan",
     "border_radius": "Köşe yarıçapı",
@@ -665,6 +696,7 @@
     "title_preset": "Başlık ön ayarı"
   },
   "options": {
+    "roomy": "Geniş",
     "apple": "Apple",
     "arrow": "Ok",
     "banana": "Muz",
@@ -941,6 +973,7 @@
     "input_field": "Giriş alanı"
   },
   "content": {
+    "social_links_fallback_info": "Bu bağlantılar, kendi bağlantıları boş olduğunda sosyal medya blokları tarafından yedek olarak kullanılır.",
     "background_video": "Arka plan videosu",
     "describe_the_video_for": "Ekran okuyucu kullanan müşteriler için videoyu açıklayın. [Daha fazla bilgi edinin](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Genişlik, mobil cihazlar için otomatik olarak optimize edilir.",

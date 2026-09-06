@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Página no encontrada",
+      "description": "La página que buscas no existe o puede haber sido movida.",
+      "back_home": "Volver al inicio"
+    },
+    "blog": {
+      "tags_label": "Filtrar artículos por tema",
+      "all_tags": "Todos los artículos"
+    },
+    "about": {
+      "story_heading": "Nuestra historia",
+      "story_body": "Cada marca tiene una historia. Comparte cómo empezó la tuya, en qué crees y las personas que hay detrás.",
+      "cta_label": "Contáctanos",
+      "values_heading": "Por qué comprar con nosotros",
+      "value_1_heading": "Envío rápido",
+      "value_1_body": "Los pedidos se preparan y envían en 1–2 días laborables.",
+      "value_2_heading": "Devoluciones fáciles",
+      "value_2_body": "Devoluciones sin complicaciones dentro de los 30 días posteriores a la entrega.",
+      "value_3_heading": "Atención dedicada",
+      "value_3_body": "Nuestro equipo te ayuda antes y después de tu compra.",
+      "newsletter_heading": "Suscríbete a nuestro boletín",
+      "newsletter_body": "Recibe novedades, historias y ofertas exclusivas en tu correo."
+    },
+    "shipping_notice": {
+      "default_text": "Los gastos y las opciones de envío se confirman al finalizar la compra."
+    },
+    "estimated_delivery": {
+      "range_text": "Entrega estimada: {{ start_date }} – {{ end_date }}",
+      "single_text": "Entrega estimada: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "También te puede gustar",
+      "add_to_cart": "Añadir {{ title }} al carrito",
+      "add_error": "No se pudo añadir este artículo. Inténtalo de nuevo."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Carrusel"
   },
   "accessibility": {
+    "quick_add": "Añadir rápido",
     "play_model": "Reproducir el modelo 3D",
     "play_video": "Reproducir el video",
     "unit_price": "Precio unitario",

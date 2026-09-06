@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Halaman tidak ditemukan",
+      "description": "Halaman yang Anda cari tidak ada atau mungkin telah dipindahkan.",
+      "back_home": "Kembali ke beranda"
+    },
+    "blog": {
+      "tags_label": "Saring postingan blog berdasarkan topik",
+      "all_tags": "Semua postingan"
+    },
+    "about": {
+      "story_heading": "Kisah kami",
+      "story_body": "Setiap merek punya kisah. Ceritakan bagaimana merek Anda dimulai, apa yang Anda perjuangkan, dan siapa yang berada di baliknya.",
+      "cta_label": "Hubungi kami",
+      "values_heading": "Mengapa berbelanja di sini",
+      "value_1_heading": "Pengiriman cepat",
+      "value_1_body": "Pesanan disiapkan dan dikirim dalam 1–2 hari kerja.",
+      "value_2_heading": "Pengembalian mudah",
+      "value_2_body": "Pengembalian tanpa ribet dalam 30 hari sejak diterima.",
+      "value_3_heading": "Dukungan khusus",
+      "value_3_body": "Tim kami siap membantu sebelum dan sesudah pembelian.",
+      "newsletter_heading": "Bergabung dengan newsletter kami",
+      "newsletter_body": "Terima kabar produk, kisah, dan penawaran eksklusif langsung di kotak masuk Anda."
+    },
+    "shipping_notice": {
+      "default_text": "Biaya dan opsi pengiriman dikonfirmasi saat checkout."
+    },
+    "estimated_delivery": {
+      "range_text": "Perkiraan pengiriman: {{ start_date }} – {{ end_date }}",
+      "single_text": "Perkiraan pengiriman: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Mungkin Anda juga suka",
+      "add_to_cart": "Tambahkan {{ title }} ke keranjang",
+      "add_error": "Tidak dapat menambahkan item ini. Silakan coba lagi."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Slider"
   },
   "accessibility": {
+    "quick_add": "Tambah cepat",
     "play_model": "Putar model 3D",
     "play_video": "Putar video",
     "unit_price": "Harga satuan",

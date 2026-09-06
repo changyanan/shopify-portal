@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Ativar dados estruturados de FAQ",
+    "faq_structured_data_info": "Adiciona marcação FAQPage JSON-LD para que mecanismos de busca entendam melhor suas perguntas e respostas.",
+    "blog_show_tags": "Mostrar tags de assunto",
+    "blog_posts_per_page": "Posts por página",
+    "blog_pagination_style": "Estilo de paginação",
+    "blog_pagination_numbered": "Números de página",
+    "blog_pagination_infinite": "Rolagem infinita",
+    "not_found_search_name": "Busca 404",
+    "search_heading": "Buscar na loja",
+    "search_placeholder": "Buscar",
+    "search_placeholder_label": "Texto do campo de busca",
+    "cart_delivery_header": "Entrega do carrinho",
+    "shipping_notice_enable": "Mostrar aviso de envio",
+    "shipping_notice_text": "Texto do aviso de envio",
+    "shipping_notice_text_info": "Deixe vazio para usar a tradução padrão da loja. Exibido acima do resumo do carrinho, na página do carrinho e na gaveta do carrinho.",
+    "estimated_delivery_enable": "Mostrar data estimada de entrega",
+    "estimated_delivery_min_days": "Entrega mais cedo (dias a partir de hoje)",
+    "estimated_delivery_max_days": "Entrega mais tarde (dias a partir de hoje)",
+    "estimated_delivery_days_info": "Dias corridos a partir de hoje. O intervalo é recalculado sempre que o carrinho é atualizado.",
+    "cart_recommendations_enable": "Mostrar recomendações na gaveta do carrinho",
+    "cart_recommendations_name": "Recomendações do carrinho",
+    "recently_viewed_name": "Vistos recentemente",
+    "rv_default_heading": "Vistos recientemente",
+    "rv_editor_info": "Exibe os produtos vistos recentemente pelo cliente. Sem histórico de navegação, a seção fica oculta; o editor de temas mostra cartões de exemplo.",
     "trust_badges_name": "Portal selos de confiança",
     "tb_layout_row": "Linha",
     "tb_layout_column": "Coluna",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Compartilhamento em mecanismos de pesquisa",
     "404": "404",
     "colors": "Paleta de cores",
     "custom_section": "Seção personalizada",
@@ -250,6 +275,12 @@
     "disclosures": "Divulgações"
   },
   "settings": {
+    "accent_color": "Cor de destaque",
+    "accent_color_secondary": "Cor de destaque secundária",
+    "page_spacing": "Espaçamento da página",
+    "page_spacing_info": "Dimensiona o preenchimento e os espaçamentos das seções que usam o sistema de espaçamento do tema.",
+    "social_share_image": "Imagem de compartilhamento social",
+    "social_share_image_info": "Usada como imagem de compartilhamento padrão quando uma página não tem imagem própria.",
     "alignment": "Alinhamento",
     "autoplay": "Reprodução automática",
     "background": "Plano de fundo",
@@ -665,6 +696,7 @@
     "title_preset": "Predefinição de título"
   },
   "options": {
+    "roomy": "Espaçoso",
     "apple": "Apple",
     "arrow": "Seta",
     "auto": "Automático",
@@ -941,6 +973,7 @@
     "input_field": "Campo de entrada"
   },
   "content": {
+    "social_links_fallback_info": "Esses links são usados como alternativa pelos blocos de redes sociais quando o próprio link está vazio.",
     "advanced": "Avançado",
     "background_image": "Imagem de fundo",
     "background_video": "Vídeo de fundo",

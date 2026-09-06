@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Enable FAQ structured data",
+    "faq_structured_data_info": "Adds FAQPage JSON-LD markup so search engines can better understand your questions and answers.",
+    "blog_show_tags": "Show topic tags",
+    "blog_posts_per_page": "Articles per page",
+    "blog_pagination_style": "Pagination style",
+    "blog_pagination_numbered": "Page numbers",
+    "blog_pagination_infinite": "Infinite scroll",
+    "not_found_search_name": "404 search",
+    "search_heading": "Search our store",
+    "search_placeholder": "Search",
+    "search_placeholder_label": "Search input placeholder",
+    "cart_delivery_header": "Cart delivery",
+    "shipping_notice_enable": "Show shipping notice",
+    "shipping_notice_text": "Shipping notice text",
+    "shipping_notice_text_info": "Leave empty to use the default storefront translation. Displayed above the cart summary on the cart page and in the cart drawer.",
+    "estimated_delivery_enable": "Show estimated delivery date",
+    "estimated_delivery_min_days": "Earliest delivery (days from today)",
+    "estimated_delivery_max_days": "Latest delivery (days from today)",
+    "estimated_delivery_days_info": "Calendar days counted from today. The range is recalculated every time the cart is updated.",
+    "cart_recommendations_enable": "Show recommendations in cart drawer",
+    "cart_recommendations_name": "Cart recommendations",
+    "recently_viewed_name": "Recently viewed",
+    "rv_default_heading": "Recently viewed",
+    "rv_editor_info": "Shows products the customer recently viewed. The section stays hidden until there is browsing history; the theme editor shows placeholder cards instead.",
     "trust_badges_name": "Portal trust badges",
     "tb_layout_row": "Row",
     "tb_layout_column": "Column",
@@ -109,6 +133,7 @@
     "text": "Text"
   },
   "content": {
+    "social_links_fallback_info": "These links are used as fallbacks by social media blocks when their own link is empty.",
     "visible_if_collection_has_more_products": "Visible if collection has more products than shown",
     "advanced": "Advanced",
     "appearance": "Appearance",
@@ -328,6 +353,7 @@
     "media_type_info": "Features are populated from your menu links"
   },
   "names": {
+    "search_engine_sharing": "Search engine sharing",
     "column": "Column",
     "product_title": "Product title",
     "custom_liquid": "Custom Liquid",
@@ -497,6 +523,7 @@
     "comparison_slider": "Comparison slider"
   },
   "options": {
+    "roomy": "Roomy",
     "above_carousel": "Above carousel",
     "accent": "Accent",
     "all": "All",
@@ -810,6 +837,12 @@
     "below_media": "Below media"
   },
   "settings": {
+    "accent_color": "Accent color",
+    "accent_color_secondary": "Secondary accent color",
+    "page_spacing": "Page spacing",
+    "page_spacing_info": "Scales the padding and gaps of sections that use the theme spacing system.",
+    "social_share_image": "Social sharing image",
+    "social_share_image_info": "Used as the default social sharing image when a page has no image of its own.",
     "accordion": "Accordion",
     "account": "Account",
     "actions_display_style": "Menu style",

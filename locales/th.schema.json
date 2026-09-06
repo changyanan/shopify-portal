@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "เปิดใช้งานข้อมูลที่มีโครงสร้าง FAQ",
+    "faq_structured_data_info": "เพิ่มมาร์กอัป FAQPage JSON-LD เพื่อช่วยให้เสิร์ชเอนจินเข้าใจคำถามและคำตอบของคุณได้ดียิ่งขึ้น",
+    "blog_show_tags": "แสดงแท็กหัวข้อ",
+    "blog_posts_per_page": "บทความต่อหน้า",
+    "blog_pagination_style": "รูปแบบการแบ่งหน้า",
+    "blog_pagination_numbered": "หมายเลขหน้า",
+    "blog_pagination_infinite": "เลื่อนแบบไม่จำกัด",
+    "not_found_search_name": "การค้นหา 404",
+    "search_heading": "ค้นหาในร้านค้า",
+    "search_placeholder": "ค้นหา",
+    "search_placeholder_label": "ข้อความแนะนำในช่องค้นหา",
+    "cart_delivery_header": "การจัดส่งสินค้าในตะกร้า",
+    "shipping_notice_enable": "แสดงข้อความแจ้งการจัดส่ง",
+    "shipping_notice_text": "ข้อความแจ้งการจัดส่ง",
+    "shipping_notice_text_info": "เว้นว่างไว้เพื่อใช้คำแปลเริ่มต้นของหน้าร้าน แสดงเหนือสรุปย่อในหน้าตะกร้าและในลิ้นชักตะกร้า",
+    "estimated_delivery_enable": "แสดงวันที่จัดส่งโดยประมาณ",
+    "estimated_delivery_min_days": "จัดส่งเร็วสุด (จำนวนวันจากวันนี้)",
+    "estimated_delivery_max_days": "จัดส่งช้าสุด (จำนวนวันจากวันนี้)",
+    "estimated_delivery_days_info": "นับเป็นวันปฏิทินจากวันนี้ ช่วงวันจะถูกคำนวณใหม่ทุกครั้งที่ตะกร้าได้รับการอัปเดต",
+    "cart_recommendations_enable": "แสดงสินค้าแนะนำในลิ้นชักตะกร้า",
+    "cart_recommendations_name": "สินค้าแนะนำในตะกร้า",
+    "recently_viewed_name": "ดูล่าสุด",
+    "rv_default_heading": "ดูล่าสุด",
+    "rv_editor_info": "แสดงสินค้าที่ลูกค้าดูล่าสุด ส่วนนี้จะซ่อนอยู่หากไม่มีประวัติการเข้าชม โดยตัวแก้ไขธีมจะแสดงการ์ดตัวอย่างแทน",
     "trust_badges_name": "Portal ป้ายความน่าเชื่อถือ",
     "tb_layout_row": "แนวนอน",
     "tb_layout_column": "แนวตั้ง",
@@ -87,6 +111,7 @@
 
 
   "names": {
+    "search_engine_sharing": "การแชร์บนเสิร์ชเอนจิน",
     "404": "404",
     "colors": "จานสี",
     "custom_section": "ส่วนที่กำหนดเอง",
@@ -249,6 +274,12 @@
     "disclosures": "การเปิดเผยข้อมูล"
   },
   "settings": {
+    "accent_color": "สีเน้น",
+    "accent_color_secondary": "สีเน้ารอง",
+    "page_spacing": "ระยะห่างของหน้า",
+    "page_spacing_info": "ปรับขนาดระยะขอบและช่องว่างของเซกชันที่ใช้ระบบระยะของธีม",
+    "social_share_image": "รูปภาพสำหรับแชร์โซเชียล",
+    "social_share_image_info": "ใช้เป็นรูปภาพแชร์เริ่มต้นเมื่อหน้าไม่มีรูปภาพของตัวเอง",
     "alignment": "การจัดตำแหน่ง",
     "autoplay": "เล่นอัตโนมัติ",
     "background": "พื้นหลัง",
@@ -664,6 +695,7 @@
     "title_preset": "พรีเซ็ตชื่อ"
   },
   "options": {
+    "roomy": "กว้าง",
     "apple": "Apple",
     "arrow": "ลูกศร",
     "auto": "อัตโนมัติ",
@@ -940,6 +972,7 @@
     "input_field": "ช่องกรอกข้อมูล"
   },
   "content": {
+    "social_links_fallback_info": "ลิงก์เหล่านี้ใช้เป็นลิงก์สำรองโดยบล็อกโซเชียลมีเดียเมื่อลิงก์ของตัวเองว่างเปล่า",
     "advanced": "ขั้นสูง",
     "background_image": "รูปภาพพื้นหลัง",
     "background_video": "วิดีโอพื้นหลัง",

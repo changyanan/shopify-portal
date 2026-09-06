@@ -53,6 +53,7 @@
 
       {%- unless cart.empty? -%}
         {% render 'portal-free-shipping' %}
+        {% render 'portal-cart-delivery' %}
         <div class="cart-page__summary">
           {%- content_for 'block', id: 'cart-page-summary', type: '_cart-summary' -%}
         </div>

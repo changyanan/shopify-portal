@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Página não encontrada",
+      "description": "A página que procura não existe ou pode ter sido movida.",
+      "back_home": "Voltar ao início"
+    },
+    "blog": {
+      "tags_label": "Filtrar artigos por tema",
+      "all_tags": "Todos os artigos"
+    },
+    "about": {
+      "story_heading": "A nossa história",
+      "story_body": "Todas as marcas têm uma história. Partilhe como começou, no que acredita e quem está por detrás.",
+      "cta_label": "Contacte-nos",
+      "values_heading": "Porque comprar connosco",
+      "value_1_heading": "Envio rápido",
+      "value_1_body": "As encomendas são preparadas e enviadas em 1–2 dias úteis.",
+      "value_2_heading": "Devoluções fáceis",
+      "value_2_body": "Devoluções sem complicações até 30 dias após a entrega.",
+      "value_3_heading": "Apoio dedicado",
+      "value_3_body": "A nossa equipa ajuda antes e depois da compra.",
+      "newsletter_heading": "Subscreva a nossa newsletter",
+      "newsletter_body": "Receba novidades, histórias e ofertas exclusivas na sua caixa de entrada."
+    },
+    "shipping_notice": {
+      "default_text": "Os custos e as opções de envio são confirmados no checkout."
+    },
+    "estimated_delivery": {
+      "range_text": "Entrega prevista: {{ start_date }} – {{ end_date }}",
+      "single_text": "Entrega prevista: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Também pode gostar de",
+      "add_to_cart": "Adicionar {{ title }} ao carrinho",
+      "add_error": "Não foi possível adicionar este artigo. Tente novamente."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Slider"
   },
   "accessibility": {
+    "quick_add": "Adição rápida",
     "play_model": "Reproduzir modelo 3D",
     "play_video": "Reproduzir o vídeo",
     "unit_price": "Preço unitário",

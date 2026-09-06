@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "FAQ-gestructureerde gegevens inschakelen",
+    "faq_structured_data_info": "Voegt FAQPage JSON-LD toe zodat zoekmachines vragen en antwoorden beter begrijpen.",
+    "blog_show_tags": "Onderwerptags tonen",
+    "blog_posts_per_page": "Berichten per pagina",
+    "blog_pagination_style": "Pagineringsstijl",
+    "blog_pagination_numbered": "Paginanummers",
+    "blog_pagination_infinite": "Oneindig scrollen",
+    "not_found_search_name": "404 zoeken",
+    "search_heading": "Zoek in onze winkel",
+    "search_placeholder": "Zoeken",
+    "search_placeholder_label": "Placeholder van het zoekveld",
+    "cart_delivery_header": "Winkelwagenverzending",
+    "shipping_notice_enable": "Verzendmelding tonen",
+    "shipping_notice_text": "Tekst van verzendmelding",
+    "shipping_notice_text_info": "Laat leeg om de standaardwinkelvertaling te gebruiken. Wordt weergegeven boven de samenvatting op de winkelwagenpagina en in het winkelwagenpaneel.",
+    "estimated_delivery_enable": "Geschatte leverdatum tonen",
+    "estimated_delivery_min_days": "Vroegste levering (dagen vanaf vandaag)",
+    "estimated_delivery_max_days": "Laatste levering (dagen vanaf vandaag)",
+    "estimated_delivery_days_info": "Kalenderdagen vanaf vandaag. Het bereik wordt opnieuw berekend bij elke update van de winkelwagen.",
+    "cart_recommendations_enable": "Aanbevelingen in het winkelwagenpaneel tonen",
+    "cart_recommendations_name": "Winkelwagenaanbevelingen",
+    "recently_viewed_name": "Onlangs bekeken",
+    "rv_default_heading": "Onlangs bekeken",
+    "rv_editor_info": "Toont producten die de klant onlangs heeft bekeken. Zonder browsegeschiedenis blijft de sectie verborgen; de thema-editor toont placeholderkaarten.",
     "trust_badges_name": "Portal vertrouwensbadges",
     "tb_layout_row": "Rij",
     "tb_layout_column": "Kolom",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Delen via zoekmachines",
     "404": "404",
     "custom_section": "Aangepaste sectie",
     "icon": "Pictogram",
@@ -250,6 +275,12 @@
     "disclosures": "Toelichtingen"
   },
   "settings": {
+    "accent_color": "Accentkleur",
+    "accent_color_secondary": "Secundaire accentkleur",
+    "page_spacing": "Pagina-afstand",
+    "page_spacing_info": "Schaalt de opvulling en tussenruimte van secties die het afstandssysteem van het thema gebruiken.",
+    "social_share_image": "Afbeelding voor sociaal delen",
+    "social_share_image_info": "Wordt gebruikt als standaardafbeelding voor sociaal delen wanneer een pagina geen eigen afbeelding heeft.",
     "autoplay": "Automatisch afspelen",
     "background": "Achtergrond",
     "border_radius": "Hoekradius",
@@ -665,6 +696,7 @@
     "title_preset": "Titelvoorinstelling"
   },
   "options": {
+    "roomy": "Ruim",
     "apple": "Apple",
     "arrow": "Pijl",
     "banana": "Banaan",
@@ -941,6 +973,7 @@
     "input_field": "Invoerveld"
   },
   "content": {
+    "social_links_fallback_info": "Deze koppelingen worden als alternatief gebruikt door socialmedia-blokken als hun eigen koppeling leeg is.",
     "background_video": "Achtergrondvideo",
     "describe_the_video_for": "Geef een beschrijving van de video voor klanten die schermlezers gebruiken. [Meer informatie](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Breedte wordt automatisch geoptimaliseerd voor mobiel.",

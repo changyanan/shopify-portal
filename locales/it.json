@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Pagina non trovata",
+      "description": "La pagina che stai cercando non esiste o potrebbe essere stata spostata.",
+      "back_home": "Torna alla home"
+    },
+    "blog": {
+      "tags_label": "Filtra gli articoli per argomento",
+      "all_tags": "Tutti gli articoli"
+    },
+    "about": {
+      "story_heading": "La nostra storia",
+      "story_body": "Ogni brand ha una storia. Racconta come è nato il tuo, cosa rappresenti e le persone che ci stanno dietro.",
+      "cta_label": "Contattaci",
+      "values_heading": "Perché scegliere noi",
+      "value_1_heading": "Spedizione rapida",
+      "value_1_body": "Gli ordini vengono preparati e spediti entro 1-2 giorni lavorativi.",
+      "value_2_heading": "Resi facili",
+      "value_2_body": "Resi senza pensieri entro 30 giorni dalla consegna.",
+      "value_3_heading": "Assistenza dedicata",
+      "value_3_body": "Il nostro team ti aiuta prima e dopo l'acquisto.",
+      "newsletter_heading": "Iscriviti alla newsletter",
+      "newsletter_body": "Ricevi novità, storie e offerte esclusive nella tua casella email."
+    },
+    "shipping_notice": {
+      "default_text": "Costi e opzioni di spedizione vengono confermati al checkout."
+    },
+    "estimated_delivery": {
+      "range_text": "Consegna stimata: {{ start_date }} – {{ end_date }}",
+      "single_text": "Consegna stimata: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Ti potrebbe interessare anche",
+      "add_to_cart": "Aggiungi {{ title }} al carrello",
+      "add_error": "Impossibile aggiungere questo articolo. Riprova."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Cursore"
   },
   "accessibility": {
+    "quick_add": "Aggiunta rapida",
     "play_model": "Riproduci modello 3D",
     "play_video": "Riproduci video",
     "unit_price": "Prezzo unitario",

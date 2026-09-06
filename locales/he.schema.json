@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "הפעלת נתונים מובנים לשאלות נפוצות",
+    "faq_structured_data_info": "מוסיף סימון FAQPage JSON-LD כדי שמנועי חיפוש יבינו טוב יותר את השאלות והתשובות שלכם.",
+    "blog_show_tags": "הצגת תגיות נושא",
+    "blog_posts_per_page": "פוסטים לעמוד",
+    "blog_pagination_style": "סגנון עימוד",
+    "blog_pagination_numbered": "מספרי עמודים",
+    "blog_pagination_infinite": "גלילה אינסופית",
+    "not_found_search_name": "חיפוש 404",
+    "search_heading": "חיפוש בחנות",
+    "search_placeholder": "חיפוש",
+    "search_placeholder_label": "טקסט מציין מקום לשדה החיפוש",
+    "cart_delivery_header": "משלוח לעגלה",
+    "shipping_notice_enable": "הצגת הודעת משלוח",
+    "shipping_notice_text": "טקסט הודעת המשלוח",
+    "shipping_notice_text_info": "השאר ריק כדי להשתמש בתרגום ברירת המחדל של החנות. מוצג מעל סיכום העגלה בעמוד העגלה ובמגירת העגלה.",
+    "estimated_delivery_enable": "הצגת תאריך מסירה משוער",
+    "estimated_delivery_min_days": "מסירה מוקדמת (ימים מהיום)",
+    "estimated_delivery_max_days": "מסירה מאוחרת (ימים מהיום)",
+    "estimated_delivery_days_info": "ימי יומן מהיום. הטווח מחושב מחדש בכל עדכון של העגלה.",
+    "cart_recommendations_enable": "הצגת המלצות במגירת העגלה",
+    "cart_recommendations_name": "המלצות עגלה",
+    "recently_viewed_name": "נצפו לאחרונה",
+    "rv_default_heading": "נצפו לאחרונה",
+    "rv_editor_info": "מציג מוצרים שהלקוח צפה בהם לאחרונה. ללא היסטוריית גלישה המקטע יישאר מוסתר; עורך ערכת הנושא מציג כרטיסי ממלא מקום.",
     "trust_badges_name": "Portal תגי אמון",
     "tb_layout_row": "שורה",
     "tb_layout_column": "טור",
@@ -108,6 +132,7 @@
     "text": "טקסט"
   },
   "content": {
+    "social_links_fallback_info": "קישורים אלה משמשים כגיבוי עבור בלוקים של מדיה חברתית כאשר הקישור שלהם ריק.",
     "visible_if_collection_has_more_products": "גלוי אם באוסף יש יותר מוצרים ממה שמוצג",
     "advanced": "מתקדם",
     "appearance": "מראה",
@@ -322,6 +347,7 @@
     "media_type_info": "התכונות מאוכלסות מקישורי התפריט שלך"
   },
   "names": {
+    "search_engine_sharing": "שיתוף במנועי חיפוש",
     "column": "עמודה",
     "product_title": "כותרת מוצר",
     "custom_liquid": "Custom Liquid",
@@ -484,6 +510,7 @@
     "comparison_slider": "מחוון השוואה"
   },
   "options": {
+    "roomy": "מרווח",
     "above_carousel": "מעל הקרוסלה",
     "accent": "הדגשה",
     "all": "הכול",
@@ -760,6 +787,12 @@
     "below_media": "מתחת למדיה"
   },
   "settings": {
+    "accent_color": "צבע הדגשה",
+    "accent_color_secondary": "צבע הדגשה משני",
+    "page_spacing": "מרווחי עמוד",
+    "page_spacing_info": "משנה את קנה המידה של הריפוד והמרווחים של מקטעים המשתמשים במערכת המרווחים של ערכת העיצוב.",
+    "social_share_image": "תמונת שיתוף חברתי",
+    "social_share_image_info": "משמשת כתמונת שיתוף ברירת מחדל כאשר לעמוד אין תמונה משלו.",
     "accordion": "אקורדיון",
     "account": "חשבון",
     "actions_display_style": "סגנון תפריט",

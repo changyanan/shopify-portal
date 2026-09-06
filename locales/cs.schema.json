@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Povolit strukturovaná data FAQ",
+    "faq_structured_data_info": "Přidává značky FAQPage JSON-LD, aby vyhledávače lépe porozuměly vašim otázkám a odpovědím.",
+    "blog_show_tags": "Zobrazit štítky témat",
+    "blog_posts_per_page": "Příspěvků na stránku",
+    "blog_pagination_style": "Styl stránkování",
+    "blog_pagination_numbered": "Čísla stránek",
+    "blog_pagination_infinite": "Nekonečné posouvání",
+    "not_found_search_name": "Hledání 404",
+    "search_heading": "Hledat v obchodě",
+    "search_placeholder": "Hledat",
+    "search_placeholder_label": "Zástupný text vyhledávacího pole",
+    "cart_delivery_header": "Doručení košíku",
+    "shipping_notice_enable": "Zobrazit upozornění na dopravu",
+    "shipping_notice_text": "Text upozornění na dopravu",
+    "shipping_notice_text_info": "Ponechte prázdné pro použití výchozího překladu. Zobrazuje se nad souhrnem na stránce košíku a v zásuvce košíku.",
+    "estimated_delivery_enable": "Zobrazit předpokládané datum doručení",
+    "estimated_delivery_min_days": "Nejčasnější doručení (dny od dneška)",
+    "estimated_delivery_max_days": "Nejpozdější doručení (dny od dneška)",
+    "estimated_delivery_days_info": "Kalendářní dny od dneška. Rozsah se přepočítává při každé aktualizaci košíku.",
+    "cart_recommendations_enable": "Zobrazit doporučení v zásuvce košíku",
+    "cart_recommendations_name": "Doporučení košíku",
+    "recently_viewed_name": "Nedávno prohlížené",
+    "rv_default_heading": "Nedávno prohlížené",
+    "rv_editor_info": "Zobrazuje produkty, které zákazník nedávno prohlédl. Bez historie prohlížení zůstává sekce skrytá; editor motivů zobrazuje zástupné karty.",
     "trust_badges_name": "Portal odznaky důvěry",
     "tb_layout_row": "Řádek",
     "tb_layout_column": "Sloupec",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Sdílení ve vyhledávačích",
     "404": "404",
     "colors": "Paleta barev",
     "custom_section": "Vlastní sekce",
@@ -250,6 +275,12 @@
     "disclosures": "Prohlášení"
   },
   "settings": {
+    "accent_color": "Akcentová barva",
+    "accent_color_secondary": "Sekundární akcentová barva",
+    "page_spacing": "Odsazení stránky",
+    "page_spacing_info": "Škáluje odsazení a mezery sekcí, které používají systém odsazení motivu.",
+    "social_share_image": "Obrázek pro sdílení na sociálních sítích",
+    "social_share_image_info": "Použije se jako výchozí obrázek pro sdílení, když stránka nemá vlastní obrázek.",
     "alignment": "Zarovnání",
     "autoplay": "Automatické přehrávání",
     "background": "Pozadí",
@@ -665,6 +696,7 @@
     "title_preset": "Předvolba nadpisu"
   },
   "options": {
+    "roomy": "Prostorný",
     "apple": "Apple",
     "arrow": "Šipka",
     "auto": "Automaticky",
@@ -941,6 +973,7 @@
     "input_field": "Vstupní pole"
   },
   "content": {
+    "social_links_fallback_info": "Tyto odkazy používají bloky sociálních sítí jako náhradní, pokud je jejich vlastní odkaz prázdný.",
     "advanced": "Pokročilé",
     "background_image": "Obrázek na pozadí",
     "background_video": "Video na pozadí",

@@ -15,7 +15,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h1>Page not found</h1>",
+            "text": "<h1>{{ 'portal.not_found.title' | t }}</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -39,7 +39,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>The link may be incorrect, or the page has been removed. </p>",
+            "text": "<p>{{ 'portal.not_found.description' | t }}</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -59,14 +59,29 @@
           },
           "blocks": {}
         },
+        "button_home": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "{{ 'portal.not_found.back_home' | t }}",
+            "link": "{{ routes.root_url }}",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
         "button_PAQMwR": {
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Continue shopping",
+            "label": "{{ 'actions.continue_shopping' | t }}",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
-            "style_class": "button",
+            "style_class": "button-secondary",
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -78,6 +93,7 @@
       "block_order": [
         "text_GqmVFf",
         "text_Ua9XAW",
+        "button_home",
         "button_PAQMwR"
       ],
       "settings": {
@@ -130,7 +146,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>You may also like</h3>",
+                "text": "<h3>{{ 'portal.cart_recommendations.title' | t }}</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -318,10 +334,18 @@
         "padding-block-start": 48,
         "padding-block-end": 64
       }
+    },
+    "not_found_search": {
+      "type": "portal-404-search",
+      "settings": {
+        "padding-block-start": 0,
+        "padding-block-end": 48
+      }
     }
   },
   "order": [
     "main",
+    "not_found_search",
     "product_list_ed3c8h"
   ]
 }

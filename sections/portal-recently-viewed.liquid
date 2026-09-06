@@ -1,0 +1,287 @@
+{% comment %}
+  Portal 定制:最近浏览商品(recently viewed)section。
+
+  实现方式:
+  - assets/portal-recently-viewed.js 把访客浏览过的商品 ID 记录到 localStorage
+    (键:portal-viewed-products,上限 8 个),元素挂载时排除当前商品并按上限截断,
+    再通过 Section Rendering API 请求
+    /search?q=id:A OR id:B&resources[type]=product&section_id=portal-recently-viewed
+    拉取真实商品卡片(复用官方 resource-card snippet,含价格与悬停副图)。
+  - 拉取渲染时本 section 命中 search.performed 分支,只输出按浏览顺序
+    (由 search.terms 还原)排列的卡片列表,由 JS 注入页面;
+    访客无浏览记录、搜索无结果或请求失败时,整个 section 自动隐藏。
+  - 主题编辑器(request.design_mode)渲染占位图形,不运行 JS。
+  - 卡片图片比例与列数由初始渲染的外层 CSS 变量统一控制,
+    不依赖拉取渲染分支的 schema 默认值。
+{% endcomment %}
+
+{% liquid
+  assign rv_columns = section.settings.columns | default: 4
+  assign rv_ratio = '1 / 1'
+  case section.settings.image_ratio
+    when 'portrait'
+      assign rv_ratio = '4 / 5'
+    when 'landscape'
+      assign rv_ratio = '4 / 3'
+    when 'adapt'
+      assign rv_ratio = 'adapt'
+  endcase
+
+  assign rv_width = 'page-width'
+  if section.settings.content_width == 'content-full-width'
+    assign rv_width = 'full-width'
+  endif
+
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+{% if search.performed and search.terms contains 'id:' %}
+  {% comment %}
+    Section Rendering API 分支:仅输出卡片列表,由 portal-recently-viewed.js 注入。
+    搜索不保留商品顺序,这里按 search.terms 中的 id 顺序逐个取出还原。
+  {% endcomment %}
+  {%- liquid
+    assign rv_order_ids = search.terms | replace: 'id:', '' | split: ' OR '
+  -%}
+  <ul
+    class="portal-rv__source list-unstyled"
+    data-portal-rv-source
+    hidden
+  >
+    {% for rv_id in rv_order_ids %}
+      {% assign rv_int_id = rv_id | times: 1 %}
+      {% assign rv_product = search.results | find: 'id', rv_int_id %}
+      {% if rv_product != blank %}
+        <li
+          class="portal-rv__item"
+          data-portal-rv-item
+          data-product-id="{{ rv_product.id }}"
+        >
+          {% render 'resource-card',
+            resource_type: 'product',
+            resource: rv_product,
+            image_width: 600,
+            image_hover: true,
+            image_aspect_ratio: 'adapt',
+            product_view_context: 'recently_viewed'
+          %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% else %}
+  <div
+    class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  ></div>
+  <div
+    class="portal-recently-viewed section section--{{ rv_width }} spacing-style{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+    style="{% render 'spacing-style', settings: section.settings %}"
+    data-testid="portal-recently-viewed"
+  >
+    {% if section.settings.heading != blank %}
+      <h2 class="portal-rv__heading">{{ section.settings.heading | escape }}</h2>
+    {% endif %}
+
+    <portal-recently-viewed
+      class="portal-rv"
+      data-source-section-id="portal-recently-viewed"
+      data-limit="{{ section.settings.products_to_show }}"
+      style="--portal-rv-columns: {{ rv_columns }}; --portal-rv-image-ratio: {{ rv_ratio }};"
+      {% if request.design_mode %}
+        data-design-mode="true"
+      {% endif %}
+    >
+      {% if request.design_mode %}
+        {% comment %} 编辑器内没有浏览记录,渲染占位图形示意布局 {% endcomment %}
+        <ul class="portal-rv__list portal-rv__list--placeholder" aria-hidden="true">
+          {% for i in (1..rv_columns) %}
+            <li class="portal-rv__item">
+              <div class="portal-rv__placeholder">
+                {{- 'product-1' | placeholder_svg_tag: 'portal-rv__placeholder-svg' -}}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <ul class="portal-rv__list" data-portal-rv-list hidden></ul>
+      {% endif %}
+    </portal-recently-viewed>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .portal-recently-viewed {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md, 16px);
+  }
+
+  .portal-rv__heading {
+    margin: 0;
+    font-family: var(--font-h2--family, var(--font-heading--family));
+    font-weight: var(--font-h2--weight);
+    font-size: var(--font-h2--size);
+    line-height: var(--font-h2--line-height);
+    letter-spacing: var(--font-h2--letter-spacing);
+    text-transform: var(--font-h2--case);
+  }
+
+  .portal-rv__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .portal-rv__list {
+      grid-template-columns: repeat(var(--portal-rv-columns, 4), minmax(0, 1fr));
+      gap: 16px;
+    }
+  }
+
+  .portal-rv__item {
+    min-width: 0;
+  }
+
+  /* 卡片比例由本 section 统一控制(拉取渲染分支拿不到实例设置,只输出 adapt) */
+  .portal-rv .resource-card__image {
+    aspect-ratio: var(--portal-rv-image-ratio, var(--resource-card-aspect-ratio, auto));
+  }
+
+  .portal-rv__placeholder {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-background-secondary);
+    overflow: hidden;
+  }
+
+  .portal-rv__placeholder svg {
+    width: 60%;
+    height: auto;
+    opacity: 0.5;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:portal.recently_viewed_name",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:portal.rv_editor_info"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:portal.rv_default_heading"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "t:settings.product_count",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.columns",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "t:settings.image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:options.auto"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        },
+        {
+          "value": "portrait",
+          "label": "t:options.portrait"
+        },
+        {
+          "value": "landscape",
+          "label": "t:options.landscape"
+        }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "content-center-aligned",
+          "label": "t:options.page"
+        },
+        {
+          "value": "content-full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "content-center-aligned"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 72
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:portal.recently_viewed_name",
+      "category": "t:portal.category"
+    }
+  ]
+}
+{% endschema %}

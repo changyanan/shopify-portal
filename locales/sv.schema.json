@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Aktivera strukturerade FAQ-data",
+    "faq_structured_data_info": "Lägger till FAQPage JSON-LD så att sökmotorer bättre förstår dina frågor och svar.",
+    "blog_show_tags": "Visa ämnes-taggar",
+    "blog_posts_per_page": "Inlägg per sida",
+    "blog_pagination_style": "Pagineringsstil",
+    "blog_pagination_numbered": "Sidnummer",
+    "blog_pagination_infinite": "Oändlig rullning",
+    "not_found_search_name": "404-sökning",
+    "search_heading": "Sök i butiken",
+    "search_placeholder": "Sök",
+    "search_placeholder_label": "Platshållare för sökfältet",
+    "cart_delivery_header": "Leverans för varukorgen",
+    "shipping_notice_enable": "Visa leveransmeddelande",
+    "shipping_notice_text": "Text för leveransmeddelande",
+    "shipping_notice_text_info": "Lämna tomt för att använda standardöversättningen. Visas ovanför sammanfattningen på varukorgssidan och i varukorgslådan.",
+    "estimated_delivery_enable": "Visa beräknat leveransdatum",
+    "estimated_delivery_min_days": "Tidigaste leverans (dagar från idag)",
+    "estimated_delivery_max_days": "Senaste leverans (dagar från idag)",
+    "estimated_delivery_days_info": "Kalenderdagar från idag. Intervallet beräknas om varje gång varukorgen uppdateras.",
+    "cart_recommendations_enable": "Visa rekommendationer i varukorgslådan",
+    "cart_recommendations_name": "Varukorgsrekommendationer",
+    "recently_viewed_name": "Nyligen visade",
+    "rv_default_heading": "Nyligen visade",
+    "rv_editor_info": "Visar produkter som kunden nyligen har tittat på. Utan surfhistorik förblir avsnittet dolt; temaredigeraren visar platshållarkort.",
     "trust_badges_name": "Portal förtroendemärken",
     "tb_layout_row": "Rad",
     "tb_layout_column": "Kolumn",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Delning i sökmotorer",
     "404": "404",
     "colors": "Färgpalett",
     "custom_section": "Anpassad sektion",
@@ -250,6 +275,12 @@
     "disclosures": "Upplysningar"
   },
   "settings": {
+    "accent_color": "Accentfärg",
+    "accent_color_secondary": "Sekundär accentfärg",
+    "page_spacing": "Sidmellanrum",
+    "page_spacing_info": "Skalar utfyllnad och mellanrum i avsnitt som använder temats mellanrumssystem.",
+    "social_share_image": "Bild för social delning",
+    "social_share_image_info": "Används som standardbild för social delning när en sida inte har en egen bild.",
     "alignment": "Justering",
     "autoplay": "Autouppspelning",
     "background": "Bakgrund",
@@ -665,6 +696,7 @@
     "title_preset": "Förinställning för rubrik"
   },
   "options": {
+    "roomy": "Rymlig",
     "apple": "Apple",
     "arrow": "Pil",
     "auto": "Auto",
@@ -941,6 +973,7 @@
     "input_field": "Inmatningsfält"
   },
   "content": {
+    "social_links_fallback_info": "Dessa länkar används som reserv av sociala medier-block när deras egen länk är tom.",
     "advanced": "Avancerat",
     "background_image": "Bakgrundsbild",
     "background_video": "Bakgrundsvideo",

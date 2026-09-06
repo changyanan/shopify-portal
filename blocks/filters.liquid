@@ -359,6 +359,8 @@
       </div>
     {% endif %}
 
+    {% render 'portal-products-count', products_count: products_count %}
+
     {% liquid
       assign child_count = 0
       if block_settings.enable_filtering == false and block_settings.enable_sorting

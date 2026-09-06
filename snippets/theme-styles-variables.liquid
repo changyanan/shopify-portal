@@ -437,8 +437,8 @@
     --gap-2xl: 2rem;
     --gap-3xl: 3rem;
 
-    --spacing-scale-md: 0.7;
-    --spacing-scale-default: 1.0;
+    --spacing-scale-md: {% case settings.page_spacing %}{% when 'compact' %}0.6{% when 'roomy' %}0.8{% else %}0.7{% endcase %};
+    --spacing-scale-default: {% case settings.page_spacing %}{% when 'compact' %}0.85{% when 'roomy' %}1.15{% else %}1.0{% endcase %};
 
     /* Checkout buttons gap */
     --checkout-button-gap: 10px;

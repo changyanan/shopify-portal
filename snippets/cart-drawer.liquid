@@ -37,6 +37,8 @@
       <div class="cart-drawer__items">
         {% render 'cart-products', force_empty: true, context: 'drawer' %}
       </div>
+
+      {% render 'portal-cart-recommendations' %}
     </div>
   {% endcapture %}
 
@@ -115,8 +117,18 @@
                   {% render 'cart-products', context: 'drawer' %}
                 </scroll-hint>
 
+                {% render 'portal-cart-recommendations' %}
+                {% render 'portal-cart-delivery', context: 'drawer' %}
+
                 <div class="cart-drawer__summary">
                   {% render 'cart-summary', section_id: 'cart-drawer-section' %}
+                  <a
+                    href="{{ routes.cart_url }}"
+                    class="cart-drawer__view-cart"
+                    data-testid="cart-drawer-view-cart"
+                  >
+                    {{ 'content.view_cart' | t }}
+                  </a>
                 </div>
               </scroll-hint>
             {%- endif -%}
@@ -217,6 +229,17 @@
   .theme-drawer__dialog[cart-summary-sticky='false'] .cart-drawer__summary {
     position: static;
     mask-image: none;
+  }
+
+  .cart-drawer__view-cart {
+    margin-block-start: calc(-1 * var(--gap-sm));
+    font-size: var(--font-size--sm);
+    color: var(--color-foreground);
+    text-underline-offset: 3px;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
 
   .theme-drawer__dialog[cart-summary-sticky='false'] .cart-drawer__items {

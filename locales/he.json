@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "הדף לא נמצא",
+      "description": "הדף שאתה מחפש לא קיים או ייתכן שהועבר.",
+      "back_home": "חזרה לדף הבית"
+    },
+    "blog": {
+      "tags_label": "סינון פוסטים בבלוג לפי נושא",
+      "all_tags": "כל הפוסטים"
+    },
+    "about": {
+      "story_heading": "הסיפור שלנו",
+      "story_body": "לכל מותג יש סיפור. ספרו איך המותג שלכם התחיל, מה אתם מייצגים ומי עומד מאחוריו.",
+      "cta_label": "צרו קשר",
+      "values_heading": "למה לקנות אצלנו",
+      "value_1_heading": "משלוח מהיר",
+      "value_1_body": "הזמנות מוכנות ונשלחות בתוך 1–2 ימי עסקים.",
+      "value_2_heading": "החזרות קלות",
+      "value_2_body": "החזרות ללא דאגות בתוך 30 יום מהמסירה.",
+      "value_3_heading": "תמיכה אישית",
+      "value_3_body": "הצוות שלנו כאן לעזור לפני הרכישה ואחריה.",
+      "newsletter_heading": "הרשמו לניוזלטר",
+      "newsletter_body": "עדכוני מוצרים, סיפורים ומבצעים בלעדיים ישר לתיבה שלכם."
+    },
+    "shipping_notice": {
+      "default_text": "עלויות המשלוח ואפשרויות המשלוח מאושרות בעת התשלום."
+    },
+    "estimated_delivery": {
+      "range_text": "מסירה משוערת: {{ start_date }} – {{ end_date }}",
+      "single_text": "מסירה משוערת: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "אולי יעניין אותך גם",
+      "add_to_cart": "הוספת {{ title }} לעגלה",
+      "add_error": "לא הצלחנו להוסיף את הפריט הזה. נסה שוב."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -17,6 +52,7 @@
   },
 
   "accessibility": {
+    "quick_add": "הוספה מהירה",
     "account": "חשבון",
     "active_filters": "מסננים פעילים:",
     "cart": "סל",

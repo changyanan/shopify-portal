@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Stránka sa nenašla",
+      "description": "Stránka, ktorú hľadáte, neexistuje alebo mohla byť presunutá.",
+      "back_home": "Späť na domovskú stránku"
+    },
+    "blog": {
+      "tags_label": "Filtrovať blogové príspevky podľa témy",
+      "all_tags": "Všetky príspevky"
+    },
+    "about": {
+      "story_heading": "Náš príbeh",
+      "story_body": "Každá značka má svoj príbeh. Podeľte sa o to, ako začal, čo je pre vás dôležité a kto stojí za značkou.",
+      "cta_label": "Kontaktujte nás",
+      "values_heading": "Prečo nakupovať u nás",
+      "value_1_heading": "Rýchle odoslanie",
+      "value_1_body": "Objednávky pripravujeme a odosielame do 1–2 pracovných dní.",
+      "value_2_heading": "Jednoduché vrátenie",
+      "value_2_body": "Bezproblémové vrátenie do 30 dní od doručenia.",
+      "value_3_heading": "Osobná podpora",
+      "value_3_body": "Náš tím vám pomôže pred nákupom aj po ňom.",
+      "newsletter_heading": "Prihláste sa na odber noviniek",
+      "newsletter_body": "Novinky o produktoch, príbehy a exkluzívne ponuky priamo do vašej schránky."
+    },
+    "shipping_notice": {
+      "default_text": "Náklady na dopravu a možnosti dopravy sa potvrdia pri pokladnici."
+    },
+    "estimated_delivery": {
+      "range_text": "Predpokladané doručenie: {{ start_date }} – {{ end_date }}",
+      "single_text": "Predpokladané doručenie: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Mohlo by sa vám páčiť aj",
+      "add_to_cart": "Pridať {{ title }} do košíka",
+      "add_error": "Položku sa nepodarilo pridať. Skúste to znova."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Jazdec"
   },
   "accessibility": {
+    "quick_add": "Rýchle pridanie",
     "play_model": "Prehrať 3D model",
     "play_video": "Prehrať video",
     "unit_price": "Jednotková cena",

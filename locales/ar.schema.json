@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "تمكين البيانات المنظمة للأسئلة الشائعة",
+    "faq_structured_data_info": "يضيف ترميز FAQPage JSON-LD لمساعدة محركات البحث على فهم أسئلتك وإجاباتك بشكل أفضل.",
+    "blog_show_tags": "إظهار وسوم المواضيع",
+    "blog_posts_per_page": "المقالات لكل صفحة",
+    "blog_pagination_style": "نمط ترقيم الصفحات",
+    "blog_pagination_numbered": "أرقام الصفحات",
+    "blog_pagination_infinite": "تمرير لا نهائي",
+    "not_found_search_name": "بحث 404",
+    "search_heading": "ابحث في متجرنا",
+    "search_placeholder": "بحث",
+    "search_placeholder_label": "نص بديل لحقل البحث",
+    "cart_delivery_header": "التوصيل لسلة التسوق",
+    "shipping_notice_enable": "إظهار ملاحظة الشحن",
+    "shipping_notice_text": "نص ملاحظة الشحن",
+    "shipping_notice_text_info": "اتركه فارغًا لاستخدام الترجمة الافتراضية. يظهر أعلى ملخص السلة في صفحة السلة وفي درج السلة.",
+    "estimated_delivery_enable": "إظهار تاريخ التوصيل المتوقع",
+    "estimated_delivery_min_days": "أقرب موعد توصيل (أيام من اليوم)",
+    "estimated_delivery_max_days": "أقصى موعد توصيل (أيام من اليوم)",
+    "estimated_delivery_days_info": "أيام تقويمية من اليوم. يُعاد حساب النطاق مع كل تحديث للسلة.",
+    "cart_recommendations_enable": "إظهار التوصيات في درج السلة",
+    "cart_recommendations_name": "توصيات السلة",
+    "recently_viewed_name": "شوهدت مؤخرًا",
+    "rv_default_heading": "شوهدت مؤخرًا",
+    "rv_editor_info": "يعرض هذا القسم المنتجات التي شاهدها العميل مؤخرًا. يظل مخفيًا عند عدم وجود سجل تصفح، ويعرض محرر القالب بطاقات توضيحية بدلًا من ذلك.",
     "trust_badges_name": "Portal شارات الثقة",
     "tb_layout_row": "أفقي",
     "tb_layout_column": "عمودي",
@@ -108,6 +132,7 @@
     "text": "نص"
   },
   "content": {
+    "social_links_fallback_info": "تُستخدم هذه الروابط كبديل بواسطة كتل وسائل التواصل الاجتماعي عندما يكون الرابط الخاص بها فارغًا.",
     "visible_if_collection_has_more_products": "مرئي إذا كانت المجموعة تحتوي على منتجات أكثر من المعروضة",
     "advanced": "متقدم",
     "appearance": "المظهر",
@@ -322,6 +347,7 @@
     "media_type_info": "تمت تعبئة الميزات من روابط القائمة الخاصة بك"
   },
   "names": {
+    "search_engine_sharing": "المشاركة عبر محركات البحث",
     "column": "عمود",
     "product_title": "عنوان المنتج",
     "custom_liquid": "Liquid مخصص",
@@ -484,6 +510,7 @@
     "comparison_slider": "شريط تمرير المقارنة"
   },
   "options": {
+    "roomy": "واسع",
     "above_carousel": "أعلى العرض الدائري",
     "accent": "تمييز",
     "all": "الكل",
@@ -760,6 +787,12 @@
     "below_media": "أسفل الوسائط"
   },
   "settings": {
+    "accent_color": "لون التمييز",
+    "accent_color_secondary": "لون التمييز الثانوي",
+    "page_spacing": "تباعد الصفحة",
+    "page_spacing_info": "يضبط حجم المساحات الداخلية والفجوات للأقسام التي تستخدم نظام تباعد القالب.",
+    "social_share_image": "صورة المشاركة الاجتماعية",
+    "social_share_image_info": "تُستخدم كصورة مشاركة افتراضية عندما لا تحتوي الصفحة على صورة خاصة بها.",
     "accordion": "أكورديون",
     "account": "حساب",
     "actions_display_style": "نمط القائمة",

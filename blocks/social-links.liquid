@@ -17,6 +17,15 @@
   {% for link_key in social_links %}
     {% liquid
       assign link_url = block.settings[link_key]
+
+      comment
+        Fall back to the global social media theme settings when the block setting is empty
+      endcomment
+      if link_url == blank
+        assign global_social_key = 'social_' | append: link_key | replace: '_url', '_link'
+        assign link_url = settings[global_social_key]
+      endif
+
       assign render_icon = true
 
       if link_url != blank

@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "找不到頁面",
+      "description": "您造訪的頁面不存在，或已被移動。",
+      "back_home": "返回首頁"
+    },
+    "blog": {
+      "tags_label": "依主題篩選網誌文章",
+      "all_tags": "全部文章"
+    },
+    "about": {
+      "story_heading": "品牌故事",
+      "story_body": "每個品牌都有自己的故事。在這裡分享我們的起點、堅持的理念，以及品牌背後的人。",
+      "cta_label": "聯絡我們",
+      "values_heading": "為什麼選擇我們",
+      "value_1_heading": "快速配送",
+      "value_1_body": "訂單將於 1–2 個工作天內揀貨並寄出。",
+      "value_2_heading": "輕鬆退貨",
+      "value_2_body": "簽收後 30 天內支援無憂退貨。",
+      "value_3_heading": "專屬服務",
+      "value_3_body": "購前購後，我們的團隊隨時為您提供協助。",
+      "newsletter_heading": "訂閱電子報",
+      "newsletter_body": "在收件匣取得商品動態、品牌故事與專屬優惠。"
+    },
+    "shipping_notice": {
+      "default_text": "運費與配送方式將於結帳時確認。"
+    },
+    "estimated_delivery": {
+      "range_text": "預計送達：{{ start_date }} 至 {{ end_date }}",
+      "single_text": "預計送達：{{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "為你推薦",
+      "add_to_cart": "將 {{ title }} 加入購物車",
+      "add_error": "暫時無法加入該商品，請重試。"
+    },
     "free_shipping": {
       "remaining_html": "再買 {{ amount }} 即可免運",
       "unlocked": "已解鎖免運!",
@@ -37,6 +72,7 @@
     "slider_label": "投影播放器"
   },
   "accessibility": {
+    "quick_add": "快速加入購物車",
     "play_model": "播放 3D 模型",
     "play_video": "播放影片",
     "unit_price": "單價",

@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Không tìm thấy trang",
+      "description": "Trang bạn tìm không tồn tại hoặc có thể đã bị di chuyển.",
+      "back_home": "Về trang chủ"
+    },
+    "blog": {
+      "tags_label": "Lọc bài viết theo chủ đề",
+      "all_tags": "Tất cả bài viết"
+    },
+    "about": {
+      "story_heading": "Câu chuyện của chúng tôi",
+      "story_body": "Mỗi thương hiệu đều có một câu chuyện. Hãy chia sẻ thương hiệu của bạn bắt đầu từ đâu, bạn tin vào điều gì và ai đứng sau nó.",
+      "cta_label": "Liên hệ với chúng tôi",
+      "values_heading": "Vì sao mua sắm cùng chúng tôi",
+      "value_1_heading": "Giao hàng nhanh",
+      "value_1_body": "Đơn hàng được chuẩn bị và gửi đi trong 1–2 ngày làm việc.",
+      "value_2_heading": "Đổi trả dễ dàng",
+      "value_2_body": "Đổi trả không rắc rối trong vòng 30 ngày kể từ khi nhận hàng.",
+      "value_3_heading": "Hỗ trợ tận tâm",
+      "value_3_body": "Đội ngũ của chúng tôi sẵn sàng giúp đỡ trước và sau khi mua.",
+      "newsletter_heading": "Đăng ký nhận tin",
+      "newsletter_body": "Nhận tin tức sản phẩm, câu chuyện và ưu đãi độc quyền ngay trong hộp thư của bạn."
+    },
+    "shipping_notice": {
+      "default_text": "Phí vận chuyển và phương thức giao hàng sẽ được xác nhận khi thanh toán."
+    },
+    "estimated_delivery": {
+      "range_text": "Giao hàng dự kiến: {{ start_date }} – {{ end_date }}",
+      "single_text": "Giao hàng dự kiến: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Bạn cũng có thể thích",
+      "add_to_cart": "Thêm {{ title }} vào giỏ hàng",
+      "add_error": "Không thể thêm sản phẩm này. Vui lòng thử lại."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Thanh trượt"
   },
   "accessibility": {
+    "quick_add": "Thêm nhanh",
     "play_model": "Phát mô hình 3D",
     "play_video": "Phát video",
     "unit_price": "Đơn giá",

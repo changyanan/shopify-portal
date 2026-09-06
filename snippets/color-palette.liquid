@@ -162,6 +162,26 @@
   endif
 %}
 
+{% comment %} Accent colors (smart contrast for on-accent text) {% endcomment %}
+{% liquid
+  assign accent_color = settings.palette_accent | default: settings.page_text_color
+  assign accent_color_secondary = settings.palette_accent_secondary | default: accent_color
+
+  assign accent_brightness = accent_color | color_brightness
+  if accent_brightness > 128
+    assign on_accent_color = palette_darkest
+  else
+    assign on_accent_color = palette_lightest
+  endif
+
+  assign accent_secondary_brightness = accent_color_secondary | color_brightness
+  if accent_secondary_brightness > 128
+    assign on_accent_secondary_color = palette_darkest
+  else
+    assign on_accent_secondary_color = palette_lightest
+  endif
+%}
+
 {% style %}
   /* Palette colors */
   :root {
@@ -175,6 +195,13 @@
     --palette-lightest-rgb: {{ palette_lightest.rgb }};
     --palette-darkest: {{ palette_darkest }};
     --palette-darkest-rgb: {{ palette_darkest.rgb }};
+    --color-accent: {{ accent_color }};
+    --color-accent-rgb: {{ accent_color.rgb }};
+    --color-on-accent: {{ on_accent_color }};
+    --color-accent-secondary: {{ accent_color_secondary }};
+    --color-accent-secondary-rgb: {{ accent_color_secondary.rgb }};
+    --color-on-accent-secondary: {{ on_accent_secondary_color }};
+    --color-card-shadow-rgb: {{ settings.card_shadow_color.rgb }};
     {% render 'brightness-opacities', background: settings.page_background_color %}
 
     --color-primary-button-text: rgb({{ settings.palette_primary_button_text.rgba }});

@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "啟用 FAQ 結構化資料",
+    "faq_structured_data_info": "加入 FAQPage JSON-LD 標記，協助搜尋引擎更理解您的問答內容。",
+    "blog_show_tags": "顯示主題標籤",
+    "blog_posts_per_page": "每頁文章數",
+    "blog_pagination_style": "分頁方式",
+    "blog_pagination_numbered": "頁碼分頁",
+    "blog_pagination_infinite": "無限捲動",
+    "not_found_search_name": "404 搜尋",
+    "search_heading": "搜尋本店商品",
+    "search_placeholder": "搜尋",
+    "search_placeholder_label": "搜尋框預留位置",
+    "cart_delivery_header": "購物車配送資訊",
+    "shipping_notice_enable": "顯示配送提示",
+    "shipping_notice_text": "配送提示文案",
+    "shipping_notice_text_info": "留空時使用預設翻譯文案。顯示在購物車頁與購物車抽屜的結帳區塊上方。",
+    "estimated_delivery_enable": "顯示預計送達日期",
+    "estimated_delivery_min_days": "最早送達（當天起算天數）",
+    "estimated_delivery_max_days": "最晚送達（當天起算天數）",
+    "estimated_delivery_days_info": "按自然日計算，購物車每次更新時自動重新計算日期區間。",
+    "cart_recommendations_enable": "在購物車抽屜中顯示推薦商品",
+    "cart_recommendations_name": "購物車推薦商品",
+    "recently_viewed_name": "最近瀏覽",
+    "rv_default_heading": "最近瀏覽",
+    "rv_editor_info": "顧客最近瀏覽過的商品。沒有瀏覽紀錄時自動隱藏；主題編輯器中顯示預留位置卡片。",
     "trust_badges_name": "Portal 信任徽章",
     "tb_layout_row": "橫向",
     "tb_layout_column": "縱向",
@@ -87,6 +111,7 @@
 
 
   "names": {
+    "search_engine_sharing": "搜尋引擎分享",
     "404": "404",
     "colors": "調色盤",
     "custom_section": "自訂區段",
@@ -249,6 +274,12 @@
     "disclosures": "資訊揭露"
   },
   "settings": {
+    "accent_color": "主色",
+    "accent_color_secondary": "輔助色",
+    "page_spacing": "頁面間距",
+    "page_spacing_info": "依比例縮放使用主題間距系統的區塊內距與間距。",
+    "social_share_image": "社群分享圖片",
+    "social_share_image_info": "當頁面沒有自己的圖片時，作為預設的社群分享圖片。",
     "alignment": "對齊",
     "autoplay": "自動播放",
     "background": "背景",
@@ -664,6 +695,7 @@
     "title_preset": "標題預設設定"
   },
   "options": {
+    "roomy": "寬鬆",
     "apple": "Apple",
     "arrow": "箭頭",
     "auto": "自動",
@@ -940,6 +972,7 @@
     "input_field": "輸入欄位"
   },
   "content": {
+    "social_links_fallback_info": "社群媒體區塊自身的連結為空時，將使用這些連結作為後備。",
     "advanced": "進階",
     "background_image": "背景圖片",
     "background_video": "背景影片",

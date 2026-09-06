@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "启用 FAQ 结构化数据",
+    "faq_structured_data_info": "添加 FAQPage JSON-LD 标记，帮助搜索引擎更好地理解您的问答内容。",
+    "blog_show_tags": "显示话题标签",
+    "blog_posts_per_page": "每页文章数",
+    "blog_pagination_style": "分页方式",
+    "blog_pagination_numbered": "页码分页",
+    "blog_pagination_infinite": "无限滚动",
+    "not_found_search_name": "404 搜索",
+    "search_heading": "搜索本店商品",
+    "search_placeholder": "搜索",
+    "search_placeholder_label": "搜索框占位文本",
+    "cart_delivery_header": "购物车配送信息",
+    "shipping_notice_enable": "显示配送提示",
+    "shipping_notice_text": "配送提示文案",
+    "shipping_notice_text_info": "留空时使用默认翻译文案。显示在购物车页和购物车抽屉的结算区域上方。",
+    "estimated_delivery_enable": "显示预计送达日期",
+    "estimated_delivery_min_days": "最早送达（当天起算天数）",
+    "estimated_delivery_max_days": "最晚送达（当天起算天数）",
+    "estimated_delivery_days_info": "按自然日计算，购物车每次更新时自动重新计算日期区间。",
+    "cart_recommendations_enable": "在购物车抽屉中显示推荐商品",
+    "cart_recommendations_name": "购物车推荐商品",
+    "recently_viewed_name": "最近浏览",
+    "rv_default_heading": "最近浏览",
+    "rv_editor_info": "展示顾客最近浏览过的商品。无浏览记录时该模块自动隐藏；主题编辑器中显示占位卡片。",
     "trust_badges_name": "Portal 信任徽章",
     "tb_layout_row": "横向",
     "tb_layout_column": "纵向",
@@ -86,6 +110,7 @@
   },
 
   "names": {
+    "search_engine_sharing": "搜索引擎分享",
     "404": "404",
     "colors": "调色板",
     "custom_section": "自定义分区",
@@ -248,6 +273,12 @@
     "disclosures": "披露信息"
   },
   "settings": {
+    "accent_color": "主色",
+    "accent_color_secondary": "辅助色",
+    "page_spacing": "页面间距",
+    "page_spacing_info": "按比例缩放使用主题间距体系的区块内边距与间距。",
+    "social_share_image": "社交分享图片",
+    "social_share_image_info": "当页面没有自己的图片时，用作默认的社交分享图片。",
     "alignment": "对齐方式",
     "autoplay": "自动播放",
     "background": "背景",
@@ -663,6 +694,7 @@
     "title_preset": "标题预设"
   },
   "options": {
+    "roomy": "宽松",
     "apple": "Apple",
     "arrow": "箭头",
     "auto": "自动",
@@ -939,6 +971,7 @@
     "input_field": "输入字段"
   },
   "content": {
+    "social_links_fallback_info": "社交媒体区块自身的链接为空时，将使用这些链接作为回退。",
     "advanced": "高级",
     "background_image": "背景图片",
     "background_video": "背景视频",

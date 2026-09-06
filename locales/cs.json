@@ -9,6 +9,41 @@
  */
 {
   "portal": {
+    "not_found": {
+      "title": "Stránka nenalezena",
+      "description": "Stránka, kterou hledáte, neexistuje nebo mohla být přesunuta.",
+      "back_home": "Zpět na domovskou stránku"
+    },
+    "blog": {
+      "tags_label": "Filtrovat blogové příspěvky podle tématu",
+      "all_tags": "Všechny příspěvky"
+    },
+    "about": {
+      "story_heading": "Náš příběh",
+      "story_body": "Každá značka má svůj příběh. Sdílejte, jak váš začal, co je pro vás důležité a kdo stojí za značkou.",
+      "cta_label": "Kontaktujte nás",
+      "values_heading": "Proč nakupovat u nás",
+      "value_1_heading": "Rychlé odeslání",
+      "value_1_body": "Objednávky připravujeme a odesíláme do 1–2 pracovních dnů.",
+      "value_2_heading": "Snadné vrácení",
+      "value_2_body": "Bezproblémové vrácení do 30 dnů od doručení.",
+      "value_3_heading": "Osobní podpora",
+      "value_3_body": "Náš tým vám pomůže před nákupem i po něm.",
+      "newsletter_heading": "Přihlaste se k odběru novinek",
+      "newsletter_body": "Zprávy o produktech, příběhy a exkluzivní nabídky přímo do vaší schránky."
+    },
+    "shipping_notice": {
+      "default_text": "Dopravné a možnosti dopravy se upřesní při objednávce."
+    },
+    "estimated_delivery": {
+      "range_text": "Předpokládané doručení: {{ start_date }} – {{ end_date }}",
+      "single_text": "Předpokládané doručení: {{ date }}"
+    },
+    "cart_recommendations": {
+      "title": "Mohlo by se vám líbit",
+      "add_to_cart": "Přidat {{ title }} do košíku",
+      "add_error": "Položku se nepodařilo přidat. Zkuste to prosím znovu."
+    },
     "free_shipping": {
       "remaining_html": "You're {{ amount }} away from free shipping",
       "unlocked": "You've unlocked free shipping!",
@@ -37,6 +72,7 @@
     "slider_label": "Posuvník"
   },
   "accessibility": {
+    "quick_add": "Rychlé přidání",
     "play_model": "Přehrát 3D model",
     "play_video": "Přehrát video",
     "unit_price": "Jednotková cena",

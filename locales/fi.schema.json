@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Ota käyttöön FAQ-rakenteiset tiedot",
+    "faq_structured_data_info": "Lisää FAQPage JSON-LD-merkinnän, jotta hakukoneet ymmärtävät kysymyksesi ja vastauksesi paremmin.",
+    "blog_show_tags": "Näytä aiheettoserot",
+    "blog_posts_per_page": "Kirjoituksia sivua kohden",
+    "blog_pagination_style": "Sivutuksen tyyli",
+    "blog_pagination_numbered": "Sivunumerot",
+    "blog_pagination_infinite": "Loputon vieritys",
+    "not_found_search_name": "404-haku",
+    "search_heading": "Hae kaupasta",
+    "search_placeholder": "Haku",
+    "search_placeholder_label": "Hakukentän paikkamerkki",
+    "cart_delivery_header": "Ostoskorin toimitus",
+    "shipping_notice_enable": "Näytä toimitusilmoitus",
+    "shipping_notice_text": "Toimitusilmoituksen teksti",
+    "shipping_notice_text_info": "Jätä tyhjäksi käyttääksesi oletuskäännöstä. Näkyy yhteenvedon yläpuolella ostoskorisivulla ja ostoskorin laatikossa.",
+    "estimated_delivery_enable": "Näytä arvioitu toimituspäivä",
+    "estimated_delivery_min_days": "Varhaisin toimitus (päivää tästä päivästä)",
+    "estimated_delivery_max_days": "Myöhäisin toimitus (päivää tästä päivästä)",
+    "estimated_delivery_days_info": "Kalenteripäiviä tästä päivästä. Aikaväli lasketaan uudelleen aina, kun ostoskori päivittyy.",
+    "cart_recommendations_enable": "Näytä suositukset ostoskorin laatikossa",
+    "cart_recommendations_name": "Ostoskorisuositukset",
+    "recently_viewed_name": "Äskettäin katsotut",
+    "rv_default_heading": "Äskettäin katsotut",
+    "rv_editor_info": "Näyttää tuotteet, joita asiakas on äskettäin katsellut. Ilman selaushistoriaa osio pysyy piilossa; teemaeditori näyttää paikkamerkkikortit.",
     "trust_badges_name": "Portal luottamusmerkit",
     "tb_layout_row": "Rivi",
     "tb_layout_column": "Sarake",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Jakaminen hakukoneissa",
     "404": "404",
     "colors": "Väripaletti",
     "custom_section": "Mukautettu osio",
@@ -250,6 +275,12 @@
     "disclosures": "Ilmoitukset"
   },
   "settings": {
+    "accent_color": "Korostusväri",
+    "accent_color_secondary": "Toissijainen korostusväri",
+    "page_spacing": "Sivun välit",
+    "page_spacing_info": "Skaalaa teeman väljestelmää käyttävien osioiden täytteet ja välit.",
+    "social_share_image": "Sosiaalisen median jakokuva",
+    "social_share_image_info": "Käytetään oletusjakokuvana, kun sivulla ei ole omaa kuvaa.",
     "alignment": "Tasaus",
     "autoplay": "Automaattinen toisto",
     "background": "Tausta",
@@ -665,6 +696,7 @@
     "title_preset": "Otsikon esiasetus"
   },
   "options": {
+    "roomy": "Tilava",
     "apple": "Omena",
     "arrow": "Nuoli",
     "auto": "Automaattinen",
@@ -941,6 +973,7 @@
     "input_field": "Syöttökenttä"
   },
   "content": {
+    "social_links_fallback_info": "Näitä linkkejä käytetään varalinkkeinä sosiaalisen median lohkoissa, kun niiden oma linkki on tyhjä.",
     "advanced": "Lisäasetukset",
     "background_image": "Taustakuva",
     "background_video": "Taustavideo",

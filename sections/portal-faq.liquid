@@ -6,6 +6,7 @@
   - 支持 @app blocks(如 FAQ 结构化数据类应用)与官方 button block(联系入口);
   - 标题与副标题为 section 设置,留空不渲染;内容区默认限制宽度保证长答案的可读性;
   - 无障碍:官方 accordion 基于 details/summary,天然支持键盘操作与焦点管理;
+  - 自动读取 accordion 中的问答内容生成 FAQPage JSON-LD 结构化数据(可在设置中关闭);
   - 样式在 snippets/portal-faq-styles.liquid。
 {%- endcomment -%}
 
@@ -44,6 +45,64 @@
     </div>
   </div>
 </div>
+
+{%- liquid
+  # 统计有效问答数量,仅存在至少一组问答时输出结构化数据
+  assign faq_count = 0
+  for block in section.blocks
+    if block.type == 'accordion'
+      for row in block.blocks
+        if row.type == '_accordion-row'
+          assign faq_count = faq_count | plus: 1
+        endif
+      endfor
+    endif
+  endfor
+-%}
+
+{%- if section.settings.structured_data and faq_count > 0 -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- assign faq_first = true -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'accordion' -%}
+            {%- for row in block.blocks -%}
+              {%- if row.type == '_accordion-row' -%}
+                {%- liquid
+                  assign faq_question = row.settings.heading | strip_html | strip
+                  capture faq_answer_html
+                    for child in row.blocks
+                      if child.type == 'text'
+                        echo child.settings.text
+                        echo ' '
+                      endif
+                    endfor
+                  endcapture
+                  assign faq_answer = faq_answer_html | strip_html | strip
+                -%}
+                {%- if faq_question != blank and faq_answer != blank -%}
+                  {%- unless faq_first -%},{%- endunless -%}
+                  {%- assign faq_first = false -%}
+                  {
+                    "@type": "Question",
+                    "name": {{ faq_question | json }},
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": {{ faq_answer | json }}
+                    }
+                  }
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -104,6 +163,13 @@
       "label": "t:portal.faq_wide_content",
       "default": false,
       "info": "t:portal.faq_wide_content_info"
+    },
+    {
+      "type": "checkbox",
+      "id": "structured_data",
+      "label": "t:portal.faq_structured_data",
+      "default": true,
+      "info": "t:portal.faq_structured_data_info"
     },
     {
       "type": "select",

@@ -9,6 +9,30 @@
  */
 {
   "portal": {
+    "faq_structured_data": "Włącz dane strukturalne FAQ",
+    "faq_structured_data_info": "Dodaje znaczniki FAQPage JSON-LD, aby wyszukiwarki lepiej rozumiały pytania i odpowiedzi.",
+    "blog_show_tags": "Pokaż tagi tematyczne",
+    "blog_posts_per_page": "Wpisy na stronę",
+    "blog_pagination_style": "Styl paginacji",
+    "blog_pagination_numbered": "Numery stron",
+    "blog_pagination_infinite": "Nieskończone przewijanie",
+    "not_found_search_name": "Wyszukiwanie 404",
+    "search_heading": "Szukaj w sklepie",
+    "search_placeholder": "Szukaj",
+    "search_placeholder_label": "Symbol zastępczy pola wyszukiwania",
+    "cart_delivery_header": "Dostawa w koszyku",
+    "shipping_notice_enable": "Pokaż powiadomienie o wysyłce",
+    "shipping_notice_text": "Treść powiadomienia o wysyłce",
+    "shipping_notice_text_info": "Pozostaw puste, aby użyć domyślnego tłumaczenia. Wyświetlane nad podsumowaniem na stronie koszyka i w szufladzie koszyka.",
+    "estimated_delivery_enable": "Pokaż szacowaną datę dostawy",
+    "estimated_delivery_min_days": "Najwcześniejsza dostawa (dni od dziś)",
+    "estimated_delivery_max_days": "Najpóźniejsza dostawa (dni od dziś)",
+    "estimated_delivery_days_info": "Dni kalendarzowe od dziś. Zakres jest ponownie obliczany przy każdej aktualizacji koszyka.",
+    "cart_recommendations_enable": "Pokaż rekomendacje w szufladzie koszyka",
+    "cart_recommendations_name": "Rekomendacje koszyka",
+    "recently_viewed_name": "Ostatnio oglądane",
+    "rv_default_heading": "Ostatnio oglądane",
+    "rv_editor_info": "Wyświetla produkty ostatnio oglądane przez klienta. Bez historii przeglądania sekcja pozostaje ukryta; edytor motywu pokazuje karty zastępcze.",
     "trust_badges_name": "Portal odznaki zaufania",
     "tb_layout_row": "Wiersz",
     "tb_layout_column": "Kolumna",
@@ -88,6 +112,7 @@
 
 
   "names": {
+    "search_engine_sharing": "Udostępnianie w wyszukiwarkach",
     "404": "404",
     "custom_section": "Sekcja niestandardowa",
     "icon": "Ikona",
@@ -250,6 +275,12 @@
     "disclosures": "Informacje prawne"
   },
   "settings": {
+    "accent_color": "Kolor akcentu",
+    "accent_color_secondary": "Pomocniczy kolor akcentu",
+    "page_spacing": "Odstępy strony",
+    "page_spacing_info": "Skaluje wypełnienia i odstępy sekcji korzystających z systemu odstępów motywu.",
+    "social_share_image": "Obraz udostępniania społecznościowego",
+    "social_share_image_info": "Używany jako domyślny obraz udostępniania, gdy strona nie ma własnego obrazu.",
     "autoplay": "Autoodtwarzanie",
     "background": "Tło",
     "border_radius": "Promień narożnika",
@@ -665,6 +696,7 @@
     "title_preset": "Gotowe ustawienie tytułu"
   },
   "options": {
+    "roomy": "Przestronny",
     "apple": "Apple",
     "arrow": "Strzałka",
     "banana": "Banan",
@@ -941,6 +973,7 @@
     "input_field": "Pole wprowadzania"
   },
   "content": {
+    "social_links_fallback_info": "Te linki są używane jako zastępcze przez bloki mediów społecznościowych, gdy ich własny link jest pusty.",
     "background_video": "Wideo w tle",
     "describe_the_video_for": "Opisz film dla klientów korzystających z czytników ekranu. [Dowiedz się więcej](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Szerokość jest automatycznie optymalizowana pod kątem urządzeń mobilnych.",
