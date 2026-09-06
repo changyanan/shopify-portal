@@ -740,7 +740,9 @@
       ],
       "name": "t:names.collection_list",
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "花瓶"
+        ],
         "layout_type": "bento",
         "carousel_on_mobile": true,
         "columns": 4,
