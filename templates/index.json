@@ -740,9 +740,7 @@
       ],
       "name": "t:names.collection_list",
       "settings": {
-        "collection_list": [
-          "frontpage"
-        ],
+        "collection_list": [],
         "layout_type": "bento",
         "carousel_on_mobile": true,
         "columns": 4,
