@@ -464,6 +464,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/fashion-model-in-pink.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": true,
@@ -485,6 +486,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
+                "image": "shopify://shop_images/house-plant-in-white-pot.jpg",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
