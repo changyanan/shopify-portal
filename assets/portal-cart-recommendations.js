@@ -147,6 +147,9 @@ class PortalCartRecommendations extends HTMLElement {
       this.#inject(content.innerHTML);
     } catch (error) {
       if (error?.name !== 'AbortError') {
+        // 仅当失败的仍是当前尝试时清空锚点(下次购物车变动可重试);
+        // 若请求已被更新的一次取代,重置会误丢弃新请求的结果
+        if (this.#anchorProductId === productId) this.#anchorProductId = null;
         console.warn('[portal-cart-recommendations] 加载推荐商品失败:', error);
         this.hidden = true;
       }

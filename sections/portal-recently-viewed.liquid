@@ -88,6 +88,7 @@
       class="portal-rv"
       data-source-section-id="portal-recently-viewed"
       data-limit="{{ section.settings.products_to_show }}"
+      {% if product %}data-current-product-id="{{ product.id }}"{% endif %}
       style="--portal-rv-columns: {{ rv_columns }}; --portal-rv-image-ratio: {{ rv_ratio }};"
       {% if request.design_mode %}
         data-design-mode="true"
@@ -109,6 +110,11 @@
       {% endif %}
     </portal-recently-viewed>
   </div>
+
+  <script
+    src="{{ 'portal-recently-viewed.js' | asset_url }}"
+    type="module"
+  ></script>
 {% endif %}
 
 {% stylesheet %}

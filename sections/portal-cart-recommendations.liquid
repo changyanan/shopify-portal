@@ -25,7 +25,11 @@
       class="portal-cart-recommendations__list"
       role="list"
     >
-      {%- for recommended_product in recommendations.products limit: 4 -%}
+      {%- comment -%}
+        不在循环上硬编码数量:注入脚本已在推荐接口 URL 中传入 limit,
+        这里渲染接口实际返回的全部商品,保持与 data-limit 一致。
+      {%- endcomment -%}
+      {%- for recommended_product in recommendations.products -%}
         <li class="portal-cart-recommendations__item">
           <a
             class="portal-cart-recommendations__media"
